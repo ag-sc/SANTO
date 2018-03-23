@@ -30,7 +30,8 @@ If you use this project please cite [TODO: full citation]
     ```sql
     UPDATE User SET IsCurator = 1 WHERE Mail = "admin";
     ```
-7. Import a zipped dataset (tokenized publication + annotations). The bulk import script will automatically assign users to their respective publications. Filenames follow the scheme `PublicationName_username.extension`, where extension is `csv` for tokenizations and `annodb` for pre-existing annotations (see example files).
+7. Upload your ontology descriptor files (see examples) under https://<serveruri>/Upload.html
+8. Import a zipped dataset (tokenized publication + annotations). The bulk import script will automatically assign users to their respective publications. Filenames follow the scheme `PublicationName_username.extension`, where extension is `csv` for tokenizations and `annodb` for pre-existing annotations (see example files).
     ```bash
     php php/cli_import.php /path/to/importfile.zip
     ```
