@@ -1,0 +1,56 @@
+.selected, .currentAnnotation {
+    background-color: darkorange;
+}
+
+.annotation-label-hover {
+    background-color: orange;
+}
+
+.annotation-table {
+    display: inline-block;
+    vertical-align: bottom;
+    border-collapse: collapse;
+    padding-bottom:0;
+    margin-bottom: 0;
+}
+.annotation-td, .annotation-tr {
+    text-align:center;
+    vertical-align: bottom;
+    padding-bottom:0;
+    margin-bottom: 0;
+}
+.annotation-label-td, .annotation-label-tr {
+    text-align:center;
+    vertical-align: bottom;
+    padding-top: 0.25em;
+}
+
+.annotation-label {
+    color: black;
+    cursor: pointer;
+    border: solid black 2px;
+    border-radius: 5px;
+}
+.annotation-text {
+    color: green;
+    vertical-align: text-bottom;
+}
+
+.line-number {
+    color: gray;
+}
+
+article#text > table tr.sentence > td {
+    padding: 0.2em 0;
+    /*border-top: 1pt solid lightgray;*/
+    border-bottom: 1pt solid lightgray;
+}
+
+article#text > table tr.sentence:nth-child(odd) {
+    background-color: #f6f6f6;
+}
+
+
+.chosen-container {
+    /*width: 200px !important;*/
+}

@@ -1,0 +1,19 @@
+
+#header {
+    height: 75px;
+    /*overflow: hidden;*/
+}
+#shownUsersSelect, #shownUsersSelect_chosen {
+    display: inline-block;
+    max-width: 50%;
+    float: right;
+    padding-right: 10px;
+}
+label[for=shownUsersSelect] {
+    float: right;
+    padding: 5px;
+}
+#content {
+    height: calc(100% - 75px);
+    overflow: auto;
+}

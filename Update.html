@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form action="Update.php" method="post" enctype="multipart/form-data">
+    <table>
+        <tr>
+            <td><label for="classes">Classes</label></td>
+            <td><input type="file" accept="text/csv" name="classes" id="classes" required></td>
+        </tr>
+        <tr>
+            <td><label for="relations">Relations</label></td>
+            <td><input type="file" accept="text/csv" name="relations" id="relations" required></td>
+        </tr>
+        <tr>
+            <td><label for="subclasses">Subclasses</label></td>
+            <td><input type="file" accept="text/csv" name="subclasses" id="subclasses" required></td>
+        </tr>
+        <tr>
+            <td><label for="groups">Groups</label></td>
+            <td><input type="file" accept="text/csv" name="groups" id="groups" required></td>
+        </tr>
+    </table>
+    <input type="submit" value="Update Version" name="submit">
+</form>
+
+<form action="InsertPublication.php" method="post" enctype="multipart/form-data">
+    <table>
+        <tr>
+            <td><label for="publication">Publication</label></td>
+            <td><input type="file" accept="text/plain" name="publication" id="publication" required></td>
+        </tr>
+        <tr>
+            <td><label for="annotations">Annotations</label></td>
+            <td><input type="file" accept=".annodb" name="annotations" id="annotations" required></td>
+        </tr>
+        <tr>
+            <td><label for="tokens">Tokens</label></td>
+            <td><input type="file" accept="text/csv" name="tokens" id="tokens" required></td>
+        </tr>
+    </table>
+    <input type="submit" value="Insert Annotation" name="submit">
+</form>
+
+</body>
+</html>
