@@ -1,11 +1,17 @@
 # SANTO
-### A Web-based Annotation Tool for Ontology-driven Slot Filling
+
+System to gather data for ontology-driven **S**lot filling tasks with a web-based **AN**notation **TO**ol. 
 
 ## Description
 
+Supervised machine learning algorithms require training data whose generation for complex relation extraction tasks tends to be difficult. Being optimized for relation extraction at sentence level, many annotation tools lack in facilitating the annotation of relational structures that are widely spread across the text. This leads to non-intuitive and cumbersome visualizations, making the annotation process unnecessarily time-consuming. We propose SANTO, an easy-to-use, domain-adaptive annotation tool specialized for complex slot filling tasks which may involve problems of cardinality and referential grounding. The web-based architecture enables fast and clearly structured annotation for multiple users in parallel. Relational structures are formulated as templates following the conceptualization of an underlying ontology. Further, import and export procedures of standard formats enable interoperability with external sources and tools.
+
 ## Citation
 
-If you use this project please cite [TODO: full citation]
+If you use this project please cite
+> Hartung M, ter Horst H, Grimm F, Diekmann T, Klinger R, Cimiano P (In Press) 
+> In: Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics (System Demonstrations). Association for Computational Linguistics.
+available at https://pub.uni-bielefeld.de/publication/2919923
 
 ## Requirements
 
