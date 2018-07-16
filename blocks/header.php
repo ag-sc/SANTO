@@ -44,14 +44,17 @@
 <div id="#header">
         <form method="post" action="index.php" enctype="application/x-www-form-urlencoded" accept-charset="utf-8" id="logoutform">
             <div class="ui-controlgroup ui-controlgroup-horizontal login-bar toolbar-text">
-                <img src="css/images/logo_small.png" alt="psink" id="header_logo" />
+                <a href="index2.php?action=selectpub"><img src="css/images/logo_small.png" alt="psink" id="header_logo" /></a>
                 <span class="version"><?= htmlentities(Configuration::instance()->get("ontology", "name")); ?></span>
                 <span><i class="fas fa-user"></i> <?= Users::loginUser()->mail; ?></span>
                 <input type="hidden" name="logout" value="logout" />
                 <div style="float:right; padding-left: 2em;">
                     <a class="logout-btn ui-controlgroup-item ui-button" style="" onclick="document.getElementById('logoutform').submit();"><i class="fas fa-power-off"></i> Logout</a>
                     <?php if (!empty($_SESSION['document'])) { ?>
-                    <a href="index.php" class="ui-button"><i class="fas fa-arrow-left"></i> Back</a>
+                        <a href="index.php" class="ui-button"><i class="fas fa-arrow-left"></i> Back</a>
+                    <?php } ?>
+                    <?php if (Users::loginUser()->isCurator()) { ?>
+                        <a href="index2.php?action=importpub.ui" class="ui-button"><i class="fas fa-arrow-up"></i> Import</a>
                     <?php } ?>
                 </div>
             </div>

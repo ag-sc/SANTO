@@ -20,7 +20,11 @@ final class User {
 
 final class Users {
     public static function loginUser() {
-        return self::byId($_SESSION["user"]);
+        if (!empty($_SESSION['user'])) {
+            return self::byId($_SESSION["user"]);
+        } else {
+            return null;
+        }
     }
 
     public static function ensureActiveLogin() {

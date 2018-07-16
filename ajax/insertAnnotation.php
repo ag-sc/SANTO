@@ -8,7 +8,13 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 }
 
 if ($_POST['annotation'] == -1) return;
+if ($_POST['sentence'] == -1) return;
 if ($_POST['endToken'] < $_POST['startToken']) return;
+
+if (isset($_POST['description']) && $_POST['description'] != "")
+    $description = $_POST['description'];
+else
+    $description = null;
 
 require_once "../php/constants.php";
 
@@ -24,8 +30,8 @@ if (isset($_POST['index']) && $_POST['index'] != -1) {
 } else die($mysqli->error);
 
 
-if($stmt = $mysqli->prepare("INSERT INTO `Annotation` (`PublicationId`, `Index`, `Class`, `Sentence`, `Onset`, `Offset`, `Text`, `User`) VALUES(?, ?, ?, ?, ?, ?, ?, ?)")) {
-    $stmt->bind_param("isiiiisi", $_SESSION['document'], $index, $class, $_POST['sentence'], $_POST['startToken'], $_POST['endToken'], $_POST['text'], $_SESSION['user']);
+if($stmt = $mysqli->prepare("INSERT INTO `Annotation` (`PublicationId`, `Index`, `Class`, `Sentence`, `Onset`, `Offset`, `Text`, `User`, `annometa`) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?)")) {
+    $stmt->bind_param("isiiiisis", $_SESSION['document'], $index, $class, $_POST['sentence'], $_POST['startToken'], $_POST['endToken'], $_POST['text'], $_SESSION['user'], $description);
     $stmt->execute() or die("ERROR: ".$mysqli->error);
 } else die($mysqli->error);
 

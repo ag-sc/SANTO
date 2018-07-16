@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     exit();
 }
-?><h1>Bulk Insert</h2>
+?><h1>Bulk Insert</h1>
 <form action="index2.php" method="POST" enctype="multipart/form-data">
 <input type="hidden" name="action" value="<?= $active_action ?>" />
 <label for="tokens">ZIP file</label> 

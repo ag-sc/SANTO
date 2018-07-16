@@ -2,7 +2,6 @@
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
-
 require_once("php/configuration.php");
 include_once "php/constants.php";
 include_once "php/functions.php";
@@ -17,12 +16,6 @@ if (isset($_POST['userMail']) && isset($_POST['password'])) {
         case "register":
             registerUser($_POST['userMail'], $_POST['password']);
             die("registration disabled");
-            break;
-        case "bypass":
-            $_SESSION['loggedIn'] = true;
-            $_SESSION['user'] = 1;
-            $_SESSION['admin'] = true;
-            $_SESSION['opened'] = array();
             break;
     }
 }
@@ -61,11 +54,6 @@ if (isset($_POST['userMail']) && isset($_POST['password'])) {
 //                        document.getElementById('submitType').value='register';
 //                    })()" /></li>
 ?>
-                <?php if ($_SERVER["HTTP_HOST"] == "localhost") { ?>
-                <li><input type="submit" value="Bypass Login" formnovalidate onclick="(function () {
-                        document.getElementById('submitType').value='bypass';
-                    })()"/></li>
-                <?php } ?>
             </ul>
         </form>
     </section>

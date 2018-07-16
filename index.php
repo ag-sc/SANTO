@@ -23,7 +23,6 @@
         header("Location: index2.php?action=selectpub");
         exit();
     }
-
     require_once("php/functions.php");
     require_once("php/configuration.php");
     require_once("php/publication.php");
@@ -89,7 +88,7 @@
         <div id="header">
             <form method="post" accept-charset="utf-8" id="logoutform">
                 <div class="ui-controlgroup ui-controlgroup-horizontal login-bar toolbar-text">
-                    <img src="css/images/logo_small.png" alt="psink" id="header_logo" />
+                    <a href="index2.php?action=selectpub"><img src="css/images/logo_small.png" alt="psink" id="header_logo" /></a>
                     <span class="version"><?= htmlentities(Configuration::instance()->get("ontology", "name")); ?></span>
                     <span><i class="fas fa-user"></i> <?php echo getUser() ?></span>
                     <button name="logout" value="logout" class="logout-btn ui-controlgroup-item ui-button" onclick="document.getElementById('logoutform').submit();"><i class="fas fa-power-off"></i> Logout</button>
@@ -181,8 +180,12 @@
             <div id="toolbar-slotfilling" class="ui-controlgroup ui-controlgroup-horizontal">
                 <?php if ($activepub) {
                     $checked = $activepub->isReadySlotFilling(Users::loginUser()) ? "checked='checked'" : "";
-                    ?>
+?>
                     <!--                    <form id="mode-form">-->
+                    <!--div id="toolbar-slotfilling-slotuser" class="ui-controlgroup-item">
+                        <select name="showSlotData" id="showSlotData" data-placeholder="Select users" multiple></select>
+                        <label for="showSlotData">Slot data for </label>
+                    </div-->
                     <input type="checkbox" class="ui-controlgroup-item"  id="DocumentReadySlotFilling" title="Marks the slot filling for this document as done" <?=$checked?>>
                     <label for="DocumentReadySlotFilling" title="Marks the slot filling for this document as done">Done</label>
                     <!--                    </form>-->
@@ -232,8 +235,10 @@
         <fieldset>
             <label for="annotationText">Text</label>
             <input type="text" tabindex="-1" name="annotationText" id="annotationText" readonly/><br><br>
-            <select name="annotation" id="annotation" data-placeholder="Select annotation"></select>
-            <input type="submit" tabindex="-1" value="Insert" />
+            <select name="annotation" tabindex="0" id="annotation" data-placeholder="Select annotation"></select><br><br>
+            <label for="description">Description</label>
+            <input type="text" tabindex="1" name="description" id="description" /><br><br>
+            <input type="submit" tabindex="2" value="Insert" />
             </fieldset>
         </form>
     </div>

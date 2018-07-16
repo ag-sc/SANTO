@@ -3,11 +3,19 @@
 }
 .ui-button {
     height: 16px;
-    font-size: 13.5px;
+    font-size: 12px;
 }
 #toolbar, #toolbar-kurator, #toolbar-slotfilling {
-    padding-top: 2px;
+    padding: 2px;
     float: right;
+    position: fixed;
+    right: 1.5em;
+    left: calc(50% + 10px);
+    background: white;
+    z-index: 9000;
+    height: 1.2em;
+    margin: 0 auto;
+    width: 99%;
 }
 .version {
     font-size: 0.6em;
@@ -71,10 +79,11 @@ span.instanceID {
 
 .right-half {
     position: fixed;
-    top: 10px;
+    top: 3em;
     bottom: 10px;
     right: 10px;
     left: calc(50% + 10px);
+    z-index: -1000;
     /*height: calc(100% - 6*25px);*/
 }
 
@@ -87,8 +96,12 @@ span.instanceID {
     width:200px;
 }
 
+#mode-form {
+    float: left;
+}
 #text {
     margin-right: 0;
+    float: left
 }
 
 .add_tab {
@@ -314,4 +327,15 @@ img#header_logo {
 li.context-menu-item.hierarchy_rootclass > span {
     text-decoration: underline;
     font-weight: bold;
+}
+
+#showSlotData, #showSlotData_chosen {
+    display: inline-block;
+    max-width: 50%;
+    float: right;
+    padding-right: 10px;
+}
+label[for=showSlotData] {
+    float: right;
+    padding: 5px;
 }

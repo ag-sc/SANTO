@@ -2,6 +2,17 @@
 require_once("../php/user.php");
 Users::ensureActiveLogin();
 
+function utf8ize($d) {
+    if (is_array($d)) {
+        foreach ($d as $k => $v) {
+            $d[$k] = utf8ize($v);
+        }
+    } else if (is_string ($d)) {
+        return utf8_encode($d);
+    }
+    return $d;
+}
+
 if (!isset($_SESSION['document'])) {echo ""; exit();};
 
 require_once("../php/functions.php");
@@ -26,11 +37,11 @@ if ($stmt = $mysqli->prepare("SELECT `Id`, `Text`, `Onset`, `Offset`, `Sentence`
 } else die("ERROR(".__LINE__."): ".$mysqli->error);
 
 $query = <<<QUERY
-SELECT (`Offset` - `Onset`) AS `Length`, `Annotation`.`Id`, `Index`, `Sentence`, `Onset`, `Offset`, `Class`.`Name` AS `Class`, `Class`.`Id` AS `ClassId`, `User`, `Class`.`Description` AS `Description`, `Reference`
+SELECT (CAST(`Offset` AS signed) - CAST(`Onset` AS signed)) AS `Length`, `Annotation`.`Id`, `Index`, `Sentence`, `Onset`, `Offset`, `Class`.`Name` AS `Class`, `Class`.`Id` AS `ClassId`, `User`, `Class`.`Description` AS `Description`, `Reference`, `annometa`
     FROM `Annotation` 
     JOIN `Class` 
         ON `Class`.`Id` = `Annotation`.`Class` 
-    WHERE `PublicationId` = ? AND (`Offset` - `Onset`) >= 0 AND (`User` = ?
+    WHERE `PublicationId` = ? AND (CAST(`Offset` AS signed) - CAST(`Onset` AS signed)) >= 0 AND (`User` = ?
 QUERY;
 if (isset($_SESSION['showPredefined']) && $_SESSION['showPredefined'])
     $query .= " OR `User` = 1";
@@ -39,8 +50,7 @@ if (isset($_GET['users']))
 else
     $users = [];
 $query .= str_repeat(" OR `User` = ?", sizeof($users));
-$query .= ') ORDER BY `Length` DESC';
-
+$query .= ') ORDER BY `User`,`Name`,`Length` DESC';
 if ($stmt = $mysqli->prepare($query)) {
     $params = array(&$publicationId, &$_SESSION['user']);
     for ($i = 0; $i < sizeof($users); ++$i) {
@@ -48,12 +58,12 @@ if ($stmt = $mysqli->prepare($query)) {
     }
     call_user_func_array(array($stmt, "bind_param"), array_merge(array(str_repeat("i", sizeof($params))), $params));
     $stmt->execute() or die("ERROR(".__LINE__."): ".$mysqli->error);
-    $stmt->bind_result($length, $id, $index, $sentence, $onset, $offset, $class, $classId, $user, $description, $reference);
+    $stmt->bind_result($length, $id, $index, $sentence, $onset, $offset, $class, $classId, $user, $description, $reference, $meta);
     while ($stmt->fetch()) {
         for ($i = $onset; $i <= $offset; ++$i) {
             $tokens[$sentence][$i]['annotations'][] = $classId;
             if ($i == $onset)
-                $tokens[$sentence][$i]["starts"][] = array("id" => $id, "annotationId" => $index, "tokenId" => $i, "classId" => $classId, "class" => $class, "onset" => $onset, "offset" => $offset, "user" => $user, "description" => $description, "reference" => $reference);
+                $tokens[$sentence][$i]["starts"][] = array("id" => $id, "annotationId" => $index, "tokenId" => $i, "classId" => $classId, "class" => $class, "onset" => $onset, "offset" => $offset, "user" => $user, "description" => $description, "reference" => $reference, "meta" => $meta);
             if ($i == $offset)
                 $tokens[$sentence][$i]["ends"][] = $index;
         }
@@ -101,16 +111,35 @@ function fit_any($annotations, $lengthIndex) {
     return -1;
 }
 
+function get_color($user, $class) {
+    if ($_SESSION['mode'] == 3)
+        return select_user_color($user);
+    else
+        return select_group_color($class);
+}
+
 function select_user_color($user) {
     switch ($user) {
         case 3: return "red";
         case 4: return "blue";
-        case 5: return"darkgreen";
-        case 6: return"darkorange";
-        case 7: return"aqua";
-        case 8: return"brown";
-        case 9: return"indigo";
-        case 10: return"gray";
+        case 5: return "darkgreen";
+        case 6: return "darkorange";
+        case 7: return "aqua";
+        case 8: return "brown";
+        case 9: return "indigo";
+        case 10: return "gray";
+        default: return "black";
+    }
+}
+
+function select_group_color($class) {
+    global $groupAssociations;
+    switch ($groupAssociations[$class]) {
+        case 1: return "red";
+        case 2: return "blue";
+        case 3: return "darkgreen";
+        case 4: return "darkorange";
+        case 5: return "aqua";
         default: return"black";
     }
 }
@@ -164,6 +193,7 @@ foreach ($tokens as $sentenceId => $sentence) {
                     echo "</tr><tr class='annotation-label-tr'>";
                 } else {
                     $class = $remainingAnnotations[$i]['class'];
+                    $meta = $remainingAnnotations[$i]['meta'];
                     $onset = $remainingAnnotations[$i]['onset'];
                     $offset = $remainingAnnotations[$i]['offset'];
                     $annotation = $remainingAnnotations[$i]["annotationId"];
@@ -181,10 +211,10 @@ foreach ($tokens as $sentenceId => $sentence) {
 
 
                     $classes = "";
-                    if ($ref != "") {
-                        $style = "border-style: dashed; border-color: ".get_reference_user_color($ref);
+                    if ($ref != "" && $_SESSION['mode'] != 1) {
+                        $style = "border-style: dashed; border-color: ".get_color($ref, $classId);
                     } else {
-                        $style = "border-color: ".select_user_color($user);
+                        $style = "border-color: ".get_color($user, $classId);
                     }
                     foreach (getSuperclasses($classId) as $superclass) {
                         $classes .= " highlight-at-$superclass";
@@ -192,7 +222,10 @@ foreach ($tokens as $sentenceId => $sentence) {
 
                     echo "<td class='annotation-label-td' colspan='$length'>";
                     $curuseranno = ($user == $loginuser->id) ? "1" : "0";
-                    echo "<span class='annotation-label no-select$classes' annotation='$annotation' classId='$classId' onset='$onset' offset='$offset' sentence='$sentenceId' index='$index' annotationId='$id' data-bycuruser='$curuseranno' annotator='$user' reference='$ref' style='$style' title='$description'>$class</span>";
+                    echo "<div class='annotation-label no-select$classes' annotation='$annotation' classId='$classId' onset='$onset' offset='$offset' sentence='$sentenceId' index='$index' annotationId='$id' data-bycuruser='$curuseranno' annotator='$user' reference='$ref' style='$style' title='$description'>";
+                    echo "<div class='annotation-meta'>$meta</div>";
+                    echo $class;
+                    echo "</div>";
                     echo "</td>";
                     $index += 1;
                     unset($remainingAnnotations[$i]);

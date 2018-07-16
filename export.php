@@ -1,6 +1,8 @@
 <?php
 
-session_start();
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
 require_once ("php/constants.php");
 require_once ("php/user.php");
 require_once("php/publication.php");
@@ -23,12 +25,69 @@ if (!empty($_GET['user'])) {
         die("Requested username not found");
     }
 }
+if (empty($foruser)) {
+    if (!empty(Users::loginUser())) {
+        $foruser = Users::loginUser();
+    }
+}
+
+function getInstances($slotdata, $annotation) {
+    $inst = array();
+    foreach($slotdata as $entry) {
+        if (!($entry->get("AnnotationId") === $annotation['Id'])) {
+            continue;
+        }
+
+        $subj = "<literal>";
+
+        if (!$entry->isDataProperty()) {
+            $subj = $entry->getInstance();
+        }
+        
+        $rel = $entry->getRelationName();
+        if (empty($rel)) {
+            $rel = type();
+        } else {
+            $rel = "<http://psink.de/scio/".$rel.">";
+        }
+        
+        $parentId = $entry->parentId();
+        $paren = "<null>";
+        if (!empty($parentId)) {
+            $parentEntry = null;
+            foreach ($slotdata as $match) {
+                if ($match->id() === $parentId) {
+                    $parentEntry = $match;
+                    break;
+                }
+            }
+            if (!empty($parentEntry)) {
+                $paren = $parentEntry->getInstance();
+            }
+        }
+
+        if ($subj !== "<literal>") {
+            $subj = "<http://scio/data/".$subj.">";
+        }
+        if ($paren !== "<null>") {
+            $paren = "<http://scio/data/".$paren.">";
+        }
+
+        $inst[] = implode(" ", array($paren, $rel, $subj));
+    }
+    if (count($inst) > 0) {
+        return "\"".implode(", ", $inst)."\"";
+    } else {
+        return "";
+    }
+}
 
 function printAnnotation() {
     global $mysqli, $publication, $foruser;
     if (empty($foruser)) {
         die("missing user");
     }
+    $pub = Publications::byId($publication);
     if($stmt = $mysqli->prepare("SELECT * FROM `Annotation` WHERE `PublicationId` = ? AND `User` = ? ORDER BY `Sentence`,`Onset`")) {
         $stmt->bind_param("ii", $publication, $foruser->id);
         $stmt->execute() or die("ERROR(".__LINE__."): ".$mysqli->error);
@@ -36,8 +95,8 @@ function printAnnotation() {
         $annotations = $result->fetch_all(MYSQLI_ASSOC);
         $stmt->close();
     } else die("ERROR(".__LINE__."): ".$mysqli->error);
-
-    echo "# AnnotationID, ClassType, DocCharOnset(incl), DocCharOffset(excl), Text\n";
+    $slotdata = $pub->slotData($foruser);
+    echo "# AnnotationID, ClassType, DocCharOnset(incl), DocCharOffset(excl), Text, Meta, Instances\n";
     foreach ($annotations as $annotation) {
         if($stmt = $mysqli->prepare("SELECT Onset FROM `Token` WHERE `Sentence` = ? AND `Number` = ? AND `PublicationId` = ?")) {
             $stmt->bind_param("iii", $annotation["Sentence"], $annotation["Onset"], $publication);
@@ -50,10 +109,11 @@ function printAnnotation() {
             $stmt->bind_param("iii", $annotation["Sentence"], $annotation["Offset"], $publication);
             $stmt->execute() or die("ERROR(".__LINE__."): ".$mysqli->error);
             $result = $stmt->get_result();
-            $offset = $result->fetch_row()[0] + 1;
+            $offset = $result->fetch_row()[0];
             $stmt->close();
         } else die("ERROR(".__LINE__."): ".$mysqli->error);
-        echo "{$annotation["Index"]}, ".className($annotation["Class"]).", $onset, $offset, {$annotation["Text"]}\n";
+        $instances = getInstances($slotdata, $annotation);
+        echo "{$annotation["Index"]}, ".className($annotation["Class"]).", $onset, $offset, \"{$annotation["Text"]}\", \"{$annotation["annometa"]}\", $instances\n";
     }
 }
 function printDocument() {
@@ -75,10 +135,10 @@ function printDocument() {
             $sentence = $token["Sentence"];
             $sentenceOnset = $token["Onset"];
         }
-        $docOffset = $token["Offset"] + 1;
+        $docOffset = $token["Offset"];
         $senOnset = $token["Onset"] - $sentenceOnset;
-        $senOffset = $token["Offset"] - $sentenceOnset + 1;
-        echo "$publication, $sentence, {$token["Number"]}, $global, $senOnset, $senOffset, {$token["Onset"]}, $docOffset, {$token["Text"]}\n";
+        $senOffset = $token["Offset"] - $sentenceOnset;
+        echo "$publication, $sentence, {$token["Number"]}, $global, $senOnset, $senOffset, {$token["Onset"]}, $docOffset, \"{$token["Text"]}\"\n";
 
         $global += 1;
     }
@@ -309,7 +369,11 @@ if ($exportpub) {
     $outfile = str_replace("/","",$filename);
     $filename = str_replace("+", "%20", urlencode($filename));
 }
-$outfile .= "_".Users::loginUser()->mail;
+if (!empty($foruser)) { 
+    $outfile .= "_".$foruser->mail;
+} else {
+    $outfile .= "_export";
+}
 if ($_GET['output'] == 'annotation') {
     $outfile.= ".annodb";
 } else {
@@ -317,7 +381,7 @@ if ($_GET['output'] == 'annotation') {
 }
 
 header('Content-disposition: attachment; filename="'.$outfile.'"');
-header('Content-Type: text/plain');
+header("Content-type: text/plain; charset=utf-8");
 switch ($_GET["output"]) {
     case "document": printDocument(); break;
     case "annotation": printAnnotation(); break;

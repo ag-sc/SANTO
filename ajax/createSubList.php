@@ -5,6 +5,7 @@ Users::ensureActiveLogin();
 
 require_once("../php/constants.php");
 require_once("../php/functions.php");
+require_once("../php/ontology.php");
 
 $parsedRelations = parseRelations();
 
@@ -25,14 +26,13 @@ function hasData($id) {
 
 function createRow($row, $depth, $groups, $id, $dataGroup, $parent, $num, $size) {
     global $mysqli, $parsedRelations, $number;
-    # broken: $opened = isset($_SESSION["opened"][$id]) && $_SESSION["opened"][$id] == 1;
-    $opened = false;
+    $opened = isset($_SESSION["opened"][$id]) && $_SESSION["opened"][$id] == 1;
 
     if ($id) {
-        $stmt = $mysqli->prepare("SELECT `Class`.`Name`, `Class`.`Id`, `Class`.`Description`, Data.ManuallySet FROM `Data` JOIN `Class` ON `ClassId` = `Class`.`Id`  WHERE `Data`.`Id` = ? AND `Data`.User = ? AND `Data`.`PublicationId` = ?");
+        $stmt = $mysqli->prepare("SELECT `Class`.`Name`, `Class`.`Id`, `Class`.`Description`, Data.ManuallySet, `r`.`Description` as `Range` FROM `Data` JOIN `Class` ON `ClassId` = `Class`.`Id` JOIN `Relation` ON `RelationId` = Relation.Id JOIN `Class` `r` ON `r`.Id = `Range` WHERE `Data`.`Id` = ? AND `Data`.User = ? AND `Data`.`PublicationId` = ?");
         $stmt->bind_param("iii", $id, $_SESSION['user'], $_SESSION['document']);
         $stmt->execute();
-        $stmt->bind_result($class, $classId, $description, $manuallyset);
+        $stmt->bind_result($class, $classId, $description, $manuallyset, $range);
         $stmt->fetch();
         $class = $class == "" ? $row["Range"] : $class;
         $classId = $classId == "" ? $row["RangeId"] : $classId;
@@ -44,13 +44,25 @@ function createRow($row, $depth, $groups, $id, $dataGroup, $parent, $num, $size)
     }
     $valued = $classId != $row["RangeId"] || hasData($id);
     $dropdown = in_array($row["RangeId"], $groups);
-//    var_dump($classId, $parsedRelations);
     $collapsible = !$dropdown && (array_key_exists($row["RangeId"], $parsedRelations) || array_key_exists($classId, $parsedRelations));
+    if (!$collapsible) {
+        $ontology = Ontology::instance();
+        // $target = $ontology->getclass_byid($row['RangeId']);
+        if (!empty($classId)) {
+            $target = $ontology->getclass_byid($classId);
+            if (!empty($target) && count($target->relations())) {
+                $collapsible = true;
+            }
+        }
+    }
+    if ($dropdown) {
+        $collapsible = false;
+    }
     $hidden = isset($_POST["hidden"]) ? 'style="display: none"' : ''; ?>
-    <tr class="tooltip-able" data-relisdp="<?= $row["DataProperty"] ?>" title="<?=$description?>" from="<?= $row["From"] ?>" to="<?= $row["To"] ?>" dataId="<?= $id ?>" classId="<?= $classId ?>" parent="<?= $parent?>" relationId="<?=$row["Id"]?>"
+    <tr data-relisdp="<?= $row["DataProperty"] ?>" title="<?=$range?>" from="<?= $row["From"] ?>" to="<?= $row["To"] ?>" dataId="<?= $id ?>" classId="<?= $classId ?>" parent="<?= $parent?>" relationId="<?=$row["Id"]?>"
         data-manualentry="<?= $manuallyset ?>" 
         originalClassId = "<?= $row["RangeId"]?>"
-        class='<?= $collapsible ? ($opened ? "collapsed expanded" : "collapsed collapsible") : "" ?>' depth='<?= $depth ?>'>
+        class='tooltip-able <?= $collapsible ? ($opened ? "collapsed expanded" : "collapsed collapsible") : "" ?>' depth='<?= $depth ?>'>
         <td class='relation' relationId='<?= $row["Id"] ?>' style='padding-left: <?= 2 * $depth ?>em'>
             <div <?= $hidden ?>>
                 <span class="icon <?= $collapsible ? ($opened ? "ui-icon ui-icon-circle-arrow-s" : "ui-icon ui-icon-circle-arrow-e") : "" ?>"></span>
@@ -64,8 +76,8 @@ function createRow($row, $depth, $groups, $id, $dataGroup, $parent, $num, $size)
                 : "<span></span>"
         ?></td>
         <?php } else { echo "<td></td>"; } ?>
-        <td class='input'>
-            <div <?= $hidden ?>>
+        <td class='input' title="<?=$description?>">
+        <div <?= $hidden ?>> 
                 <?php if (!in_array($row["RangeId"], $groups) && $row["Range"] != "Event") {
                     $placeholder = $class;
                     if ($classId != $row["RangeId"]) {
@@ -86,7 +98,7 @@ function createRow($row, $depth, $groups, $id, $dataGroup, $parent, $num, $size)
                         }
                     }
                     ?>
-                        <input type='text' placeholder='<?=$placeholder?>' data-range="<?= !empty($row['Range']) ? $row['Range'] : "" ?>" data-isdataprop="<?= (!empty($row["DataProperty"]) && $row["DataProperty"] == 1) ? "1" : "0" ?>" data-class="<?= htmlentities($class); ?>" data-instance="<?= htmlentities($class)." ".htmlentities($id); ?>"
+                            <input type='text' placeholder='<?=$placeholder?>' data-range="<?= !empty($row['Range']) ? $row['Range'] : "" ?>" data-isdataprop="<?= (!empty($row["DataProperty"]) && $row["DataProperty"] == 1) ? "1" : "0" ?>" data-class="<?= htmlentities($class); ?>" data-instance="<?= htmlentities($class)." ".htmlentities($id); ?>"
                            class='slot_editor accepts-<?= implode(" accepts-", getSubclasses($row["RangeId"])) ?>'
                            readonly='readonly' value='<?php
                     if ($id) {
@@ -95,10 +107,10 @@ function createRow($row, $depth, $groups, $id, $dataGroup, $parent, $num, $size)
     FROM `Annotation`
         JOIN `Class`
             ON `Annotation`.`Class` = `Class`.`Id`
-        WHERE `Annotation`.`Index` = (SELECT `Index` FROM `Annotation` WHERE `Id` = (SELECT `AnnotationId` FROM `Data` WHERE `Id` = ? AND `User` = ? AND `PublicationId` = ?))
+        WHERE `Annotation`.`Index` = (SELECT `Index` FROM `Annotation` WHERE `Id` = (SELECT `AnnotationId` FROM `Data` WHERE `Id` = ? AND `User` = ? AND `PublicationId` = ?)) AND `Annotation`.`PublicationId` = ?
 QUERY;
                         $stmt = $mysqli->prepare($query);
-                        $stmt->bind_param("iii", $id, $_SESSION['user'], $_SESSION['document']);
+                        $stmt->bind_param("iiii", $id, $_SESSION['user'], $_SESSION['document'], $_SESSION['document']);
                         $stmt->execute();
                         $result = $stmt->get_result();
                         $text = "";
@@ -108,6 +120,7 @@ QUERY;
                             $text .= $r[1]." ";
                             $annotationIndex = $r[2];
                         }
+                        // TODO current
                         if (isset($class) && !empty($text)) {
                             $valued = true;
                             echo "$class (".trim($text).")";
@@ -115,7 +128,7 @@ QUERY;
                         $stmt->free_result();
                         //$id = $mysqli->insert_id;
                     }
-                    ?>' annotation='<?= ($valued && !empty($annotationIndex)) ? $annotationIndex : ""?>' hasvalue="<?= ($valued && !empty($annotationIndex)) ? "1" : "0" ?>">
+                    ?>' data-annotation='<?= ($valued && !empty($annotationIndex)) ? $annotationIndex : ""?>' hasvalue="<?= ($valued && !empty($annotationIndex)) ? "1" : "0" ?>">
                 <?php
                 } else
                 {
@@ -174,17 +187,30 @@ QUERY;
         </td>
     </tr>
     <?php
-    if ($opened)
-        createSublist($row["RangeId"], null, $id, $depth+1);
+    if ($opened) {
+        createSublist(!empty($classId) ? $classId : $row["RangeId"], null, $id, $depth+1);
+    }
     return $valued;
 }
 
+$ontology = Ontology::instance();
 function createSublist($classId, $topLevel, $dataId, $depth) {
-    global $mysqli;
-
+    global $mysqli, $ontology;
+    // TODO opened issue current
     $superClasses = getSuperclasses($classId);
     $subClasses = getSubclasses($_POST["topLevelId"]);
-
+    
+    // $target = $ontology->getclass_byid($row['RangeId']);
+    if (!$topLevel) {
+    if (!empty($classId)) {
+        $target = $ontology->getclass_byid($classId);
+        $superClasses = array($target->id);
+        foreach ($target->super_classes(true) as $sclass) {
+            $superClasses[] = $sclass->id;
+        }
+    }
+    }
+    
     $query = "SELECT `Relation`.`Id` AS `Id`, `Relation`, `Range`.`Id` AS `RangeId`, `Range`.`Name` AS `Range`, `From`, `To`, `MergedName`, Relation.DataProperty AS DataProperty
         FROM `Relation`
         JOIN `Class` AS `Range`
@@ -195,14 +221,13 @@ function createSublist($classId, $topLevel, $dataId, $depth) {
         for ($i = 0; $i < sizeof($superClasses); ++$i) {
             $params[] = &$superClasses[$i];
         }
+        
         call_user_func_array(array($stmt, "bind_param"), array_merge(array(str_repeat("i", sizeof($superClasses))), $params));
         $stmt->execute();
         $results = $stmt->get_result();
         $relations = $results->fetch_all(MYSQLI_ASSOC);
         $stmt->free_result();
     }
-
-
 
     $query = <<<QUERY
     SELECT `Group` FROM `Group`;
@@ -255,23 +280,23 @@ QUERY;
                     $stmt->close();
                     ?>' class='topLevel darkplaceholder slot_editor accepts-<?=implode(" accepts-", getSubclasses($_POST["topLevelId"]))?>' readonly='readonly' value='<?php
                     $query = <<<QUERY
-    SELECT `Class`.`Name` as `Class`, `Text`, Annotation.Id
+    SELECT `Class`.`Name` as `Class`, `Text`, Class.Id, `Sentence`, `Onset`, `Offset`, Annotation.Index as AnnotationIndex
     FROM `Annotation`
         JOIN `Class`
             ON `Annotation`.`Class` = `Class`.`Id`
-        WHERE `Annotation`.`Id` = (SELECT `AnnotationId` FROM `Data` WHERE `Id` = ? AND `User` = ?)
+         WHERE `Annotation`.`Index` = (SELECT `Index` FROM `Annotation` WHERE `Id` = (SELECT `AnnotationId` FROM `Data` WHERE `Id` = ? AND `User` = ? AND `PublicationId` = ?)) AND `Annotation`.`PublicationId` = ?
 QUERY;
                     $stmt = $mysqli->prepare($query);
-                    $stmt->bind_param("ii", $dataId, $_SESSION['user']);
+                    $stmt->bind_param("iiii", $dataId, $_SESSION['user'], $_SESSION['document'], $_SESSION['document']);
                     $stmt->execute();
-                    $stmt->bind_result($class, $text, $classId);
+                    $stmt->bind_result($class, $text, $classId, $sentence, $onset, $offset, $annotation_id);
                     $stmt->fetch();
                     if (isset($class) && isset($text)) {
                         $valued = true;
-                        echo "$class ($text)";
+                        echo "$class ($sentence, $onset-$offset, $text)";
                     }
                     $stmt->close();
-                    ?>' data-manualentry="<?= $manuallyset ?>">
+                    ?>' data-manualentry="<?= $manuallyset ?>" data-annotation="<?= $annotation_id?>">
                 </div>
             </td>
             <td class='removeInput'>

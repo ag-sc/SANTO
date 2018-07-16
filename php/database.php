@@ -24,6 +24,7 @@ final class Database {
         $dbschema = Configuration::instance()->get("database", "schema");
 
         $this->mysqli = new mysqli($dbhost, $dbuser, $dbpass, $dbschema);
+        $this->mysqli->set_charset("utf8");
         if ($this->mysqli->connect_errno) {
             printf("Database connection failed: %s\n", $mysqli->connect_error);
             exit();

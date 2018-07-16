@@ -1,9 +1,0 @@
-
-#header {
-    height: 40px;
-    /*overflow: hidden;*/
-}
-#content {
-    height: calc(100% - 40px);
-    overflow: auto;
-}

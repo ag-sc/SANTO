@@ -45,6 +45,9 @@ final class SlotEntry {
     public function getText() {
         return $this->get("Text");
     }
+    public function getAnnotationId() {
+        return $this->get("AnnotationId");
+    }
     public function getRelationName() {
         return $this->get("Relation");
     }
@@ -56,7 +59,11 @@ final class SlotEntry {
     }
     public function getInstance() {
         if ($this->isRelation() && !empty($this->getDataGroup())) {
-            return $this->get("ClassName")."_".$this->getDataGroup();
+            if (!empty($this->get("dgname"))) {
+                return $this->get("dgname")."_".$this->getDataGroup();
+            } else {
+                return $this->get("ClassName")."_".$this->getDataGroup();
+            }
         }
         if (!empty($this->get("ClassName"))) {
             return $this->get("ClassName")."_".$this->get("id");
@@ -253,10 +260,66 @@ final class Publication {
 
     public function slotData($onlyforuser = null) {
         $allentries = array();
-        $query = "SELECT Data.*, Annotation.*, Relation.Id as RelationId, Relation.Domain As RelationDomain, Relation.Relation As Relation, Relation.Range As RelationRange, Relation.From As RelationFrom, Relation.To As RelationTo, Relation.DataProperty, Relation.MergedName, Data.Name As DataName, Class.Name as ClassName, Class.IndividualName As IndividualName, Class.Id as ClassId FROM Data left join Class ON Data.ClassId = Class.Id left join Annotation ON Data.AnnotationId = Annotation.Id left join Relation ON Relation.Id = Data.RelationId WHERE Data.`PublicationId` = ? ORDER BY Data.`Id`";
+        $query = <<<QUERY
+	SELECT `Data`.*,
+		   Annotation.Id AS OriginalAnnoId,
+		   LinkedAnno.Id AS AnnotationId,
+		   LinkedAnno.*,
+		   Relation.Id as RelationId,
+		   Relation.Domain As RelationDomain,
+		   Relation.Relation As Relation,
+		   Relation.Range As RelationRange,
+		   Relation.From As RelationFrom,
+		   Relation.To As RelationTo,
+		   Relation.DataProperty,
+		   Relation.MergedName,
+		   Data.Name As DataName,
+		   Class.Name as ClassName,
+		   Class.IndividualName As IndividualName,
+		   Class.Id as ClassId,
+		   DGClass.Name AS dgname
+		   FROM Data
+		   LEFT JOIN Class ON Data.ClassId = Class.Id
+		   LEFT JOIN Annotation ON Data.AnnotationId = Annotation.`Id`
+		   LEFT JOIN Annotation AS LinkedAnno ON Annotation.`Index` = LinkedAnno.`Index` AND Data.PublicationId = LinkedAnno.PublicationId
+		   LEFT JOIN Relation ON Relation.Id = Data.RelationId LEFT JOIN Data AS DGData ON Data.DataGroup = DGData.Id
+		   LEFT JOIN Class AS DGClass ON DGData.ClassId = DGClass.Id
+		   WHERE Data.`PublicationId` = ?
+		   GROUP BY Data.`Id`, Annotation.`Id`, LinkedAnno.`Id`
+		   ORDER BY Data.`Id`;
+QUERY;
         if (!empty($onlyforuser)) {
-            $query = "SELECT Data.*, Annotation.*, Relation.Id as RelationId, Relation.Domain As RelationDomain, Relation.Relation As Relation, Relation.Range As RelationRange, Relation.From As RelationFrom, Relation.To As RelationTo, Relation.DataProperty, Relation.MergedName, Data.Name As DataName, Class.Name as ClassName, Class.IndividualName As IndividualName, Class.Id as ClassId FROM Data left join Class ON Data.ClassId = Class.Id left join Annotation ON Data.AnnotationId = Annotation.Id left join Relation ON Relation.Id = Data.RelationId WHERE Data.`PublicationId` = ? AND Data.User = ? ORDER BY Data.`Id`";
+            $query = <<<QUERY
+	SELECT `Data`.*,
+		   Annotation.Id AS OriginalAnnoId,
+		   LinkedAnno.Id AS AnnotationId,
+		   LinkedAnno.*,
+		   Relation.Id as RelationId,
+		   Relation.Domain As RelationDomain,
+		   Relation.Relation As Relation,
+		   Relation.Range As RelationRange,
+		   Relation.From As RelationFrom,
+		   Relation.To As RelationTo,
+		   Relation.DataProperty,
+		   Relation.MergedName,
+		   Data.Name As DataName,
+		   Class.Name as ClassName,
+		   Class.IndividualName As IndividualName,
+		   Class.Id as ClassId,
+		   DGClass.Name AS dgname
+		   FROM Data
+		   LEFT JOIN Class ON Data.ClassId = Class.Id
+		   LEFT JOIN Annotation ON Data.AnnotationId = Annotation.`Id`
+		   LEFT JOIN Annotation AS LinkedAnno ON Annotation.`Index` = LinkedAnno.`Index` AND Data.PublicationId = LinkedAnno.PublicationId
+		   LEFT JOIN Relation ON Relation.Id = Data.RelationId LEFT JOIN Data AS DGData ON Data.DataGroup = DGData.Id
+		   LEFT JOIN Class AS DGClass ON DGData.ClassId = DGClass.Id
+		   WHERE Data.`PublicationId` = ? AND Data.User = ?
+		   GROUP BY Data.`Id`, Annotation.`Id`, LinkedAnno.`Id`
+		   ORDER BY Data.`Id`;
+
+QUERY;
         }
+
         if ($stmt = Database::prepare($query)) {
             if (empty($onlyforuser)) {
                 $stmt->bind_param("i", $this->id);
@@ -498,21 +561,172 @@ final class Publications {
     }
     
     public static function nameFromFilename($filename) {
-        $parts = split("_", pathinfo($filename, PATHINFO_FILENAME));
+        $parts = explode("_", pathinfo($filename, PATHINFO_FILENAME));
         array_pop($parts); // remove username
         
         return implode(" ", $parts);
     }
 
     public static function userFromFilename($filename) {
-        $parts = split("_", pathinfo($filename, PATHINFO_FILENAME));
-        return array_pop($parts);
+        $parts = explode("_", pathinfo($filename, PATHINFO_FILENAME));
+        $res = array_pop($parts);
+        if (empty($res)) {
+            $res = "admin";
+        }
+        return $res;
+    }
+
+    public static function insertmeta($target) {
+        $za = new ZipArchive();
+        $za->open($target);
+
+        $files_text = array();
+        $files_tokens = array();
+        $files_annos = array();
+        for($i = 0; $i < $za->numFiles; $i++){ 
+            $stat = $za->statIndex( $i ); 
+            $fileext = strtolower(pathinfo($stat['name'], PATHINFO_EXTENSION));
+            if ($fileext === "txt") {
+                $files_text[] = $stat['name'];
+            } else if ($fileext === "csv") {
+                $files_tokens[] = $stat['name'];
+            } else if ($fileext === "annodb") {
+                $files_annos[] = $stat['name'];
+            }
+        }
+        
+        Database::query("START TRANSACTION");
+        $inserted_meta = 0;
+        $inserted_docs = 0;
+        $missed_meta = 0;
+        $missed_docs = 0;
+        $skipped_existing = 0;
+        $classIDs = array();
+
+        foreach($files_annos as $annofile) {
+            $content = $za->getFromName($annofile);
+            // gather users from filename
+            $username = explode("_", pathinfo($annofile, PATHINFO_FILENAME));
+            $username = $username[count($username) - 1];
+            if (empty($username)) {
+                $username = "admin";
+            }
+            $anno_user = Users::byMail($username);
+            $publication = Publications::byName(self::nameFromFilename($annofile));
+
+            if (empty($publication)) {
+                $missed_docs++;
+                continue;
+            }
+
+            $inserted_docs++;
+            $publicationId = $publication->id;
+            print_r("ANNOFILE:: user=$anno_user pub=$publication".PHP_EOL);
+            
+            $annotations = array();
+            // read annotations from file
+            foreach(explode("\n", $content) as $line){
+                if (strlen($line) === 0 or trim($line)[0] === '#') continue;
+                $linecsv = str_getcsv($line, "\t");
+                if (sizeof($linecsv) === 5) {
+                    $annotation = array_combine(array("index", "class", "onset", "offset", "text"), $linecsv);
+                    $annotation['meta'] = null;
+                } else {
+                    $annotation = array_combine(array("index", "class", "onset", "offset", "text", "meta"), $linecsv);
+                }
+                $annotations[] = $annotation;
+            }
+            unset($content);
+
+            foreach($annotations as $idx => $annotation) {
+                // gather token information on the current annotation
+                if (!array_key_exists($annotation["class"], $classIDs)) {
+                    $matchingClass = AnnoClass::byName($annotation["class"]);
+                    if (!empty($matchingClass)) {
+                        $classIDs[$annotation["class"]] = $matchingClass->id;
+                    } else {
+                        print_r("WARNING: class <".$annotation['class']."> not found! (in: $annofile, annotation: ".json_encode($annotation).")".PHP_EOL);
+                        $missed_meta++;
+                        continue;
+                    }
+                }
+                $annotation['classId'] = $classIDs[$annotation["class"]];
+
+                if ($stmt = Database::prepare("SELECT `Number`, `Sentence` FROM `Token` WHERE `Onset` = ? AND `PublicationId` = ?;")) {
+                    $stmt->bind_param("ii", $annotation["onset"], $publicationId);
+                    $stmt->execute() or die("ERROR(" . __LINE__ . "): " . Database::error());
+                    if ($result = $stmt->get_result()) {
+                        if ($row = $result->fetch_assoc()) {
+                            $annotation["onsetToken"] = $row;
+                        }
+                        $result->close();
+                    }
+                    $stmt->close();
+                } else die("ERROR(" . __LINE__ . "): " . Database::error());
+
+                if ($stmt = Database::prepare("SELECT `Number`, `Sentence` FROM `Token` WHERE `Offset` = ? AND `PublicationId` = ?;")) {
+                    $stmt->bind_param("ii", $annotation["offset"], $publicationId);
+                    $stmt->execute() or die("ERROR(" . __LINE__ . "): " . Database::error());
+                    if ($result = $stmt->get_result()) {
+                        if ($row = $result->fetch_assoc()) {
+                            $annotation["offsetToken"] = $row;
+                        }
+                        $result->close();
+                    }
+                    $stmt->close();
+                } else die("ERROR(" . __LINE__ . "): " . Database::error());
+                
+                if ($stmt = Database::prepare("SELECT * FROM `Annotation` WHERE PublicationId = ? AND `Class` = ? AND `SENTENCE` = ? AND Onset = ? AND Offset = ? AND User = ? LIMIT 1")) {
+                    $stmt->bind_param("iiiiii", $publicationId, $annotation["classId"], $annotation["onsetToken"]["Sentence"], $annotation["onsetToken"]["Number"], $annotation["offsetToken"]["Number"], $anno_user->id);
+                    $stmt->execute() or die("ERROR(".__LINE__."): ".Database::error().": ".$annotation["class"]);
+
+                    if ($result = $stmt->get_result()) {
+                        if ($row = $result->fetch_assoc()) {
+                            if (!empty($row['annometa'])) {
+                                $skipped_existing++;
+                                continue;
+                            }
+                            $result->close();
+
+                            // update annotation entry
+                            if ($ustmt = Database::prepare("UPDATE `Annotation` SET annometa = ? WHERE Id = ? LIMIT 1")) {
+                                $ustmt->bind_param("si", $annotation['meta'], $row['Id']);
+                                $ustmt->execute() or die("ERROR(".__LINE__."): ".Database::error().": ".$annotation["class"]);
+                                $inserted_meta++;
+                                $ustmt->close();
+                            } else {
+                                $missed_meta++;
+                                $ustmt->close();
+                                continue;
+                            }
+                        } else {
+                            $result->close();
+                            $missed_meta++;
+                            $stmt->close();
+                            continue;
+                        }
+                    } else {
+                        $missed_meta++;
+                        $stmt->close();
+                        continue;
+                    }
+
+                    $stmt->close();
+                } 
+            }
+
+        }
+
+        $za->close();
+        Database::query("COMMIT");
+        print_r("=======================\nInserted metadata: $inserted_meta into $inserted_docs documents - Target annotation not found for $missed_meta metadata entries - $missed_docs documents not found\n");
+        print_r("skipped $skipped_existing metadata entries that were already filled".PHP_EOL);
     }
 
     // bulk insert function, $target needs to point to a zip file
     // TODO get rid of those unnecessary token selects when inserting annotations
     // TODO cache class id lookup selects
-    public static function bulkinsert($target) {
+    public static function bulkinsert($target, $skiptokens = false) {
         $za = new ZipArchive();
         $za->open($target);
 
@@ -536,7 +750,9 @@ final class Publications {
         $activepubs = array();
         $inserted_pubs = 0;
         $existing_pubs = 0;
-        foreach ($files_tokens as $tokenfile) {
+        if (!$skiptokens) {
+            foreach ($files_tokens as $tokenfile) {
+            print_r("Importing $tokenfile\n");
             // create publication
             $pubname = self::nameFromFilename($tokenfile);
             $pubuser = self::userFromFilename($tokenfile);
@@ -559,7 +775,8 @@ final class Publications {
             $inserted = 0;
             if (!$pub_existed) {
                 // insert tokens for all new publications
-                foreach(split("\n", $za->getFromName($tokenfile)) as $line) {
+                foreach(explode("\n", $za->getFromName($tokenfile)) as $line) {
+                    if (trim($line) === '') continue;
                     if (trim($line)[0] === '#') continue;
                     $token = array_combine(array("sentence", "number", "onset", "offset", "text"), str_getcsv($line, "\t"));
 
@@ -588,6 +805,7 @@ final class Publications {
             }
 
         }
+        }
 
         print_r("=======================\nInserted publications: $inserted_pubs\nExisting: $existing_pubs\n"); 
         $inserted_annos = 0;
@@ -608,7 +826,7 @@ final class Publications {
         foreach($files_annos as $annofile) {
             $content = $za->getFromName($annofile);
             // gather users from filename
-            $username = split("_", pathinfo($annofile, PATHINFO_FILENAME));
+            $username = explode("_", pathinfo($annofile, PATHINFO_FILENAME));
             $username = $username[count($username) - 1];
             $anno_user = Users::byMail($username);
 
@@ -624,9 +842,15 @@ final class Publications {
 
             $annotations = array();
             // read annotations from file
-            foreach(split("\n", $content) as $line){
+            foreach(explode("\n", $content) as $line){
                 if (strlen($line) === 0 or trim($line)[0] === '#') continue;
-                $annotation = array_combine(array("index", "class", "onset", "offset", "text"), str_getcsv($line, "\t"));
+                $linecsv = str_getcsv($line, "\t");
+                if (sizeof($linecsv) === 5) {
+                    $annotation = array_combine(array("index", "class", "onset", "offset", "text"), $linecsv);
+                    $annotation['meta'] = null;
+                } else {
+                    $annotation = array_combine(array("index", "class", "onset", "offset", "text", "meta"), $linecsv);
+                }
                 $annotations[] = $annotation;
             }
             unset($content);
@@ -666,7 +890,7 @@ final class Publications {
                         $result->close();
                     }
                     $stmt->close();
-                } else die("ERROR(" . __LINE__ . "): " . Databasse::error());
+                } else die("ERROR(" . __LINE__ . "): " . Database::error());
                 
                 // insert annotation entry
                 if ($stmt = Database::prepare("INSERT IGNORE INTO `Annotation` (`PublicationId`, `Index`, `Class`, `Sentence`, `Onset`, `Offset`, `Text`, `User`) VALUES(?, ?, ?, ?, ?, ?, ?, ?);")) {
@@ -703,7 +927,7 @@ final class Publications {
         <a href="#" class="export_select ui-controlgroup-item ui-button" title="Export" data-jq-dropdown="#jq-dropdown-export"><i class="fas fa-cloud-download-alt"></i></a>
         <div id="jq-dropdown-export" class="jq-dropdown jq-dropdown-tip">
                 <ul class="jq-dropdown-menu">
-                <li><a target="_new" href="export.php?publication=<?= $activepub->id ?>&output=annotation&user=<?= urlencode(Users::loginUser()->mail) ?>"><i class="fas fa-pencil-alt"></i> Annotations</a></li>
+                <li><a target="_new" href="rdf.php?publication=<?= $activepub->id ?>&output=annotation&user=<?= urlencode(Users::loginUser()->mail) ?>"><i class="fas fa-pencil-alt"></i> Annotations</a></li>
                 <li><a target="_new" href="export.php?publication=<?= $activepub->id ?>&output=document"><i class="fas fa-file-alt"></i> Tokens</a></li>
                 <li><a target="_new" href="rdf.php?publication=<?= $activepub->id ?>&user=<?= urlencode(Users::loginUser()->mail) ?>"><i class="fas fa-database"></i> RDF</a></li>
                 </ul>

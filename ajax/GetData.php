@@ -2,6 +2,17 @@
 require_once("../php/user.php");
 Users::ensureActiveLogin();
 
+function utf8ize($d) {
+    if (is_array($d)) {
+        foreach ($d as $k => $v) {
+            $d[$k] = utf8ize($v);
+        }
+    } else if (is_string ($d)) {
+        return utf8_encode($d);
+    }
+    return $d;
+}
+
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     header('HTTP/1.0 403 Forbidden');
     die('Invalid method');
@@ -18,5 +29,5 @@ if ($stmt = $mysqli->prepare($query)) {
     $stmt->bind_param("i", $dataId);
     $stmt->execute();
     $result = $stmt->get_result();
-    echo json_encode($result->fetch_all(MYSQLI_ASSOC), JSON_PRETTY_PRINT);
+    echo json_encode(utf8ize($result->fetch_all(MYSQLI_ASSOC)), JSON_PRETTY_PRINT);
 }

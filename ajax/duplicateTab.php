@@ -7,6 +7,18 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     die('Invalid method');
 }
 
+
+function utf8ize($d) {
+    if (is_array($d)) {
+        foreach ($d as $k => $v) {
+            $d[$k] = utf8ize($v);
+        }
+    } else if (is_string ($d)) {
+        return utf8_encode($d);
+    }
+    return $d;
+}
+
 require_once("../php/constants.php");
 
 header('Content-Type: application/json');
@@ -56,4 +68,4 @@ if (isset($_POST["classId"])) {
     }
 }
 
-echo json_encode(array("newDataId" => $newDataId, "description" => isset($description) ? $description : null));
+echo json_encode(utf8ize(array("newDataId" => $newDataId, "description" => isset($description) ? $description : null)));

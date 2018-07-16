@@ -24,7 +24,7 @@ var_dump($name);
 
 
 if($stmt = $mysqli->prepare("INSERT INTO `Publication` (`FileName`, `Name`) VALUES(?, ?)")) {
-    $stmt->bind_param("ss", $name, $name);
+    $stmt->bind_param("ss", $_FILES['tokens']['name'], $name);
     $stmt->execute() or die("ERROR(".__LINE__."): ".$mysqli->error);
     $stmt->close();
 } else die("ERROR(".__LINE__."): ".$mysqli->error);

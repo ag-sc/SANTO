@@ -12,7 +12,7 @@ require_once "../php/constants.php";
 
 if($stmt = $mysqli->prepare("UPDATE `Data` SET `Name`= ? WHERE `Id`= ?")) {
     $name = $_POST["name"];
-    if (sizeof($name) == 0)
+    if (empty($name) || strlen($name) === 0)
         return;
     $stmt->bind_param("si", $_POST["name"], $_POST["dataId"]);
     $stmt->execute() or die("ERROR: ".$mysqli->error);

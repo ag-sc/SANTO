@@ -275,9 +275,8 @@ function updatePlaceholder(idx, elem) {
                 var annotation = $(this).attr("annotation");
                 if (annotation == 0)
                     return;
-                var target = $(".annotation-label[annotation="+$(this).attr("annotation")+"]");
-                console.log(target);
-                var content = $("#content");
+                var target = $(".annotation-label[annotation="+$(this).data("annotation")+"]");
+                var content = $(".left-half");
                 content.animate({
                     scrollTop: target.offset().top - content.offset().top + content.scrollTop()
                 });

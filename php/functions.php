@@ -1,7 +1,7 @@
 <?php
-
 require_once("constants.php");
 require_once("user.php");
+require_once("database.php");
 
 function parse($file, $multimap = false) {
     $csvFile = file($file);
@@ -35,7 +35,7 @@ function parseGroups()
 QUERY;
     global $mysqli;
     $groups = array();
-    if ($result = $mysqli->query($query)) {
+    if ($result = Database::query($query)) {
         while($row = $result->fetch_row())
             $groups[$row[0]] = array("name" => $row[1], "heading" => $row[2]);
         $result->free();
@@ -55,7 +55,7 @@ function parseRelations()
 QUERY;
     global $mysqli, $reversedRelations;
     $relations = array();
-    if ($result = $mysqli->query($query)) {
+    if ($result = Database::query($query)) {
         while($row = $result->fetch_row()) {
             $reversedRelations[$row[3]] = $row[0];
             $relations[$row[0]][] = array("domain" => $row[1], "relation" => $row[2], "rangeId" => $row[3], "range" => $row[4], "from" => $row[5], "to" => $row[6], "dataType" => boolval($row[7]));
@@ -78,24 +78,39 @@ function parseSubClasses()
 	        JOIN `Class` AS `Super`
 		        ON `SubClass`.`SuperClass` = `Super`.`Id`
 QUERY;
-    global $mysqli, $subClasses, $superClasses;
+    global $subClasses, $superClasses;
     $subClasses = array();
     $superClasses = array();
-    if ($result = $mysqli->query($query)) {
+    if ($result = Database::query($query)) {
         while($row = $result->fetch_row()) {
-            $subClasses[$row[1]][] = array("superClassId" => $row[0], "subClass" => $row[2], "subClassId" => $row[3]);
-            $superClasses[$row[3]][] = array("superClassId" => $row[0], "subClass" => $row[2], "superClassId" => $row[1]);
+            $subClasses[$row[1]][] = array("superClass" => $row[0], "subClass" => $row[2], "superClassId" => $row[1], "subClassId" => $row[3]);
+            $superClasses[$row[3]][] = array("superClass" => $row[0], "subClass" => $row[2], "superClassId" => $row[1], "subClassId" => $row[3]);
         }
         $result->free();
     }
     return $subClasses;
 }
 
+function find_group($classId) {
+    var_dump(getSuperSuperClass($classId));
+    if ($stmt = Database::prepare("SELECT Id FROM `Group` WHERE `Group`.`Group` = ?")) {
+        $super = getSuperSuperclass($classId);
+        $stmt->bind_param("i", $super);
+        $stmt->execute();
+        if ($f = $stmt->fetch()) {
+            $stmt->close();
+            return $f;
+        }
+        $stmt->close();
+        return $f;
+    }
+}
+
 function parseClasses()
 {
     global $mysqli;
     $classes = array();
-    if ($result = $mysqli->query("SELECT `Class`.`Name` AS `Class` FROM`Class`")) {
+    if ($result = Database::query("SELECT `Class`.`Name` AS `Class` FROM`Class`")) {
         while($row = $result->fetch_row())
             $classes[] = $row[0];
         $result->free();
@@ -105,8 +120,8 @@ function parseClasses()
 
 
 parseSubClasses();
-function getSubclasses($top)
-{
+
+function getSubclasses($top) {
     global $subClasses;
     $ret = array($top);
     if (isset($subClasses[$top]))
@@ -115,7 +130,6 @@ function getSubclasses($top)
         }
     return $ret;
 }
-
 function getSubclassesName($top) {
     global $mysqli;
     $subclasses = getSubclasses($top);
@@ -142,6 +156,15 @@ function getSuperclasses($top)
     }
     return $ret;
 }
+
+function getSuperSuperClass($current)
+{
+    global $superClasses;
+    if (isset($superClasses[$current])) foreach ($superClasses[$current] as $superClass) {
+        $current = getSuperSuperClass($superClass["superClassId"]);
+    }
+    return $current;
+}
 //var_dump($reversedRelations);
 function getReversedRelations($classId) {
     global $reversedRelations;
@@ -160,6 +183,97 @@ function getReversedRelations($classId) {
     }
 //    var_dump($ret);
     return $ret;
+}
+
+$groupAssociations = parseAssociations();
+
+function getGroup($classId, $groups, $visited = null) {
+    foreach ($groups as $group) {
+        if ($classId == $group["Group"])
+            return $group["Id"];
+    }
+    if (empty($visited)) {
+        $visited = array();
+    }
+    if (in_array($classId, $visited)) {
+        return null;
+    }
+
+    $visited[] = $classId;
+    $superclass = null;
+    if ($stmt = Database::prepare("SELECT `SuperClass` FROM `SubClass` WHERE `SubClass` = ?")) {
+        $stmt->bind_param("i", $classId);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        if ($result->num_rows > 1) {
+            foreach ($result->fetch_assoc() as $row) {
+                foreach ($groups as $group) {
+                    if ($row["SuperClass"] == $group["Group"])
+                        return $group["Group"];
+                }
+            }
+            $stmt->close();
+            return null;
+        }
+        if ($result->num_rows == 1) {
+            $superclass = $result->fetch_assoc()["SuperClass"];
+        }
+        $stmt->close();
+    }
+    $relation = null;
+    if ($stmt = Database::prepare("SELECT `Domain` FROM `Relation` WHERE `Range` = ?")) {
+        $stmt->bind_param("i", $classId);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        if ($result->num_rows > 1) {
+            foreach ($result->fetch_assoc() as $row) {
+                foreach ($groups as $group) {
+                    if ($row["Domain"] == $group["Group"])
+                        return $group["Group"];
+                }
+            }
+            $stmt->close();
+            return null;
+        }
+        if ($result->num_rows == 1) {
+            $superclass = $result->fetch_assoc()["Domain"];
+        }
+        $stmt->close();
+    }
+    foreach ($groups as $group) {
+        if ($superclass && $superclass == $group["Group"]
+            || $relation && $relation == $group["Group"])
+            return $group["Id"];
+    }
+    if ($relation && !$superclass) {
+        return getGroup($relation, $groups, $visited);
+    }
+    if (!$relation && $superclass) {
+        return getGroup($superclass, $groups, $visited);
+    }
+    return null;
+}
+
+function parseAssociations()
+{
+    $groups = Database::query("SELECT `Group`, `Id` FROM `Group`")->fetch_all(MYSQLI_ASSOC);
+//    foreach ($groups as $group) {
+//        return (int)$group["Group"];
+//    }
+//    return $groups;
+
+    $classes = array();
+    if ($result = Database::query("SELECT `Id`, `Name` FROM `Class`")) {
+        while($row = $result->fetch_assoc())
+            $classes[$row["Name"]] = $row["Id"];
+        $result->free();
+    } else die(Database::error());
+
+    $associations = array();
+    foreach ($classes as $name => $classId) {
+        $associations[$classId] = (int)getGroup($classId, $groups);
+    }
+    return $associations;
 }
 
 function generateColor($classId) {
@@ -195,7 +309,7 @@ function generateColor($classId) {
 
 function ensureDefaultUser() {
     global $mysqli;
-    $mysqli->query('INSERT IGNORE INTO `User` (`Id`, `Mail`, `Password`) VALUES(1, "admin", "$2y$12$qXacYz7tb9xXul96YovcTeDea44n4R5H2zyOEgdoV6W54WjEyLvoW")');
+    Database::query('INSERT IGNORE INTO `User` (`Id`, `Mail`, `Password`) VALUES(1, "admin", "$2y$12$qXacYz7tb9xXul96YovcTeDea44n4R5H2zyOEgdoV6W54WjEyLvoW")');
 }
 
 function loginUser($mail, $password) {
@@ -229,12 +343,18 @@ function getUser() {
     return $mail;
 }
 
-function registerUser($mail, $password) {
+function registerUser($mail, $password, $curator = false) {
     global $mysqli, $pepper;
 
+    if ($curator !== false) {
+        $curator = 1;
+    } else {
+        $curator = 0;
+    }
+
     $hash = password_hash($password.$pepper, PASSWORD_BCRYPT, array('cost' => 12));
-    if($stmt = $mysqli->prepare("INSERT INTO `User` (`Mail`, `Password`) VALUES(?, ?)")) {
-        $stmt->bind_param("ss", $mail, $hash);
+    if($stmt = $mysqli->prepare("INSERT INTO `User` (`Mail`, `Password`, IsCurator) VALUES(?, ?, ?)")) {
+        $stmt->bind_param("ssi", $mail, $hash, $curator);
         if ($stmt->execute()) {
 
             $_SESSION['loggedIn'] = true;

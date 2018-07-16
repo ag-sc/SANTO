@@ -15,6 +15,10 @@ If you use this project please cite
 > In: Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics (System Demonstrations). Association for Computational Linguistics.
 available at https://pub.uni-bielefeld.de/publication/2919923
 
+## Online Demo
+
+A demo instance that is routinely reset is available at http://psink.techfak.uni-bielefeld.de/santo/
+
 ## Requirements
 
 - Apache >= 2.4

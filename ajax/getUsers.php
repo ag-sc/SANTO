@@ -3,6 +3,17 @@
 require_once("../php/user.php");
 Users::ensureActiveLogin();
 
+function utf8ize($d) {
+    if (is_array($d)) {
+        foreach ($d as $k => $v) {
+            $d[$k] = utf8ize($v);
+        }
+    } else if (is_string ($d)) {
+        return utf8_encode($d);
+    }
+    return $d;
+}
+
 require_once "../php/functions.php";
 
 global $mysqli;
@@ -14,4 +25,4 @@ if($stmt = $mysqli->prepare("SELECT UserId AS Id, Mail, Ready FROM User_Publicat
     $stmt->close();
 } else die("ERROR(".__LINE__."): ".$mysqli->error);
 
-echo json_encode($arr, JSON_PRETTY_PRINT);
+echo json_encode(utf8ize($arr), JSON_PRETTY_PRINT);

@@ -37,7 +37,7 @@ foreach ($csvFile as $line) {
     $annotationIndices[$annotation["index"]][] = $annotation;
 }
 
-if ($stmt = $mysqli->prepare("SELECT `AUTO_INCREMENT` FROM  INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA = 'anno' AND TABLE_NAME = 'Annotation';")) {
+if ($stmt = $mysqli->prepare("SELECT MAX(`Index`) FROM Annotation;")) {
     $stmt->execute() or die("ERROR: ".$mysqli->error);
     $result = $stmt->get_result();
     $arr = $result->fetch_row();

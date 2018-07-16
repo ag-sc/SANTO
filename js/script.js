@@ -184,9 +184,10 @@ function loadText(async) {
                     }
                 } else {
                     var index = $(this).attr("annotation");
-                    if (annotator())
-                        $(".selected:not([annotation="+index+"])").removeClass("selected");
-                    $('.annotation-label[annotation='+index+']').toggleClass("selected");
+                    if (annotator()) {
+                        $(".selected:not([annotation=" + index + "])").removeClass("selected").removeClass("cursor");
+                    }
+                    $('.annotation-label[annotation='+index+']').toggleClass("selected").removeClass("cursor");
                 }
             });
 
@@ -299,6 +300,9 @@ function addAnnotation() {
     if (window.getSelection) {
         var sel = window.getSelection();
         if (sel.rangeCount) {
+            if (sel.getRangeAt(0).startOffset === sel.getRangeAt(0).endOffset)
+                return;
+
             var startContainer = $(sel.getRangeAt(0).startContainer);
             var endContainer = $(sel.getRangeAt(sel.rangeCount - 1).endContainer);
 
@@ -334,9 +338,14 @@ function addAnnotation() {
             var index = null;
             var annotationClass = null;
             var insert = true;
+            var description = null;
             $(".selected").each(function () {
                 var annotator = $(this).attr("annotator");
                 var idx = $(this).attr("annotation");
+                var description_field = $(this).find(".annotation-meta");
+                if (description_field.text() !== '') {
+                    description = description_field.text();
+                }
                 if (index && idx != index) {
                     insert = false;
                     return;
@@ -355,7 +364,8 @@ function addAnnotation() {
                         "endToken": endTokenId,
                         "index": index,
                         "sentence": sentenceId,
-                        "text": text
+                        "text": text,
+                        "description": description,
                     },
                     success: function () {
                         loadText();
@@ -397,6 +407,11 @@ function changeActiveAnnotation() {
         "sentence": selectedAnnotation.attr("sentence"),
         "index": selectedAnnotation.attr("index")
     };
+
+    if (!annotation) {
+        console.log("no annotation selected. not invoking changeActiveAnnotation");
+        return;
+    }
 
     var affected_tokens = $(".token[sentence=" + annotation_data.sentence+ "]").filter(function () {
         return parseInt($(this).attr("token")) >= annotation_data.onset && parseInt($(this).attr("token")) <= annotation_data.offset;
@@ -589,20 +604,25 @@ $(document).ready(function () {
         if (!isCurationMode) {
             $(".annotation-label").addClass("selected");
         } else {
-            $(".annotation-label").removeClass("selected");
+            $(".annotation-label").removeClass("selected").removeClass("cursor");
 
+            var first = true;
             $(".annotation-label").each(function() {
                 var $this = $(this);
                 if ($this.data("bycuruser") && $this.data("bycuruser") == '1') {
                     return;
                 }
                 $this.addClass("selected");
+                if (first) {
+                    $this.addClass("cursor");
+                    first = false;
+                }
             })
         }
-    }
+    };
     $("#toolbar-select-all").on("click", selectAll);
     $("#toolbar-deselect-all").on("click", function () {
-        $(".annotation-label.selected").removeClass("selected");
+        $(".annotation-label.selected").removeClass("selected").removeClass("cursor");
     });
 
     $("body").keyup(function(event){
@@ -628,7 +648,7 @@ $(document).ready(function () {
                         maxIndex = (value > maxIndex) ? value : maxIndex;
                     });
                     if (index < maxIndex) {
-                        selectedAnnotation.removeClass("selected");
+                        selectedAnnotation.removeClass("selected").removeClass("cursor");
                         element = $(".annotation-label[index=" + (index + 1) + "]");
                         element.addClass("selected");
                         var scroll = content.height() / 2 - element.closest(".sentence").offset().top + content.offset().top;
@@ -645,7 +665,7 @@ $(document).ready(function () {
                 var content = $('#content');
                 var index = parseInt(selectedAnnotation.attr("index"));
                 if (index > 0) {
-                    selectedAnnotation.removeClass("selected");
+                    selectedAnnotation.removeClass("selected").removeClass("cursor");
                     element = $(".annotation-label[index=" + (index - 1) + "]");
                     element.addClass("selected");
                     var scroll = content.height() / 2 - element.closest(".sentence").offset().top + content.offset().top;
@@ -681,10 +701,10 @@ $(document).ready(function () {
                 var user = annotation.attr("annotator");
                 var index = parseInt(annotation.attr("index"));
                 if (event.ctrlKey && $(".selected").length > 1) {
-                    $(".annotation-label.selected:last").removeClass("selected")
+                    $(".annotation-label.selected:last").removeClass("selected").removeClass("cursor")
                 } else if (index > 0) {
                     if (!event.ctrlKey)
-                        $(".selected").removeClass("selected");
+                        $(".selected").removeClass("selected").removeClass("cursor");
                     var element = $(".annotation-label").filter(function () {
                         return $(this).attr("annotator") === user;
                     }).filter(function () {
@@ -708,7 +728,7 @@ $(document).ready(function () {
                 var index = parseInt(annotation.attr("index"));
                 if (index < $(".annotation-label:last").attr("index")) {
                     if (!event.ctrlKey)
-                        $(".selected").removeClass("selected");
+                        $(".selected").removeClass("selected").removeClass("cursor");
                     var element = $(".annotation-label").filter(function () {
                         return $(this).attr("annotator") === user;
                     }).filter(function () {
@@ -728,9 +748,7 @@ $(document).ready(function () {
         }
         if (annotator() || kurator()) {
             if (event.key == "Escape") {
-                $(".selected").each(function () {
-                    $(this).removeClass("selected");
-                });
+                $(".selected").removeClass("selected").removeClass("cursor");
             }
         }
 
@@ -761,6 +779,28 @@ $(document).ready(function () {
     });
     $.ajax({
         type: "GET",
+        url: "ajax/getUsers.php?mode=slotdata",
+        dataType: "json",
+        success: function (result) {
+            var select = $("#showSlotData");
+            for (var key in result) {
+                select.append("<option value='"+result[key].Id+"'>"+result[key].Mail + (result[key].Ready ? " (finished)" : " (unfinished)") +"</option>");
+            }
+            select.chosen({
+                no_results_text: "No user found",
+                search_contains: true,
+                display_selected_options: false
+            }).change(function () {
+                update_user_colors();
+                loadText();
+            });
+            if (!filler()) {
+                $("#showSlotData_chosen").hide();
+            }
+        }
+    });
+    $.ajax({
+        type: "GET",
         url: "ajax/createListLayout.php",
         success: function (result) {
             $("#annotation-list").html(result);
@@ -785,7 +825,7 @@ $(document).ready(function () {
 
     $('input[name=mode]').change(function() {
         $(".selected").each(function () {
-            $(this).removeClass("selected");
+            $(this).removeClass("selected").removeClass("cursor");
         });
     });
 
@@ -841,7 +881,7 @@ $(document).ready(function () {
         $.ajax({
             type: "POST",
             url: "ajax/insertAnnotation.php",
-            data: {"annotation": anno, "startToken": startToken, "endToken": endToken, "index": index, "sentence": sentence, "text": insertAnnotationDialog.find('#annotationText').val()},
+            data: {"annotation": anno, "startToken": startToken, "endToken": endToken, "index": index, "sentence": sentence, "text": insertAnnotationDialog.find('#annotationText').val(), "description": insertAnnotationDialog.find('#description').val()},
             success: function () {
                 loadText();
             }
@@ -885,10 +925,18 @@ $(document).ready(function () {
                                 first = false;
                                 return;
                             }
-                            if (val[1])
-                                newContainer.append("<option class='tooltip-able' title='"+val[1]+"' value='"+val[2]+"'>"+val[0]+"</option>");
-                            else
-                                newContainer.append("<option value='"+val[2]+"'>"+val[0]+"</option>");
+                            var found = false;
+                            insertAnnotationDialog.find("div.chosen-container").each(function () {
+                                console.log($(this).prev("select").val(), val[2]);
+                                if (parseInt($(this).prev("select").val()) === parseInt(val[2]))
+                                    found = true;
+                            });
+                            if (!found) {
+                                if (val[1])
+                                    newContainer.append("<option class='tooltip-able' title='" + val[1] + "' value='" + val[2] + "'>" + val[0] + "</option>");
+                                else
+                                    newContainer.append("<option value='" + val[2] + "'>" + val[0] + "</option>");
+                            }
                         });
                         newContainer.chosen({
                             width: "270px",

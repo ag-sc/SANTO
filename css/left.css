@@ -1,6 +1,9 @@
 .selected, .currentAnnotation {
     background-color: darkorange;
 }
+.cursor {
+     background-color: orange;
+}
 
 .annotation-label-hover {
     background-color: orange;
@@ -30,6 +33,9 @@
     cursor: pointer;
     border: solid black 2px;
     border-radius: 5px;
+}
+.annotation-meta {
+    color: gray;
 }
 .annotation-text {
     color: green;

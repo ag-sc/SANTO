@@ -9,6 +9,6 @@ define("DB_SCHEMA", Configuration::instance()->get("database", "schema"));
 
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 $mysqli = new mysqli(DB_HOST, DB_USER, DB_PW, DB_SCHEMA);
-
+$mysqli->set_charset("utf8");
 $pepper = Configuration::instance()->get("crypto", "pepper");
 ?>

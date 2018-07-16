@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Annotation Interface</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="plugins/jquery-3.1.0.min.js"></script>
+
+    <script src="plugins/ui/jquery-ui.min.js"></script>
+    <link href="plugins/ui/jquery-ui.min.css" rel="stylesheet" type="text/css">
+    <link href="plugins/ui/jquery-ui.structure.min.css" rel="stylesheet" type="text/css">
+    <link href="plugins/ui/jquery-ui.theme.min.css" rel="stylesheet" type="text/css">
+
+    <script src="plugins/contextMenu/jquery.contextMenu.min.js"></script>
+    <link href="plugins/contextMenu/jquery.contextMenu.min.css" rel="stylesheet" type="text/css">
+
+    <script src="js/script.js"></script>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<section class="left-half">
+    <span class="context-menu"></span>
+    <menu id="context-menu" style="display:none" class="showcase"></menu>
+    <article id="text" style="text-align: justify"></article>
+</section>
+<section class="right-half no-select" style="cursor: default">
+    <div id="tabs">
+        <ul>
+            <li id="add_tab" class="ui-icon ui-icon-plus not-sortable">addTab</li>
+        </ul>
+    </div>
+    <div id='subgroups' style='display: none'>
+        <h2>Groups (will be hidden)</h2>
+    </div>
+</section>
+</body>
+</html>
