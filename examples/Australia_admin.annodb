@@ -1,0 +1,206 @@
+T1	Person	43621	43637	Richard Flanagan
+T7	Sport	46814	46821	netball
+T9	Person	44990	45002	Heath Ledger
+T10	Settlement	44402	44411	Hollywood
+T11	SportsEvent	47707	47730	2018 Commonwealth Games
+T16	Country	409	420	New Zealand
+T21	Continent	135	155	Australian continent
+T23	Currency	27597	27614	Australian dollar
+T24	EthnicGroup	31966	31971	Greek
+T27	MilitaryConflict	18593	18603	East Timor
+T28	Person	43697	43707	Les Murray
+T30	Holiday	5446	5459	Australia Day
+T31	EthnicGroup	31951	31957	Indian
+T32	Agent	44039	44051	Nellie Melba
+T35	SoccerLeague	48515	48541	Australian Football League
+T37	Mammal	23502	23510	platypus
+T38	BritishRoyalty	10666	10678	Elizabeth II
+T39	Food	46460	46467	pavlova
+T40	Organisation	16643	16667	World Trade Organization
+T42	BodyOfWater	18796	18803	Arafura
+T45	Settlement	3051	3058	Jakarta
+T47	BodyOfWater	18879	18889	Tasman Sea
+T48	AdministrativeRegion	4646	4651	Weipa
+T52	SportsEvent	47672	47676	1962
+T53	Politician	13701	13717	Malcolm Turnbull
+T54	SportsEvent	47796	47800	2015
+T55	Country	38913	38967	Organisation for Economic Co-operation and Development
+T57	GovernmentAgency	18196	18217	Department of Defence
+T61	Person	42007	42018	Tom Roberts
+T66	Company	27892	27922	Australian Securities Exchange
+T71	OfficeHolder	13369	13382	Julia Gillard
+T73	Food	46484	46492	meat pie
+T74	SoccerLeague	47879	47894	OFC Nations Cup
+T77	EthnicGroup	31823	31830	English
+T78	Agent	42306	42322	Margaret Preston
+T80	Artist	42448	42461	Fred Williams
+T81	MountainRange	48616	48631	Australian Alps
+T82	University	39233	39253	University of Sydney
+T83	Sport	46800	46812	field hockey
+T87	Film	44706	44720	Breaker Morant
+T96	AdministrativeRegion	21312	21324	Gulf Country
+T98	OfficeHolder	3267	3284	Lachlan Macquarie
+T100	Mammal	24023	24032	thylacine
+T101	Company	45791	45807	News Corporation
+T103	Artist	42353	42364	Arthur Boyd
+T105	Bird	23612	23615	emu
+T107	Country	16957	16968	South Korea
+T109	Country	690	695	Dutch
+T111	Person	43319	43333	Miles Franklin
+T112	Mammal	23741	23746	dingo
+T113	SportsEvent	47678	47682	1982
+T115	BroadcastNetwork	45066	45101	Australian Broadcasting Corporation
+T121	Plant	23324	23334	eucalyptus
+T122	MilitaryConflict	7454	7470	Eureka Rebellion
+T123	Organisation	45441	45466	Reporters Without Borders
+T125	MilitaryUnit	8810	8847	Australian and New Zealand Army Corps
+T126	EthnicGroup	31984	31989	Dutch
+T128	Place	21872	21879	Simpson
+T136	Language	35031	35041	Vietnamese
+T140	Place	21905	21911	Gibson
+T145	Country	27772	27780	Kiribati
+T148	MilitaryUnit	17628	17652	Australian Defence Force
+T149	OfficeHolder	5244	5258	Arthur Phillip
+T151	EthnicGroup	36603	36625	Aboriginal Australians
+T152	PoliticalParty	26407	26425	Liberal Government
+T153	Sport	46823	46835	rugby league
+T154	River	4604	4621	Pennefather River
+T155	MilitaryUnit	17672	17693	Royal Australian Navy
+T156	AdministrativeRegion	21501	21514	The Kimberley
+T160	BroadcastNetwork	45124	45152	Special Broadcasting Service
+T161	Mammal	23582	23588	wombat
+T162	Person	45007	45021	Cate Blanchett
+T168	Writer	43646	43658	David Malouf
+T169	SportsEvent	47666	47670	1938
+T171	Language	34964	34971	Italian
+T178	Country	32933	32940	Vietnam
+T181	Organisation	16499	16511	Cairns Group
+T185	AdministrativeRegion	14039	14067	Australian Capital Territory
+T186	BodyOfWater	18829	18838	Coral Sea
+T188	AdministrativeRegion	21296	21303	Top End
+T189	MountainRange	19688	19708	Great Dividing Range
+T191	Country	358	373	Solomon Islands
+T193	EthnicGroup	36913	36936	Torres Strait Islanders
+T198	Film	44875	44893	Rabbit-Proof Fence
+T200	AdministrativeRegion	14082	14100	Northern Territory
+T202	Non-ProfitOrganisation	43839	43856	Australia Council
+T203	Country	755	768	Great Britain
+T204	Island	19347	19363	Macquarie Island
+T205	EthnicGroup	31935	31942	Chinese
+T209	Country	16279	16302	Commonwealth of Nations
+T210	ProtectedArea	19567	19581	Mount Augustus
+T212	Writer	43601	43616	Thomas Keneally
+T213	BodyOfWater	18808	18813	Timor
+T214	AdministrativeRegion	21127	21143	Barkly Tableland
+T217	Island	15705	15721	Lord Howe Island
+T218	Food	46469	46478	lamington
+T222	Person	17907	17923	Governor-General
+T223	Mammal	23571	23576	koala
+T227	Film	44243	44270	The Story of the Kelly Gang
+T228	Island	19833	19845	Heard Island
+T231	Olympics	47568	47572	2000
+T233	Single	43239	43255	Waltzing Matilda
+T238	Mountain	19664	19680	Mount Kosciuszko
+T242	Sport	47234	47259	Australian rules football
+T243	City	5612	5618	Sydney
+T247	Food	46426	46433	dim sim
+T251	EthnicGroup	31887	31895	Scottish
+T252	EthnicGroup	32886	32900	United Kingdom
+T259	HorseRace	47329	47342	Melbourne Cup
+T261	Country	5482	5494	Crown Colony
+T262	Country	16001	16006	ASEAN
+T263	Person	43069	43081	Henry Lawson
+T266	Country	27793	27799	Tuvalu
+T270	Writer	43588	43599	Peter Carey
+T271	Agent	41796	41817	Emily Kame Kngwarreye
+T276	EthnicGroup	31904	31911	Italian
+T277	PoliticalParty	13544	13553	Coalition
+T280	Person	44930	44941	Errol Flynn
+T281	Place	21938	21952	Great Victoria
+T285	SportsEvent	47684	47688	2006
+T286	Election	13337	13367	partyroom leadership challenge
+T290	Mountain	19891	19907	Mount McClintock
+T292	Language	34995	35004	Cantonese
+T293	Organisation	39365	39379	Group of Eight
+T294	Mammal	23515	23522	echidna
+T297	Person	43671	43687	David Williamson
+T298	Bird	23624	23634	kookaburra
+T301	Writer	43468	43481	Patrick White
+T303	Organisation	38758	38804	Programme for International Student Assessment
+T304	Country	2964	2971	Vanuatu
+T308	Mountain	19777	19788	Mawson Peak
+T310	Country	315	324	Indonesia
+T313	Country	27782	27787	Nauru
+T316	Election	13440	13468	most recent federal election
+T317	Country	33346	33369	Torres Strait Islanders
+T318	AdministrativeRegion	13879	13894	New South Wales
+T319	RugbyLeague	48489	48510	National Rugby League
+T326	Disease	40357	40369	hypertension
+T328	AdministrativeRegion	13958	13966	Victoria
+T336	Person	43984	43999	Joan Sutherland
+T337	Person	44960	44973	Geoffrey Rush
+T338	Legislature	11462	11486	House of Representatives
+T340	Artist	42463	42477	Brett Whiteley
+T341	Organisation	16015	16036	Pacific Islands Forum
+T342	Person	44975	44988	Nicole Kidman
+T344	MilitaryConflict	8860	8869	Gallipoli
+T345	Person	4488	4503	Willem Janszoon
+T346	Organisation	16516	16549	Asia-Pacific Economic Cooperation
+T347	PoliticalParty	12942	12964	Australian Labor Party
+T351	Organisation	15900	15910	ANZUS pact
+T353	MilitaryUnit	17705	17720	Australian Army
+T356	Country	329	339	East Timor
+T359	MilitaryConflict	8934	8955	Kokoda Track campaign
+T362	Language	34980	34986	Arabic
+T369	BodyOfWater	5366	5378	Port Jackson
+T371	Artist	41990	42005	Arthur Streeton
+T372	Language	35753	35759	Auslan
+T373	WorldHeritageSite	19446	19464	Great Barrier Reef
+T374	Continent	87	94	Oceania
+T375	Person	4838	4853	William Dampier
+T377	Country	7701	7715	British Empire
+T378	Sport	46791	46798	cricket
+T379	Olympics	47546	47550	1956
+T381	EthnicGroup	555	577	indigenous Australians
+T383	PoliticalParty	13058	13072	National Party
+T389	Sport	46840	46851	rugby union
+T391	Person	2797	2811	Samuel Purchas
+T395	AdministrativeRegion	13902	13912	Queensland
+T399	Language	34947	34955	Mandarin
+T401	Language	2273	2278	Latin
+T403	Place	21792	21797	Uluru
+T408	Award	43502	43527	Nobel Prize in Literature
+T413	MilitaryConflict	18436	18457	2003 invasion of Iraq
+T414	Island	5766	5783	Van Diemen's Land
+T417	AdministrativeRegion	13977	13994	Western Australia
+T419	MilitaryConflict	8665	8678	Western Front
+T420	EthnicGroup	31920	31926	German
+T422	Film	44677	44699	Picnic at Hanging Rock
+T423	OfficeHolder	13576	13587	Tony Abbott
+T426	Award	43563	43579	Man Booker Prize
+T434	GovernmentAgency	25324	25345	Bureau of Meteorology
+T435	Museum	42621	42650	National Gallery of Australia
+T442	AdministrativeRegion	13920	13935	South Australia
+T446	MilitaryUnit	17729	17755	Royal Australian Air Force
+T449	Newspaper	28399	28412	The Economist
+T451	Organisation	17529	17558	Center for Global Development
+T453	Organisation	1998	2001	G20
+T454	PrimeMinister	10322	10340	Whitlam Government
+T456	Artist	42336	42348	Sidney Nolan
+T457	Person	4989	4999	James Cook
+T458	EthnicGroup	31872	31877	Irish
+T459	Newspaper	45377	45391	The Australian
+T462	SportsLeague	47362	47378	Sydney to Hobart
+T463	AdministrativeRegion	48645	48653	Tasmania
+T465	Person	43086	43100	Banjo Paterson
+T467	Company	45812	45825	Fairfax Media
+T468	Film	44863	44868	Shine
+T469	OfficeHolder	29792	29809	Howard Government
+T471	Country	297	313	Papua New Guinea
+T475	Mammal	23561	23569	kangaroo
+T476	Language	35013	35018	Greek
+T477	Country	15417	15431	Norfolk Island
+T480	OfficeHolder	29685	29701	Hawke Government
+T486	Country	1982	1996	United Nations
+T488	Person	44943	44958	Judith Anderson
+T489	AdministrativeRegion	21535	21542	Pilbara

@@ -1,0 +1,2137 @@
+Abbey	false	-Comment: An abbey is a Catholic monastery or convent, under the authority of an Abbot or an Abbess, who serves as the spiritual father or mother of the community. -Label: abbey
+AbbeychurchBlessing	false	 -Label: abbey church blessing
+AbbeychurchBlessingCharge	false	 -Label: abbey church blessing charge
+AbleToGrind	false	 -Label: able to grind
+AbsoluteMagnitude	false	 -Label: absolute magnitude
+Abstensions	false	 -Label: Number of abstensions after the vote
+AcademicJournal	false	-Comment: An academic journal is a mostly peer-reviewed periodical in which scholarship relating to a particular academic discipline is published. Academic journals serve as forums for the introduction and presentation for scrutiny of new research, and the critique of existing research. Content typically takes the form of articles presenting original research, review articles, and book reviews. -Label: academic journal
+Acceleration	false	 -Label: acceleration (s)
+AcquirementDate	false	 -Label: date of acquirement
+ActiveYear	false	 -Label: active year
+ActiveYearsEndDateMgr	false	 -Label: active years end date manager
+ActiveYearsEndYearMgr	false	 -Label: active years end year manager
+ActiveYearsStartDateMgr	false	 -Label: active years start date manager
+ActiveYearsStartYearMgr	false	 -Label: active years start year manager
+Activity	false	 -Label: activity
+Actor	false	-Comment: An actor or actress is a person who acts in a dramatic production and who works in film, television, theatre, or radio in that capacity. -Label: actor
+Added	false	 -Label: added
+Address	false	 -Label: address
+AdministrativeRegion	false	-Comment: A PopulatedPlace under the jurisdiction of an administrative body. This body may administer either a whole region or one or more adjacent Settlements (town administration) -Label: administrative region
+AdultActor	false	-Comment: A pornographic actor or actress or a porn star is a person who performs sex acts in film, normally characterised as a pornographic film.. -Label: adult (pornographic) actor
+AfdbId	false	 -Label: afdb id
+Affair	false	 -Label: affair
+Affiliate	false	 -Label: affiliate
+Age	false	 -Label: age
+AgencyStationCode	false	-Comment: Agency station code (used on tickets/reservations, etc.). -Label: agency station code
+Agent	false	-Comment: Analogous to a foaf:Agent, an agent is an entity that acts. This is intended to be the super class of Person and Organisation. -Label: agent
+AgeRange	false	 -Label: age range
+Agglomeration	false	 -Label: agglomeration
+AgglomerationPopulationYear	false	 -Label: agglomerationPopulationYear
+Aircraft	false	 -Label: aircraft
+AircraftType	false	 -Label: aircraft type
+AirDate	false	 -Label: airdate
+Airline	false	 -Label: airline
+Airport	false	 -Label: airport
+AirportUsing	false	 -Label: Different usage of an airport
+Albedo	false	-Comment: reflection coefficient -Label: albedo
+Album	false	 -Label: album
+AlbumRuntime	false	 -Label: album duration (s)
+AlemmanicName	false	 -Label: city allemmanic name
+AlgerianName	false	 -Label: algerian name
+AlgerianSettlement	false	No description provided
+AlgerianSettlementName	false	 -Label: algerian settlement name
+AllcinemaId	false	 -Label: allcinema id
+Allegiance	false	-Comment: The country or other power the person served. Multiple countries may be indicated together with the corresponding dates. This field should not be used to indicate a particular service branch, which is better indicated by the branch field. -Label: allegiance
+AlpsSoiusaCode	false	-Comment: the Alps SOIUSA code corresponding to the mountain, according to the SOIUSA classification -Label: Alps SOIUSA code
+AlternativeTitle	false	-Comment: The alternative title attributed to a work -Label: alternative title
+Altitude	false	 -Label: altitude
+AmateurBoxer	false	 -Label: amateur boxer
+AmateurDefeat	false	 -Label: amateur defeat
+AmateurFight	false	 -Label: amateur fight
+AmateurKo	false	 -Label: amateur ko
+AmateurNoContest	false	 -Label: amateur no contest
+AmateurTie	false	 -Label: amateur tie
+AmateurTitle	false	 -Label: amateur title
+AmateurVictory	false	 -Label: amateur victory
+AmateurYear	false	 -Label: amateur year
+Ambassador	false	-Comment: An ambassador is the highest ranking diplomat that represents a nation and is usually accredited to a foreign sovereign or government, or to an international organization. -Label: ambassador
+AmericanFootballCoach	false	 -Label: american football coach
+AmericanFootballLeague	false	-Comment: A group of sports teams that compete against each other in american football. -Label: american football league
+AmericanFootballPlayer	false	 -Label: american football player
+AmericanFootballTeam	false	 -Label: american football team
+Amgid	false	 -Label: amgId
+Amphibian	false	 -Label: amphibian
+AmsterdamCode	false	 -Label: Amsterdam Code
+AmusementParkAttraction	false	 -Label: amusement park attraction
+AnalogChannel	false	 -Label: analog channel
+AnatomicalStructure	false	 -Label: anatomical structure
+Animal	false	 -Label: animal
+AnimangaCharacter	false	-Comment: Anime/Manga character -Label: animanga character
+Anime	false	-Comment: A style of animation originating in Japan -Label: anime
+Anniversary	false	 -Label: anniversary
+Annotation	false	 -Label: Annotation
+AnnualTemperature	false	 -Label: annual temperature (K)
+Apoapsis	false	 -Label: apoapsis (μ)
+ApparentMagnitude	false	 -Label: apparent magnitude
+AppearancesInLeague	false	 -Label: appearances in league
+AppearancesInNationalTeam	false	 -Label: appearances in national team
+ApproximateCalories	false	-Comment: Approximate calories per serving. -Label: approximate calories (J)
+Apskritis	false	 -Label: apskritis
+ArabicName	false	 -Label: arabic name
+Arachnid	false	 -Label: arachnid
+ArberishtName	false	 -Label: city arberisht name
+Archaea	false	 -Label: archaea
+Archeologist	false	 -Label: Archeologist
+Archipelago	false	 -Label: archipelago
+Architect	false	 -Label: architect
+ArchitecturalMovement	false	 -Label: architectural movement
+ArchitecturalStructure	false	-Comment: An architectural structure is a human-made, free-standing, immobile outdoor construction (http://en.wikipedia.org/wiki/Architectural_structure). -Label: architectural structure
+ArchitecturalStructure,_Monument	false	No description provided
+Archive	false	-Comment: Collection of documents pertaining to a person or organisation. -Label: Archive
+Area	false	 -Label: area
+AreaCode	false	-Comment: Area code for telephone numbers. -Label: area code
+AreaDate	false	 -Label: area date
+AreaLand	false	 -Label: area land (m2)
+AreaOfCatchment	false	 -Label: area of catchment (m2)
+AreaOfCatchmentQuote	false	 -Label: area of catchment quote
+AreaQuote	false	 -Label: area quote
+AreaRank	false	 -Label: area rank
+AreaRural	false	 -Label: area rural (m2)
+AreaTotal	false	 -Label: area total (m2)
+AreaTotalRanking	false	 -Label: total area ranking
+AreaUrban	false	 -Label: area urban (m2)
+AreaWater	false	 -Label: area water (m2)
+Arena	false	 -Label: arena
+ArgueDate	false	 -Label: argue date
+Aristocrat	false	 -Label: architect
+Arm	false	 -Label: arm
+Army	false	 -Label: army
+ArrestDate	false	 -Label: arrest date
+Artery	false	 -Label: artery
+ArtificialSatellite	false	-Comment: In the context of spaceflight, an artificial satellite is an artificial object which has been intentionally placed into orbit. -Label: ArtificialSatellite
+ArtificialSnowArea	false	 -Label: artificial snow area
+Artist	false	 -Label: artist
+ArtistDiscography	false	 -Label: artist discography
+ArtisticFunction	false	 -Label: artistic function
+Artwork	false	-Comment: A work of art, artwork, art piece, or art object is an aesthetic item or artistic creation. -Label: artwork
+AscentDate	false	 -Label: ascent date
+AsiaChampionship	false	 -Label: asia championship
+ASide	false	 -Label: a side
+Assets	false	-Comment: Assets and liabilities are part of a companis balance sheet. In financial accounting, assets are economic resources. Anything tangible or intangible that is capable of being owned or controlled to produce value and that is held to have positive economic value is considered an asset. -Label: assets ($)
+AssetUnderManagement	false	 -Label: asset under management ($)
+Asteroid	false	 -Label: asteroid
+Astronaut	false	 -Label: astronaut
+Athlete	false	 -Label: athlete
+Athlete,_CareerStation	false	No description provided
+Athletics	false	 -Label: athletics
+AthleticsPlayer	false	 -Label: athletics player
+Atoll	false	 -Label: atoll
+AtPage	false	-Comment: Page # where the referenced resource is to be found in the source document -Label: page number
+AtRowNumber	false	-Comment: Row # where the referenced resource is to be found in the source file -Label: row number
+AustralianFootballLeague	false	-Comment: A group of sports teams that compete against each other in australian football. -Label: australian football league
+AustralianFootballTeam	false	 -Label: australian football team
+AustralianRulesFootballPlayer	false	 -Label: Australian rules football player
+AustraliaOpenDouble	false	 -Label: australia open double
+AustraliaOpenMixed	false	 -Label: australia open mixed
+AustraliaOpenSingle	false	 -Label: australia open single
+AustrianAdministrativeRegion	false	No description provided
+AustrianSettlement	false	No description provided
+AuthorityMandate	false	 -Label: authority mandate
+AuthorityTitle	false	 -Label: authority title of a romanian settlement
+Automobile	false	 -Label: automobile
+AutomobileEngine	false	 -Label: automobile engine
+AutomobileModel	false	 -Label: automobile model
+AutoRacingLeague	false	-Comment: a group of sports teams or individual athletes that compete against each other in auto racing -Label: auto racing league
+AverageAnnualGeneration	false	 -Label: average annual gross power generation (J)
+AverageClassSize	false	 -Label: average class size
+AverageDepth	false	 -Label: average depth
+AverageDepthQuote	false	 -Label: average depth quote
+AvifaunaPopulation	false	 -Label: avifauna population
+Award	false	 -Label: award
+Backhand	false	 -Label: backhand
+BackScene	false	 -Label: back scene
+Bacteria	false	 -Label: bacteria
+BadGuy	false	 -Label: bad guy
+BadmintonPlayer	false	 -Label: badminton player
+Band	false	 -Label: band
+Barangays	false	 -Label: barangays
+Baronet	false	 -Label: baronet
+BarPassRate	false	 -Label: bar pass rate
+BaseballLeague	false	-Comment: a group of sports teams that compete against each other in Baseball. -Label: baseball league
+BaseballPlayer	false	 -Label: baseball player
+BaseballSeason	false	 -Label: baseball season
+BaseballTeam	false	 -Label: baseball team
+BasketballLeague	false	-Comment: a group of sports teams that compete against each other in Basketball -Label: basketball league
+BasketballPlayer	false	 -Label: basketball player
+BasketballTeam	false	 -Label: basketball team
+BattingSide	false	 -Label: batting side
+BattleHonours	false	 -Label: battle honours
+BeachVolleyballPlayer	false	 -Label: beach volleyball player
+BeatifiedDate	false	 -Label: beatified date
+BeautyQueen	false	-Comment: A beauty pageant titleholder -Label: beauty queen
+BedCount	false	 -Label: bed count
+Beer	false	 -Label: beer
+BelgiumPoliticalSeats	false	 -Label: belgium political seats
+BelgiumSettlement	false	No description provided
+Believers	false	 -Label: Believers
+BestFinish	false	 -Label: best ranking finish
+BestLap	false	 -Label: best lap
+BestRankDouble	false	 -Label: best rank double
+BestRankSingle	false	 -Label: best rank single
+BestWsopRank	false	 -Label: best wsop rank
+BestYearWsop	false	 -Label: best year wsop
+Beverage	false	-Comment: A drink, or beverage, is a liquid which is specifically prepared for human consumption. -Label: beverage
+BgafdId	false	 -Label: bgafd id
+BibsysId	false	-Comment: BIBSYS is a supplier of library and information systems for all Norwegian university Libraries, the National Library of Norway, college libraries, and a number of research libraries and institutions. -Label: BIBSYS Id
+BicycleInformation	false	-Comment: Information on station's bicycle facilities. -Label: bicycle information
+BigPoolRecord	false	 -Label: big pool record
+Bioavailability	false	-Comment: "The rate and extent to which the active ingredient or active moiety is absorbed from a drug product and becomes available at the site of action. For drug products that are not intended to be absorbed into the bloodstream, bioavailability may be assessed by measurements intended to reflect the rate and extent to which the active ingredient or active moiety becomes available at the site of action (21CFR320.1)." -Label: Bioavailability
+Bioclimate	false	 -Label: bioclimate
+BiologicalDatabase	false	 -Label: Biological database
+Biomolecule	false	-Comment: equivalent to http://ccdb.ucsd.edu/NIF/BIRNLex-OBO-UBO.owl#birnlex_22. -Label: Biomolecule
+Bird	false	 -Label: bird
+Birth	false	-Comment: someone's birth as a type of personal event -Label: birth
+BirthDate	false	 -Label: birth date
+BirthName	false	 -Label: birth name
+BirthYear	false	 -Label: birth year
+BlackLongDistancePisteNumber	false	 -Label: long distance piste number
+BlackSkiPisteNumber	false	 -Label: black ski piste number
+Blazon	false	 -Label: Blazon
+BlazonCaption	false	 -Label: Blazon caption
+Block	false	 -Label: block
+BloodGroup	false	 -Label: blood group
+BlueLongDistancePisteNumber	false	 -Label: blue long distance piste number
+BlueSkiPisteNumber	false	 -Label: blue ski piste number
+BnfId	false	-Comment: Authority data of people listed in the general catalogue of the National Library of France -Label: BNF Id
+BoardGame	false	-Comment: come from http://en.wikipedia.org/wiki/Category:Board_games -Label: board game
+Bodybuilder	false	 -Label: bodybuilder
+BodyOfWater	false	 -Label: body of water
+BoilingPoint	false	 -Label: boiling point (K)
+Bone	false	 -Label: bone
+Book	false	 -Label: book
+BowlingLeague	false	-Comment: a group of sports teams or players that compete against each other in Bowling -Label: bowling league
+BowlRecord	false	 -Label: bowl record
+Boxer	false	 -Label: boxer
+Boxing	false	 -Label: boxing
+BoxingCategory	false	 -Label: boxing category
+BoxingLeague	false	-Comment: A group of sports teams or fighters that compete against each other in Boxing -Label: boxing league
+BoxingStyle	false	 -Label: boxing style
+BpnId	false	-Comment: Dutch project with material for 40,000 digitized biographies, including former colonies of the Netherlands. -Label: BPN Id
+Brain	false	 -Label: brain
+BrainInfoNumber	false	 -Label: brain info number
+BrainInfoType	false	 -Label: brain info type
+Brewery	false	 -Label: brewery
+Bridge	false	 -Label: bridge
+BridgeCarries	false	-Comment: Type of vehicles the bridge carries. -Label: bridge carries
+BritishOpen	false	 -Label: britishOpen
+BritishRoyalty	false	 -Label: British royalty
+Broadcaster	false	 -Label: broadcaster
+BroadcastNetwork	false	 -Label: broadcast network
+BroadcastRepeater	false	 -Label: broadcast repeater
+BroadcastStationClass	false	 -Label: broadcast station class
+BroadcastTranslator	false	 -Label: broadcast translator
+BronzeMedalDouble	false	 -Label: bronze medal double
+BronzeMedalMixed	false	 -Label: bronze medal mixed
+BronzeMedalSingle	false	 -Label: bronze medal single
+BrownDwarf	false	 -Label: brown dwarf
+BSide	false	 -Label: b side
+BudgetYear	false	 -Label: budget year
+Building	false	-Comment: Building is defined as a Civil Engineering structure such as a house, worship center, factory etc. that has a foundation, wall, roof etc. that protect human being and their properties from direct harsh effect of weather like rain, wind, sun etc. (http://en.wikipedia.org/wiki/Building). -Label: building
+BuildingEndDate	false	 -Label: building end date
+BuildingEndYear	false	 -Label: building end year
+BuildingStartDate	false	 -Label: building start date
+BuildingStartYear	false	 -Label: building start year
+Bullfighter	false	 -Label: bullfighter
+BusCompany	false	 -Label: bus company
+BusinessPerson	false	 -Label: businessperson
+BustSize	false	 -Label: bust size (μ)
+CableCar	false	 -Label: cable car
+CalabrianName	false	 -Label: city calabrian name
+CallsignMeaning	false	-Comment: The out written call sign. -Label: call sign meaning
+Camera	false	 -Label: camera
+CampusSize	false	 -Label: campus size (m2)
+CampusType	false	 -Label: campus type
+CanadianFootballLeague	false	-Comment: A group of sports teams that compete against each other in canadian football league. -Label: canadian football league
+CanadianFootballPlayer	false	 -Label: canadian football player
+CanadianFootballTeam	false	 -Label: canadian football team
+Canal	false	-Comment: a man-made channel for water -Label: canal
+CanBaggageChecked	false	-Comment: Whether bags can be checked. -Label: can baggage checked
+CannonNumber	false	 -Label: cannon number
+Canoeist	false	 -Label: canoeist
+CanonizedDate	false	 -Label: canonized date
+Capacity	false	 -Label: capacity
+CapacityFactor	false	 -Label: capacity factor
+Capital	false	-Comment: A municipality enjoying primary status in a state, country, province, or other region as its seat of government. -Label: Capital
+CapitalCoordinates	false	 -Label: capital coordinates
+CapitalElevation	false	 -Label: capital elevation (μ)
+CapitalOfRegion	false	-Comment: seat of a first order administration division. -Label: Capital of region
+CaptureDate	false	 -Label: capture date
+Carcinogen	false	 -Label: carcinogen
+Cardinal	false	 -Label: cardinal
+CareerPoints	false	 -Label: career points
+CareerPrizeMoney	false	 -Label: career prize money ($)
+CareerStation	false	-Comment: this class marks a career step in the life of a person, e.g. a soccer player, holding information on the time span, matches and goals he or she achieved at a certain club -Label: career station
+CargoFuel	false	 -Label: cargo fuel (g)
+CargoGas	false	 -Label: cargo gas (g)
+CargoWater	false	 -Label: cargo water (g)
+CarNumber	false	 -Label: car number
+Cartoon	false	 -Label: cartoon
+Case	false	-Comment: A case is the total of work done to prepare for an administrative or business decision. As a rule, a case is reflected in a set of documents. -Label: case
+_case	false	 -Label: case
+CashPrice	false	 -Label: cash price
+Casino	false	-Comment: In modern English, a casino is a facility which houses and accommodates certain types of gambling activities. -Label: casino
+CasNumber	false	 -Label: CAS number
+Castle	false	-Comment: Castles often are, but need not be a military structure. They can serve for status, pleasure and hunt as well. -Label: castle
+Casualties	false	 -Label: casualties
+_catch	false	 -Label: catch
+CatholicPercentage	false	 -Label: catholic percentage
+Causalties	false	 -Label: causalties
+CauseOfDeath	false	 -Label: cause of death
+Cave	false	 -Label: cave
+CcaState	false	 -Label: cca state
+Ceeb	false	 -Label: ceeb
+Celebrity	false	 -Label: celebrity
+CelestialBody	false	 -Label: celestial body
+Cemetery	false	-Comment: An abbey is a Catholic monastery or convent, under the authority of an Abbot or an Abbess, who serves as the spiritual father or mother of the community. -Label: cemetery
+CensusYear	false	 -Label: census year
+Center	false	 -Label: norwegian center
+centimetre	false	No description provided
+CenturyBreaks	false	-Comment: number of breaks with 100 points and more -Label: century breaks
+Certification	false	 -Label: certification
+CertificationDate	false	 -Label: certification date
+ChairmanTitle	false	 -Label: chairman title
+Championships	false	 -Label: championships
+Chancellor	false	 -Label: chancellor
+ChaouiName	false	 -Label: chaoui name
+CharacterInPlay	false	-Comment: Name of a character in play. -Label: character in play
+ChartsPlacements	false	 -Label: Place in the Music Charts
+ChEBI	false	-Comment: A unique identifier for the drug in the Chemical Entities of Biological Interest (ChEBI) ontology -Label: ChEBI
+Cheese	false	-Comment: A milk product prepared for human consumption -Label: cheese
+Chef	false	-Comment: a person who cooks professionally for other people -Label: chef
+ChemicalCompound	false	 -Label: chemical compound
+ChemicalElement	false	 -Label: chemical element
+ChemicalSubstance	false	 -Label: chemical substance
+ChessPlayer	false	 -Label: chess player
+ChorusCharacterInPlay	false	-Comment: The name of the (Greek) chorus character in play. -Label: chorus character in play
+ChristeningDate	false	 -Label: date of christening
+ChristianBishop	false	 -Label: Christian Bishop
+ChristianDoctrine	false	 -Label: Christian Doctrine
+ChristianPatriarch	false	 -Label: Christian Patriarch
+Chromosome	false	 -Label: chromosome
+Church	false	-Comment: This is used for church buildings, not any other meaning of church. -Label: church
+Circle	false	 -Label: region
+CircuitLength	false	 -Label: circuit length (μ)
+CircuitName	false	 -Label: circuit name
+Circulation	false	 -Label: circulation
+Circumcised	false	 -Label: circumcised
+City	false	-Comment: a relatively large and permanent settlement, particularly a large urban settlement -Label: city
+CityDistrict	false	-Comment: District, borough, area or neighbourhood in a city or town -Label: city district
+CityLink	false	 -Label: city link
+CityRank	false	-Comment: Place of the building in the list of the highest buildings in the city -Label: city rank
+CitySince	false	 -Label: city since
+CityType	false	 -Label: city type
+#class	isNamedIndividual	Description
+Classes	false	 -Label: classes
+ClassicalMusicArtist	false	 -Label: classical music artist
+ClassicalMusicComposition	false	 -Label: classical music composition
+Classification	false	 -Label: classification
+Cleric	false	 -Label: cleric
+ClericalAdministrativeRegion	false	-Comment: An administrative body governing some territorial unity, in this case a clerical administrative body -Label: clerical administrative region
+ClericalOrder	false	 -Label: clerical order
+ClimbUpNumber	false	 -Label: clip up number
+Closed	false	 -Label: closed
+ClothingSize	false	 -Label: clothing size
+ClothSize	false	 -Label: cloth size
+ClubMoss	false	 -Label: club moss
+CmpEvaDuration	false	 -Label: CMP EVA duration (s)
+CmykCoordinateBlack	false	 -Label: black coordinate in the CMYK space
+CmykCoordinateCyanic	false	 -Label: cyanic coordinate in the CMYK space
+CmykCoordinateMagenta	false	 -Label: magenta coordinate in the CMYK space
+CmykCoordinateYellow	false	 -Label: yellow coordinate in the CMYK space
+Co2Emission	false	 -Label: CO2 emission (g/km)
+Coach	false	 -Label: coach
+CoachingRecord	false	 -Label: coaching record
+CoachSeason	false	 -Label: coach season
+Coalition	false	 -Label: coalition
+CoastLength	false	 -Label: length of a coast
+CoastLine	false	 -Label: coast line (μ)
+CodeBook	false	-Comment: code book or statute book referred to in this legal case -Label: code book
+CodeDistrict	false	 -Label: City district code
+CodeLandRegistry	false	-Comment: Land Registry code designating a parcel of land -Label: code land registry
+CodeMemorial	false	-Comment: Identifier for monuments of the Memorial type -Label: memorial ID number
+CodeMunicipalMonument	false	-Comment: Code assigned to (Dutch) monuments at the municipal level, deemed to be of local value -Label: monument code (municipal)
+Coden	false	-Comment: CODEN is a six character, alphanumeric bibliographic code, that provides concise, unique and unambiguous identification of the titles of serials and non-serial publications from all subject areas. -Label: CODEN
+CodeNationalMonument	false	-Comment: Code assigned to (Dutch) monuments at the national level, deemed to be of national value -Label: monument code (national)
+CodeProvincialMonument	false	-Comment: Code assigned to (Dutch) monuments at the provincial level, mostly for monuments in the countryside, or for waterworks -Label: monument code (provinciall)
+CodeSettlement	false	 -Label: settlement code
+CodeStockExchange	false	 -Label: code Stock Exchange
+Collection	false	 -Label: collection
+CollectionOfValuables	false	-Comment: Collection of valuables is a collection considered to be a work in itself) -Label: collection of valuables
+College	false	 -Label: college
+CollegeCoach	false	 -Label: college coach
+CollegeHof	false	 -Label: college hof
+ColonialName	false	 -Label: colonial name
+ColorChart	false	 -Label: colorChart
+Colour	false	-Comment: Color or colour is the visual perceptual property corresponding in humans to the categories called red, yellow, blue and others. Color derives from the spectrum of light (distribution of light energy versus wavelength) interacting in the eye with the spectral sensitivities of the light receptors. -Label: colour
+Combatant	false	 -Label: combatant
+Comedian	false	 -Label: comedian
+ComedyGroup	false	 -Label: Comedy Group
+Comic	false	 -Label: comic
+Comics	false	 -Label: comics
+ComicsCharacter	false	 -Label: comics character
+ComicsCreator	false	 -Label: comics creator
+ComicStrip	false	 -Label: comic strip
+Comitat	false	 -Label: comitat of a settlement
+Command	false	 -Label: command
+CommandModule	false	 -Label: command module
+Commissioner	false	 -Label: commissioner
+CommissionerDate	false	 -Label: commissioner date
+CommissioningDate	false	 -Label: commissioning date
+Community	false	 -Label: Community
+CommunityIsoCode	false	 -Label: iso code of a community
+Company	false	 -Label: company
+Competition	false	 -Label: competition
+CompletionDate	false	 -Label: completion date
+CompressionRatio	false	 -Label: compression ratio
+Congressman	false	 -Label: congressman
+Conifer	false	 -Label: conifer
+Consecration	false	 -Label: consecration
+ConservationStatus	false	 -Label: conservation status
+ConservationStatusSystem	false	 -Label: conservation status system
+Constellation	false	 -Label: constellation
+Contest	false	 -Label: contest
+Continent	false	 -Label: continent
+ContinentalTournamentBronze	false	 -Label: continental tournament bronze
+ContinentalTournamentGold	false	 -Label: continental tournament gold
+ContinentalTournamentSilver	false	 -Label: continental tournament silver
+ContinentRank	false	-Comment: Place of the building in the list of the highest buildings in the continent -Label: continent rank
+ContractAward	false	 -Label: contract award
+ControlledDesignationOfOriginWine	false	-Comment: A quality assurance label for wines -Label: Controlled designation of origin wine
+Convention	false	 -Label: convention
+ConvictionDate	false	 -Label: conviction date
+Coordinates	false	 -Label: geographic coordinates
+core#Concept	false	No description provided
+CornishName	false	 -Label: cornish name
+CoronationDate	false	 -Label: coronation date
+Cost	false	 -Label: cost ($)
+Council	false	 -Label: council of a liechtenstein settlement
+Country	false	 -Label: country
+CountryRank	false	-Comment: Place of the building in the list of the highest buildings in the country -Label: country rank
+CountrySeat	false	-Comment: A country seat is a rural patch of land owned by a land owner. -Label: country estate
+Course	false	 -Label: course (μ)
+Crater	false	 -Label: crater
+CreationChristianBishop	false	 -Label: creation christian bishop
+Credit	false	 -Label: credit
+Crews	false	 -Label: crews
+CrewSize	false	 -Label: crew size
+Cricketer	false	 -Label: cricketer
+CricketGround	false	 -Label: cricket ground
+CricketLeague	false	-Comment: a group of sports teams that compete against each other in Cricket -Label: cricket league
+CricketTeam	false	 -Label: cricket team
+Criminal	false	 -Label: criminal
+CrownDependency	false	 -Label: crown dependency
+Crustacean	false	 -Label: crustacean
+cubicCentimetre	false	No description provided
+cubicKilometre	false	No description provided
+cubicMetre	false	No description provided
+cubicMetrePerSecond	false	No description provided
+Cuisine	false	 -Label: cuisine
+CultivatedVariety	false	-Comment: A cultivar is a plant or grouping of plants selected for desirable characteristics that can be maintained by propagation. A plant whose origin or selection is primarily due to intentional human activity. -Label: cultivar (cultivated variety)
+Curler	false	 -Label: curler
+CurlingLeague	false	-Comment: a group of sports teams that compete against each other in Curling -Label: curling league
+Currency	false	 -Label: currency
+CurrencyCode	false	-Comment: ISO 4217 currency designators. -Label: currency code
+CurrentlyUsedFor	false	-Comment: Current use of the architectural structure, if it is currently being used as anything other than its original purpose. -Label: currently used for
+CurrentRank	false	 -Label: current rank
+CurrentRecord	false	 -Label: current record
+CurrentSeason	false	 -Label: current season
+Cycad	false	 -Label: cycad
+CyclingCompetition	false	 -Label: cycling competition
+CyclingLeague	false	-Comment: a group of sports teams that compete against each other in Cycling -Label: cycling league
+CyclingRace	false	 -Label: cycling race
+CyclingTeam	false	 -Label: cycling team
+Cyclist	false	 -Label: cyclist
+CylinderBore	false	 -Label: cylinder bore (μ)
+CylinderCount	false	 -Label: cylinder count
+CyrilliqueName	false	 -Label: cyrillique name
+d0.owl#CognitiveEntity	false	No description provided
+d0.owl#Location	false	No description provided
+Dam	false	-Comment: A dam is part of a landscape infrastructure, like waterworks (canals) or roads, much more than a building, though, of course, it has been built, too. -Label: dam
+Dancer	false	 -Label: dancer
+DanseCompetition	false	 -Label: danse competition
+DanseScore	false	 -Label: danse score
+DartsPlayer	false	 -Label: darts player
+Database	false	 -Label: Database
+DateAct	false	 -Label: date act
+DateAgreement	false	 -Label: date of an agreement
+DateClosed	false	 -Label: date closed
+DateCompleted	false	 -Label: date completed
+DateConstruction	false	 -Label: date construction
+DateExtended	false	 -Label: date extended
+DateLastUpdated	false	 -Label: Date Last Updated
+DateOfBurial	false	 -Label: date of burial
+DateUnveiled	false	-Comment: Designates the unveiling date -Label: date unveiled
+DateUse	false	 -Label: date use
+DavisCup	false	 -Label: davis cup
+day	false	No description provided
+DbnlCodeDutch	false	-Comment: identifier in Dutch digital library (dbnl) -Label: Digital Library code NL
+Dcc	false	-Comment: The Dewey Decimal Classification is a proprietary system of library classification developed by Melvil Dewey in 1876. -Label: Dewey Decimal Classification
+DeadInFightDate	false	 -Label: dead in fight date
+DeadInFightPlace	false	 -Label: dead in fight place
+Deanery	false	-Comment: The intermediate level of a clerical administrative body between parish and diocese -Label: deanery
+Death	false	-Comment: someone's death as a type of personal event -Label: death
+DeathAge	false	 -Label: death age
+DeathDate	false	 -Label: death date
+DeathYear	false	 -Label: death year
+Debut	false	 -Label: debut
+Dec	false	 -Label: dec
+Decay	false	 -Label: decay
+DecideDate	false	 -Label: decide date
+Declination	false	 -Label: declination
+DecommissioningDate	false	 -Label: decommissioning date
+Decoration	false	-Comment: An object, such as a medal or an order, that is awarded to honor the recipient ostentatiously. -Label: decoration
+Defeat	false	 -Label: defeat
+DefeatAsMgr	false	 -Label: defeat as manager
+Definition	false	 -Label: definition
+Deity	false	 -Label: deity
+Delegation	false	 -Label: delegation
+Deme	false	 -Label: deme
+Demographics	false	 -Label: demographics
+DemographicsAsOf	false	 -Label: demographics as of
+DemolitionDate	false	-Comment: The date the building was demolished. -Label: demolition date
+DemolitionYear	false	-Comment: The year the building was demolished. -Label: demolition year
+Department	false	 -Label: department
+DepartmentCode	false	 -Label: code of the department
+DepartmentPosition	false	 -Label: geolocDepartment
+Depth	false	 -Label: depth (μ)
+DepthQuote	false	 -Label: depth quote
+Deputy	false	 -Label: deputy
+DerivedWord	false	 -Label: derived word
+Desert	false	-Comment: A barren area of land where little precipitation occurs. -Label: Desert
+DetectionMethod	false	 -Label: Method of discovery
+Device	false	 -Label: device
+Different	false	 -Label: different
+DigitalCamera	false	 -Label: digital camera
+DigitalChannel	false	 -Label: digital channel
+DigitalSubChannel	false	 -Label: digital sub channel
+Diocese	false	-Comment: District or see under the supervision of a bishop. -Label: diocese
+Diocese,_Parish	false	No description provided
+Diploma	false	 -Label: diploma
+DisappearanceDate	false	 -Label: date disappearance of a populated place
+Disbanded	false	 -Label: disbanded
+Discharge	false	 -Label: discharge (m³/s)
+DischargeAverage	false	 -Label: discharge average (m³/s)
+Discontinued	false	 -Label: discontinued
+Discovered	false	 -Label: discovery date
+Discovery	false	 -Label: date when the island has been discovered
+Disease	false	 -Label: disease
+Diseasesdb	false	 -Label: DiseasesDB
+DisneyCharacter	false	 -Label: disney character
+Displacement	false	 -Label: displacement (μ³)
+DissolutionDate	false	 -Label: dissolution date
+DissolutionYear	false	 -Label: dissolution year
+Dissolved	false	 -Label: dissolved
+DistanceLaps	false	 -Label: distance laps
+DistanceToBelfast	false	 -Label: distance to Belfast (μ)
+DistanceToCapital	false	 -Label: distance to capital (μ)
+DistanceToCardiff	false	 -Label: distance to Cardiff (μ)
+DistanceToCharingCross	false	 -Label: distance to Charing Cross (μ)
+DistanceToDouglas	false	 -Label: distance to Douglas (μ)
+DistanceToDublin	false	 -Label: distance to Dublin (μ)
+DistanceToEdinburgh	false	 -Label: distance to Edinburgh (μ)
+DistanceToLondon	false	 -Label: distance to London (μ)
+DistanceTraveled	false	 -Label: distance traveled (μ)
+Dist_ly	false	 -Label: dist_ly
+Dist_pc	false	 -Label: dist_pc
+District	false	 -Label: district
+DistrictWaterBoard	false	-Comment: Conservancy, governmental agency dedicated to surface water management -Label: district water board
+Divorce	false	-Comment: two people's divorce as a type of personal event -Label: divorce
+DockedTime	false	 -Label: docked time (s)
+Document	false	-Comment: Any document -Label: document
+DocumentNumber	false	-Comment: Identification a document within a particular registry -Label: document number
+DocumentType	false	-Comment: type of document (official, informal etc.) -Label: Document Type
+Dog	false	 -Label: dog
+DorlandsPrefix	false	 -Label: Dorlands prefix
+DorlandsSuffix	false	 -Label: Dorlands suffix
+DraftLeague	false	 -Label: draft league
+DraftPick	false	 -Label: draft pick
+DraftPosition	false	 -Label: draft position
+DraftRound	false	 -Label: draft round
+Drama	false	 -Label: drama
+DressCode	false	-Comment: The recommended dress code for an establishment or event. -Label: dress code
+Drug	false	 -Label: drug
+DryCargo	false	 -Label: dry cargo (g)
+DUL.owl#BiologicalObject	false	No description provided
+DUL.owl#Collection	false	No description provided
+DUL.owl#Collective	false	No description provided
+DUL.owl#Concept	false	No description provided
+DUL.owl#Configuration	false	No description provided
+DUL.owl#Description	false	No description provided
+DUL.owl#DesignedArtifact	false	No description provided
+DUL.owl#Entity	false	No description provided
+DUL.owl#Event	false	No description provided
+DUL.owl#FunctionalSubstance	false	No description provided
+DUL.owl#InformationEntity	false	No description provided
+DUL.owl#InformationObject	false	No description provided
+DUL.owl#NaturalPerson	false	No description provided
+DUL.owl#Organism	false	No description provided
+DUL.owl#PhysicalBody	false	No description provided
+DUL.owl#PlanExecution	false	No description provided
+DUL.owl#Quality	false	No description provided
+DUL.owl#Role	false	No description provided
+DUL.owl#Situation	false	No description provided
+DUL.owl#SocialPerson	false	No description provided
+DUL.owl#SpaceRegion	false	No description provided
+DUL.owl#TimeInterval	false	No description provided
+DUL.owl#UnitOfMeasure	false	No description provided
+Duration	false	-Comment: The duration of the item (movie, audio recording, event, etc.) in ISO 8601 date format -Label: duration (s)
+DutchCOROPCode	false	 -Label: Dutch COROP code
+DutchMIPCode	false	-Comment: The Dutch MIP project was meant to take stock of all kinds of monuments -Label: monument code for the Monuments Inventory Project
+DutchName	false	 -Label: dutch name
+DutchRKDCode	false	 -Label: Dutch RKD code
+EcNumber	false	 -Label: EC number
+Economist	false	-Comment: An economist is a professional in the social science discipline of economics. -Label: economist
+EditorTitle	false	 -Label: editor title
+EducationalInstitution	false	 -Label: educational institution
+EffectiveRadiatedPower	false	 -Label: effectiveRadiatedPower (W)
+EgafdId	false	 -Label: egafd id
+Egyptologist	false	 -Label: egyptologist
+EkatteCode	false	-Comment: Indexing code used by the Bulgarian National Statistical Institute to identify populated places -Label: EKATTE code
+Election	false	 -Label: Election
+ElectionDate	false	 -Label: election date
+ElectionDateLeader	false	-Comment: The date that leader was elected. -Label: election date leader
+ElectionDiagram	false	 -Label: Election Diagram
+Elevation	false	-Comment: average elevation above the sea level -Label: elevation (μ)
+ElevationQuote	false	 -Label: elevation quote
+ElevatorCount	false	 -Label: elevator count
+Elo	false	 -Label: ELO rating
+EloRecord	false	 -Label: maximum ELO rating
+Emblem	false	 -Label: emblem
+Embryology	false	 -Label: embryology
+EmedicineSubject	false	 -Label: eMedicine subject
+EmedicineTopic	false	 -Label: eMedicine subject
+Employer	false	-Comment: a person, business, firm, etc, that employs workers. -Label: Employer
+EmployersCelebration	false	 -Label: employer's celebration
+EndangeredSince	false	 -Label: endangered since
+EndCareer	false	 -Label: end career
+EndDate	false	-Comment: The end date of the event. -Label: end date
+Endowment	false	 -Label: endowment ($)
+EndYearOfInsertion	false	 -Label: end year of insertion
+EndYearOfSales	false	 -Label: end year of sales
+engineConfiguration	false	No description provided
+Engineer	false	 -Label: engineer
+EnglishName	false	 -Label: English name
+Ensembl	false	 -Label: ensemble
+Entomologist	false	 -Label: entomologist
+Entrezgene	false	 -Label: EntrezGene
+Enzyme	false	 -Label: enzyme
+Episode	false	 -Label: episode
+EpisodeNumber	false	-Comment: The episode number of the TelevisionEpisode. -Label: episode number
+Epoch	false	-Comment: moment in time used as a referrence point for some time-vaying astronomical quantity -Label: epoch
+EptFinalTable	false	 -Label: ept final table
+EptItm	false	 -Label: ept itm
+EptTitle	false	 -Label: ept title
+Equity	false	 -Label: equity ($)
+Eruption	false	 -Label: eruption
+EruptionYear	false	 -Label: eruption date
+Escalafon	false	 -Label: escalafon
+EscapeVelocity	false	 -Label: escape velocity (kmh)
+EspnId	false	 -Label: ESPN id
+Established	false	 -Label: Established
+Establishment	false	 -Label: Establishment
+ETeatrId	false	 -Label: e-teatr.pl id
+EthnicGroup	false	 -Label: ethnic group
+Eukaryote	false	 -Label: eukaryote
+EurobabeIndexId	false	 -Label: eurobabe index id
+EuropeanChampionship	false	 -Label: european championship
+EuropeanUnionEntranceDate	false	 -Label: european union entrance date
+EurovisionSongContestEntry	false	 -Label: Eurovision song contest entry
+Event	false	 -Label: event
+EventDate	false	 -Label: event date
+Expedition	false	 -Label: expedition
+ExternalOrnament	false	 -Label: external ornament
+ExtinctionDate	false	 -Label: extinction date
+ExtinctionYear	false	 -Label: extinction year
+EyeColour	false	 -Label: eye colour
+Eyes	false	 -Label: eyes
+FaaLocationIdentifier	false	 -Label: FAA Location Identifier
+FacilityId	false	 -Label: facility id
+Factory	false	-Comment: A factory (previously manufactory) or manufacturing plant is an industrial site, usually consisting of buildings and machinery, or more commonly a complex having several buildings, where workers manufacture goods or operate machines processing one product into another. -Label: factory
+FacultySize	false	-Comment: number of faculty members -Label: faculty size
+Family	false	-Comment: A group of people related by common descent, a lineage. -Label: family
+Fansgroup	false	 -Label: fansgroup
+FareZone	false	-Comment: The fare zone in which station is located. -Label: fare zone
+Farmer	false	 -Label: farmer
+Fashion	false	-Comment: A type or code of dressing, according to the standards of the time or individual design. -Label: fashion
+FashionDesigner	false	 -Label: fashion designer
+FastestLap	false	 -Label: fastest lap
+Fate	false	 -Label: fate
+Fauna	false	 -Label: fauna
+Fc	false	 -Label: FC
+FcRuns	false	 -Label: FC runs
+FeastDay	false	 -Label: feast day
+Feat	false	 -Label: feat
+Feature	false	 -Label: feature
+FedCup	false	 -Label: fed cup
+Fees	false	 -Label: fees ($)
+Fencer	false	 -Label: fencer
+Fern	false	 -Label: fern
+Festival	false	No description provided
+Fibahof	false	 -Label: fibahof
+FictionalCharacter	false	 -Label: fictional character
+FieldHockeyLeague	false	-Comment: a group of sports teams that compete against each other in Field Hockey -Label: field hockey league
+Fight	false	 -Label: fight
+FigureSkater	false	 -Label: figure skater
+File	false	-Comment: A document with a filename -Label: file
+FileExtension	false	 -Label: The extension of this file
+Film	false	 -Label: movie
+FilmAudioType	false	-Comment: specifies the audio type of the film i.e. 'sound' or 'silent' -Label: film audio type
+FilmColourType	false	-Comment: specifies the colour type of the film i.e. 'colour' or 'b/w' -Label: film colour type
+FilmFestival	false	 -Label: film festival
+FilmNumber	false	 -Label: film number
+FilmPolskiId	false	 -Label: FilmPolski.pl id
+FilmRuntime	false	 -Label: film runtime (s)
+FinalFlight	false	-Comment: date of final flight -Label: final flight
+FinalLost	false	 -Label: final lost
+FinalLostDouble	false	 -Label: final lost double
+FinalLostSingle	false	 -Label: final lost single
+FinalLostTeam	false	 -Label: final lost team
+FinalPublicationDate	false	-Comment: Date of the final publication. -Label: final publication date
+FinalPublicationYear	false	-Comment: Year of the final publication. -Label: final publication year
+FinnishName	false	 -Label: finnish name
+FipsCode	false	 -Label: fips code
+FirstAirDate	false	-Comment: The date on which regular broadcasts began. -Label: first air date
+FirstAscent	false	 -Label: first ascent
+FirstAscentYear	false	 -Label: year of first ascent
+FirstBroadcast	false	 -Label: first broadcast
+FirstFlightEndDate	false	 -Label: first flight end date
+FirstFlightStartDate	false	 -Label: first flight start date
+FirstGame	false	 -Label: first game
+FirstLaunch	false	 -Label: first launch
+FirstLaunchDate	false	 -Label: first launch date
+FirstMention	false	 -Label: first mention
+FirstProMatch	false	 -Label: first pro match
+FirstPublicationDate	false	-Comment: Date of the first publication. -Label: first publication date
+FirstPublicationYear	false	-Comment: Year of the first publication. -Label: first publication year
+Fish	false	 -Label: fish
+Flag	false	 -Label: flag
+FlagCaption	false	 -Label: flag caption
+FlagSize	false	 -Label: flagSize
+FlashPoint	false	-Comment: lowest temperature at which a substance can vaporize and start burning -Label: flash point
+FloorArea	false	 -Label: floor area (m2)
+FloorCount	false	 -Label: floor count
+Flora	false	 -Label: flora
+FloweringPlant	false	 -Label: flowering plant
+FlyingHours	false	 -Label: flying hours (s)
+FoalDate	false	 -Label: foal date
+Food	false	-Comment: Food is any eatable or drinkable substance that is normally consumed by humans. -Label: Food
+Foot	false	 -Label: foot
+FootballLeagueSeason	false	 -Label: football league season
+FootballMatch	false	-Comment: a competition between two football teams -Label: football match
+FormationDate	false	 -Label: formation date
+FormationYear	false	 -Label: formation year
+FormerCallsign	false	 -Label: former call sign
+FormerChannel	false	 -Label: former channel
+FormerMunicipality	false	-Comment: A municipality that has ceased to exist, and most of the time got incorporated (wholesale or partly) into another municipality -Label: one-time municipality
+Formula	false	 -Label: formula
+FormulaOneRacer	false	 -Label: Formula One racer
+FormulaOneRacing	false	 -Label: formula one racing
+FormulaOneTeam	false	 -Label: formula 1 team
+Foundation	false	 -Label: foundation
+FoundationDate	false	 -Label: date foundation of a populated place
+Free	false	 -Label: free
+FreeDanseScore	false	 -Label: free danse score
+FreeFlightTime	false	 -Label: free flight time (s)
+FreeLabel	false	 -Label: freeLabel
+FreeProgCompetition	false	 -Label: free prog competition
+FreeProgScore	false	 -Label: free prog score
+FreeScoreCompetition	false	 -Label: free score competition
+FrenchName	false	 -Label: french name of a settlement
+FrequencyOfPublication	false	-Comment: The frequency of periodical publication (eg. Weekly, Bimonthly). -Label: frequency of publication
+FrequentlyUpdated	false	 -Label: frequently updated
+FrioulanName	false	 -Label: city frioulan name
+FrontierLength	false	 -Label: length of a frontier
+Frozen	false	 -Label: frozen
+FuelCapacity	false	 -Label: fuel capacity (μ³)
+FuelConsumption	false	 -Label: fuel consumption
+fuelType	false	No description provided
+FuelTypeName	false	 -Label: fuel type
+FullCompetition	false	 -Label: full competition
+FullScore	false	 -Label: full score
+FunctionEndDate	false	 -Label: function end date
+FunctionEndYear	false	 -Label: function end year
+FunctionStartDate	false	 -Label: function start date
+FunctionStartYear	false	 -Label: function start year
+Fungus	false	 -Label: fungus
+GaelicGamesPlayer	false	 -Label: Gaelic games player
+GaelicName	false	 -Label: gaelic name
+Gagaouze	false	 -Label: gagaouze
+Galaxy	false	 -Label: galaxy
+Game	false	-Comment: a structured activity, usually undertaken for enjoyment and sometimes used as an educational tool -Label: game
+Games	false	 -Label: games
+Garden	false	-Comment: A garden is a planned space, usually outdoors, set aside for the display, cultivation, and enjoyment of plants and other forms of nature. (http://en.wikipedia.org/wiki/Garden) -Label: garden
+Gate	false	-Comment: Gate is defined as a built structure marking the entrance to a building or an estate. -Label: gate
+GatedCommunity	false	 -Label: Gated community
+Gene	false	 -Label: gene
+GeneLocation	false	 -Label: GeneLocation
+GeneLocationEnd	false	-Comment: the end of the gene -Label: gene location end
+GeneLocationStart	false	-Comment: the start of the gene coordinates -Label: gene location start
+GenerationUnits	false	 -Label: generation units
+Genereviewsid	false	 -Label: GeneReviewsID
+Genereviewsname	false	 -Label: GeneReviewsName
+GenomeDB	false	-Comment: the edition of the database used (i.e. hg19) -Label: Genome DB
+Genre	false	 -Label: genre
+GeolocDual	false	 -Label: geolocdual
+GeologicalPeriod	false	 -Label: geological period
+GeologicPeriod	false	 -Label: geologic period
+GeopoliticalOrganisation	false	 -Label: geopolitical organisation
+GermanName	false	 -Label: city german name
+GermanSettlement	false	No description provided
+GiniCoefficient	false	-Comment: is a measure of the inequality of a distribution. It is commonly used as a measure of inequality of income or wealth. -Label: gini coefficient
+GiniCoefficientAsOf	false	 -Label: gini coefficient as of
+GiniCoefficientRanking	false	 -Label: gini coefficient ranking
+Ginkgo	false	 -Label: ginkgo
+GivenName	false	 -Label: given name
+Glacier	false	 -Label: glacier
+Globularswarm	false	 -Label: Globular Swarm
+Gnetophytes	false	 -Label: Gnetophytes
+GnisCode	false	 -Label: gnis code
+Gnl	false	 -Label: gnl
+GoalsInLeague	false	 -Label: goals in league
+GoalsInNationalTeam	false	 -Label: goals in national team
+GoldMedalDouble	false	 -Label: gold medal double
+GoldMedalMixed	false	 -Label: gold medal mixed
+GoldMedalSingle	false	 -Label: gold medal single
+GolfCourse	false	 -Label: golf course
+GolfLeague	false	-Comment: Golfplayer that compete against each other in Golf -Label: golf league
+GolfPlayer	false	 -Label: golf player
+GolfTournament	false	 -Label: golf tournament
+GovernmentAgency	false	-Comment: A government agency is a permanent or semi-permanent organization in the machinery of government that is responsible for the oversight and administration of specific functions, such as an intelligence agency. -Label: government agency
+GovernmentalAdministrativeRegion	false	-Comment: An administrative body governing some territorial unity, in this case a governmental administrative body -Label: governmental administrative region
+GovernmentElevation	false	 -Label: government elevation (μ)
+GovernmentType	false	-Comment: a form of government -Label: Government Type
+Governor	false	 -Label: governor
+Governorate	false	 -Label: governorate
+gramPerKilometre	false	No description provided
+GrandPrix	false	 -Label: Grand Prix
+Grape	false	 -Label: grape
+Grave	false	 -Label: grave
+GraveMonument	false	-Comment: A monument erected on a tomb, or a memorial stone. -Label: grave stone or grave monument
+GrayPage	false	-Comment: Refers to the famous 1918 edition of Gray's Anatomy. -Label: Gray page
+GraySubject	false	-Comment: Refers to the famous 1918 edition of Gray's Anatomy. -Label: Gray subject
+GreekName	false	 -Label: city greek name
+GreenAlga	false	 -Label: green alga
+GreenLongDistancePisteNumber	false	 -Label: green long distance piste number
+GreenSkiPisteNumber	false	 -Label: green ski piste number
+GridironFootballPlayer	false	 -Label: gridiron football player
+GridReference	false	 -Label: grid reference
+GrindingCapability	false	-Comment: grinding capability for Mills -Label: grinding capability
+Gross	false	 -Label: gross ($)
+GrossDomesticProduct	false	 -Label: gross domestic product
+GrossDomesticProductAsOf	false	 -Label: gross domestic product as of
+GrossDomesticProductPerCapita	false	 -Label: gross domestic product per capita
+GrossDomesticProductPerPeople	false	 -Label: gross domestic product per people
+GrossDomesticProductRank	false	 -Label: gross domestic product rank
+GroundsForLiquidation	false	 -Label: grounds for termination of activities
+Group	false	-Comment: An (informal) group of people. -Label: group
+GroupCommemorated	false	-Comment: Designates the category of people commemorated by a monument -Label: group commemorated
+Guitar	false	-Comment: Describes the guitar -Label: Guitar
+Guitarist	false	 -Label: guitarist
+Gun	false	 -Label: aircraft gun
+Gymnast	false	-Comment: A gymnast is one who performs gymnastics -Label: gymnast
+HairColour	false	 -Label: hair colour
+Hairs	false	 -Label: hairs
+HallOfFame	false	 -Label: hall of fame
+HandballLeague	false	-Comment: a group of sports teams that compete against each other in Handball -Label: handball league
+HandballPlayer	false	 -Label: handball player
+HandballTeam	false	 -Label: handball team
+Handisport	false	 -Label: handisport
+HeadLabel	false	 -Label: head label
+HeightAboveAverageTerrain	false	 -Label: height above average terrain (μ)
+HeightAgainst	false	 -Label: height against
+HeightAttack	false	 -Label: height attack
+Heisman	false	 -Label: heisman
+Hgncid	false	 -Label: HGNCid
+HighestBreak	false	 -Label: highest break
+HighestBuildingInYear	false	 -Label: highest building in year
+HighestPointIsland	false	 -Label: highest point of the island
+HighestRank	false	 -Label: highest rank
+HipSize	false	 -Label: hip size (μ)
+Historian	false	 -Label: historian
+HistoricalCountry	false	-Comment: A place which used to be a country. -Label: Historical country
+HistoricalDistrict	false	-Comment: a place which used to be a district. -Label: Historical district
+HistoricalMap	false	 -Label: historical map
+HistoricalName	false	 -Label: historical name
+HistoricalPeriod	false	-Comment: A historical Period should be linked to a Place by way of the property dct:spatial (already defined) -Label: historical period
+HistoricalProvince	false	-Comment: A place which used to be a province. -Label: Historical province
+HistoricalRegion	false	 -Label: historical region
+HistoricalSettlement	false	-Comment: A place which used to be a city or town or village. -Label: Historical settlement
+HistoricBuilding	false	 -Label: historic building
+HistoricPlace	false	 -Label: historic place
+HockeyTeam	false	 -Label: hockey team
+Hof	false	 -Label: hof
+Holiday	false	 -Label: holiday
+HollywoodCartoon	false	 -Label: hollywood cartoon
+Homage	false	 -Label: homage
+HopmanCup	false	 -Label: hopman cup
+HorseRace	false	 -Label: horse race
+HorseRider	false	 -Label: horse rider
+HorseRiding	false	 -Label: HorseRiding
+HorseTrainer	false	 -Label: horse trainer
+Hospital	false	 -Label: hospital
+Host	false	 -Label: host
+Hotel	false	 -Label: hotel
+HotSpring	false	 -Label: hot spring
+hour	false	No description provided
+HraState	false	 -Label: hra state
+HsvCoordinateHue	false	 -Label: hue coordinate in the HSV colour space
+HsvCoordinateSaturation	false	 -Label: saturation coordinate in the HSV colour space
+HsvCoordinateValue	false	 -Label: value coordinate in the HSV colour space
+HumanDevelopmentIndex	false	 -Label: human development index
+HumanDevelopmentIndexAsOf	false	 -Label: human development index as of
+HumanDevelopmentIndexRank	false	 -Label: human development index rank
+HumanGene	false	 -Label: HumanGene
+HumanGeneLocation	false	 -Label: HumanGeneLocation
+Humorist	false	 -Label: humorist
+HungarySettlement	false	No description provided
+IafdId	false	 -Label: iafd id
+IataAirlineCode	false	-Comment: IATA designation for airline companies -Label: IATA code
+IataLocationIdentifier	false	 -Label: IATA Location Identifier
+IbdbId	false	-Comment: The Internet Broadway Database ID (IBDB ID) from ibdb.com. -Label: IBDB ID
+IcaoAirlineCode	false	-Comment: ICAO designation for airline companies -Label: ICAO code
+IcaoLocationIdentifier	false	 -Label: ICAO Location Identifier
+Icd10	false	 -Label: ICD10
+Icd9	false	 -Label: ICD9
+Icdo	false	 -Label: ICDO
+IceHockeyLeague	false	-Comment: a group of sports teams that compete against each other in Ice Hockey. -Label: ice hockey league
+IceHockeyPlayer	false	 -Label: ice hockey player
+Id	false	 -Label: id
+IdentificationSymbol	false	 -Label: identification symbol
+Ideology	false	-Comment: for example: Progressivism_in_the_United_States, Classical_liberalism -Label: ideology
+IdNumber	false	 -Label: id number
+IihfHof	false	 -Label: lihf hof
+Illiteracy	false	 -Label: illiteracy
+Image	false	-Comment: A document that contains a visual image -Label: image
+Imdb	false	 -Label: Imdb
+ImdbId	false	 -Label: IMDB id
+ImpactFactor	false	-Comment: The impact factor, often abbreviated IF, is a measure reflecting the average number of citations to articles published in science and social science journals. -Label: impact factor
+ImpactFactorAsOf	false	-Comment: Census year of the imapct factor. -Label: impact factor as of
+ImposedDanseCompetition	false	 -Label: imposed danse competition
+ImposedDanseScore	false	 -Label: imposed danse score
+Inchi	false	 -Label: The IUPAC International Chemical Identifier
+Inclination	false	 -Label: inclination
+Income	false	 -Label: income
+IndividualisedPnd	false	-Comment: PND (Personennamendatei) data about a person. PND is published by the German National Library. For each person there is a record with her/his name, birth and occupation connected with a unique identifier, the PND number. -Label: individualised PND number
+InfantMortality	false	 -Label: infant mortality
+Information	false	 -Label: information
+InformationAppliance	false	-Comment: An information device such as PDAs or Video game consoles, etc. -Label: information appliance
+InformationName	false	 -Label: information name
+Infrastructure	false	 -Label: infrastructure
+inhabitantsPerSquareKilometre	false	No description provided
+InitiallyUsedFor	false	-Comment: Initial use of the architectural structure. -Label: initally used for
+InlineHockeyLeague	false	-Comment: group of sports teams that compete against each other in Inline Hockey. -Label: inline hockey league
+Inn	false	-Comment: International Nonproprietary Name given to a pharmaceutical substance -Label: INN
+Insect	false	 -Label: insect
+InseeCode	false	-Comment: numerical indexing code used by the French National Institute for Statistics and Economic Studies (INSEE) to identify various entities -Label: INSEE code
+InstalledCapacity	false	 -Label: installed capacity (W)
+Installment	false	 -Label: Installment
+Instrument	false	-Comment: Describes all musical instrument -Label: Instrument
+Instrumentalist	false	 -Label: instrumentalist
+Intercommunality	false	 -Label: Intercommunality
+Interest	false	 -Label: interest
+Internationally	false	 -Label: internationally
+InternationalPhonePrefix	false	 -Label: international phone prefix
+InternationalPhonePrefixLabel	false	 -Label: international phone prefix label
+Introduced	false	 -Label: introduced
+IntroductionDate	false	 -Label: introduction date
+IobdbId	false	-Comment: Lortel Archives Internet Off-Broadway database "show id" from lortel.org. -Label: IOBDB ID
+IrishName	false	 -Label: irish name
+Isbn	false	-Comment: The International Standard Book Number (ISBN) is a unique numeric commercial book identifier based upon the 9-digit Standard Book Numbering (SBN) code. -Label: ISBN
+IsCityState	false	 -Label: is a city state
+IsHandicappedAccessible	false	-Comment: True if the station is handicapped accessible. -Label: is handicapped accessible
+Isil	false	 -Label: International Standard Identifier for Libraries and Related Organizations (ISIL)
+Island	false	 -Label: island
+IsniId	false	-Comment: ISNI is a method for uniquely identifying the public identities of contributors to media content such as books, TV programmes, and newspaper articles. -Label: ISNI Id
+Iso31661Code	false	-Comment: defines codes for the names of countries, dependent territories, and special areas of geographical interest -Label: ISO 3166-1 code
+IsoCode	false	 -Label: iso code of a place
+IsPartOfRoute	false	-Comment: Name of another route from which the route is part of. Infobox property values are mostly given as plain text, therefore range is xsd:string. -Label: is part of route
+IsPeerReviewed	false	-Comment: In academia peer review is often used to determine an academic papers suitability for publication. -Label: is peer reviewed
+IssDockings	false	 -Label: iss dockings
+Issn	false	-Comment: International Standard Serial Number (ISSN) -Label: issn
+Ist	false	 -Label: ist
+Istat	false	 -Label: code istat
+ItalianName	false	 -Label: city italian name
+IthfDate	false	 -Label: ithf date
+IucnCategory	false	 -Label: iucn category
+IupacName	false	 -Label: IUPAC name
+Jockey	false	 -Label: jockey (horse racer)
+Journalist	false	 -Label: journalist
+Jstor	false	-Comment: JSTOR number (short for Journal Storage) is a United States-based online system number for archiving academic journals. -Label: JSTOR
+Judge	false	 -Label: judge
+JuniorYearsEndYear	false	 -Label: junior years end year
+JuniorYearsStartYear	false	 -Label: junior years start year
+Jutsu	false	 -Label: jutsu
+KabyleName	false	 -Label: kabyle name
+KanjiName	false	 -Label: kanji name
+kelvin	false	No description provided
+KhlDraft	false	 -Label: khl draft year
+KhlDraftYear	false	 -Label: khl draft year
+KilledBy	false	 -Label: killed by
+kilogram	false	No description provided
+kilogramPerCubicMetre	false	No description provided
+kilometre	false	No description provided
+kilometrePerHour	false	No description provided
+kilometrePerSecond	false	No description provided
+kilowatt	false	No description provided
+KindOfCoordinate	false	 -Label: kind of coordinate
+KindOfCriminal	false	 -Label: kind of criminal
+KindOfCriminalAction	false	 -Label: kind of criminal action
+KindOfRock	false	 -Label: kind of rock
+Ko	false	 -Label: ko
+LacrosseLeague	false	-Comment: a group of sports teams that compete against each other in Lacrosse. -Label: lacrosse league
+LacrossePlayer	false	 -Label: lacrosse player
+LadinName	false	 -Label: city ladin name
+LahHof	false	 -Label: lah hof
+Lake	false	 -Label: lake
+LandArea	false	 -Label: area of a land (m2)
+LandingDate	false	 -Label: landing date
+LandingSite	false	 -Label: landing site
+LandPercentage	false	 -Label: land percentage of a place
+LandRegistryCode	false	 -Label: land registry code
+Landskap	false	 -Label: norwegian landskap
+Landtag	false	 -Label: austrian land tag
+LandtagMandate	false	 -Label: austrian land tag mandate
+Language	false	 -Label: language
+LargestWin	false	 -Label: largest win
+LastAirDate	false	-Comment: The date on which the broadcaster made its last broadcast. -Label: last air date
+LastElectionDate	false	-Comment: The last election date for the house. -Label: last election date
+LastFlightEndDate	false	 -Label: last flight end date
+LastFlightStartDate	false	 -Label: last flight start date
+LastLaunch	false	 -Label: last launch
+LastLaunchDate	false	 -Label: last launch date
+LastPosition	false	 -Label: last position
+LastProMatch	false	 -Label: first pro match
+LastPublicationDate	false	-Comment: Date of the last publication. -Label: last publication date
+LastSeason	false	 -Label: last season
+Laterality	false	 -Label: laterality
+LatestPreviewDate	false	 -Label: latest preview date
+LatestPreviewVersion	false	 -Label: latest preview version
+LatestReleaseDate	false	 -Label: latest release date
+LatestReleaseVersion	false	 -Label: latest release version
+Launch	false	 -Label: launch
+LaunchDate	false	 -Label: launch date
+Launches	false	 -Label: launches
+LaunchPad	false	 -Label: launch pad
+LawCountry	false	 -Label: law country
+LawFirm	false	-Comment: A law firm is a business entity formed by one or more lawyers to engage in the practice of law. The primary service provided by a law firm is to advise clients (individuals or corporations) about their legal rights and responsibilities, and to represent their clients in civil or criminal cases, business transactions, and other matters in which legal advice and other assistance are sought. -Label: law firm
+Lawyer	false	-Comment: a person who is practicing law. -Label: Lawyer
+LayingDown	false	 -Label: laying down
+Lcc	false	-Comment: The Library of Congress Classification (LCC) is a system of library classification developed by the Library of Congress. -Label: LCC
+Lccn	false	-Comment: The Library of Congress Control Number or LCCN is a serially based system of numbering cataloging records in the Library of Congress in the United States. It has nothing to do with the contents of any book, and should not be confused with Library of Congress Classification. -Label: LCCN
+LccnId	false	-Comment: Library of Congress Control Number -Label: LCCN Id
+LchfDraft	false	 -Label: lchf draft year
+LchfDraftYear	false	 -Label: lchf draft year
+Leadership	false	 -Label: leadership
+LeaderTitle	false	 -Label: leader title
+LeadYear	false	 -Label: lead year
+LebanonSettlement	false	No description provided
+LegalArrondissement	false	 -Label: legal arrondissement
+LegalArticle	false	-Comment: article in code book or statute book referred to in this legal case -Label: legal article
+LegalCase	false	 -Label: Legal Case
+LegislativePeriodName	false	-Comment: The term of the on-going session (e.g.: "40th Canadian Parliament"). -Label: legislative period name
+Legislature	false	 -Label: legislature
+LengthQuote	false	 -Label: length quote
+LengthReference	false	 -Label: length reference
+LethalOnChickens	false	 -Label: lethal when given to chickens
+LethalOnMice	false	 -Label: lethal when given to mice
+LethalOnRabbits	false	 -Label: lethal when given to rabbits
+LethalOnRats	false	 -Label: lethal when given to rats
+Letter	false	-Comment: A letter from the alphabet. -Label: letter
+Library	false	 -Label: library
+LicenceLetter	false	 -Label: licence letter of a german settlement
+LicenceNumber	false	 -Label: licence number
+LicenceNumberLabel	false	 -Label: licence number label
+LiechtensteinSettlement	false	No description provided
+Lieutenancy	false	 -Label: lieutenancy
+Lieutenant	false	 -Label: lieutenant
+LifeCycleEvent	false	 -Label: life cycle event
+LifeExpectancy	false	 -Label: life expectancy
+Ligament	false	 -Label: ligament
+Lighthouse	false	 -Label: lighthouse
+LightNovel	false	-Comment: A style of Japanese novel -Label: light novel
+Limit	false	 -Label: limit
+LineLength	false	-Comment: Length of the line. Wikipedians usually do not differentiate between track length and line lenght. -Label: line length (μ)
+LineOfFashion	false	-Comment: A coherent type of clothing or dressing following a particular fashion -Label: line of fashion
+Linguist	false	 -Label: linguist
+LinkedSpace	false	 -Label: linked space
+List	false	-Comment: A general list of items. -Label: list
+Listen	false	 -Label: Listen
+litre	false	No description provided
+LittlePoolRecord	false	 -Label: little pool record
+LoadLimit	false	-Comment: Load limit of the bridge. -Label: load limit (g)
+Locality	false	 -Label: locality of a switzerland settlement
+Localization	false	 -Label: localization of the island
+LocalizationThumbnailCaption	false	 -Label: legend thumbnail localization
+LocalPhonePrefix	false	 -Label: local phone prefix
+LocationIdentifier	false	 -Label: Location Identifier
+Lock	false	 -Label: lock
+Locomotive	false	 -Label: locomotive
+LocusSupplementaryData	false	 -Label: locus supplementary data
+LongDistancePisteKilometre	false	 -Label: long distance piste kilometre (μ)
+LongDistancePisteNumber	false	 -Label: long distance piste number
+Longtype	false	-Comment: can be used to include more informations e.g. the name of the artist that a tribute album is in honor of -Label: longtype
+LowerAge	false	 -Label: lower age
+LowerEarthOrbitPayload	false	-Comment: Payload mass in a typical Low Earth orbit -Label: lower earth orbit payload (g)
+Lowest	false	 -Label: lowest
+LunarCrater	false	 -Label: lunar crater
+LunarEvaTime	false	 -Label: lunar EVA time (s)
+LunarLandingSite	false	 -Label: lunar landing site
+LunarModule	false	 -Label: lunar module
+LunarOrbitTime	false	 -Label: lunar orbit time (s)
+LunarSampleMass	false	 -Label: lunar sample mass (g)
+LunarSurfaceTime	false	 -Label: lunar surface time (s)
+LuxembourgishName	false	 -Label: city luxembourgish name
+Lymph	false	 -Label: lymph
+Magazine	false	-Comment: Magazines, periodicals, glossies or serials are publications, generally published on a regular schedule, containing a variety of articles. They are generally financed by advertising, by a purchase price, by pre-paid magazine subscriptions, or all three. -Label: magazine
+MaidenFlight	false	-Comment: date of maiden flight -Label: maiden flight
+MaidenVoyage	false	 -Label: maiden voyage
+MainBuilding	false	 -Label: main building
+MainIslands	false	 -Label: main islands
+Mainspan	false	 -Label: mainspan (μ)
+Mammal	false	 -Label: mammal
+ManagerTitle	false	 -Label: manager title
+ManagerYears	false	 -Label: manager years
+Manga	false	-Comment: Manga are comics created in Japan -Label: manga
+Manhua	false	-Comment: Comics originally produced in China -Label: manhua
+Manhwa	false	-Comment: Korean term for comics and print cartoons -Label: manhwa
+ManxName	false	 -Label: manx name
+MaoriName	false	 -Label: maori name
+MapCaption	false	 -Label: map caption
+MapDescription	false	 -Label: map description
+MarketCapitalisation	false	 -Label: market capitalisation ($)
+Marriage	false	-Comment: someone's marriage as a type of personal event -Label: marriage
+MartialArtist	false	 -Label: martial artist
+MatchPoint	false	 -Label: match point
+Material	false	 -Label: material
+MaxAbsoluteMagnitude	false	 -Label: maximum absolute magnitude
+MaxApparentMagnitude	false	 -Label: maximum apparent magnitude
+MaximumArea	false	 -Label: maximum area
+MaximumAreaQuote	false	 -Label: maximum area quote
+MaximumBoatBeam	false	 -Label: maximum boat beam (μ)
+MaximumBoatLength	false	 -Label: maximum boat length (μ)
+MaximumDepth	false	 -Label: maximum depth (μ)
+MaximumDepthQuote	false	 -Label: maximum depth quote
+MaximumElevation	false	-Comment: maximum elevation above the sea level -Label: maximum elevation (μ)
+MaximumInclination	false	 -Label: maximum inclination
+MaximumTemperature	false	 -Label: maximum temperature (K)
+Mayor	false	 -Label: mayor
+MayorArticle	false	 -Label: mayor article
+MayorFunction	false	 -Label: mayor function of a switzerland settlement
+MayorMandate	false	 -Label: mayorMandate
+MayorTitle	false	 -Label: mayor title of a hungarian settlement
+MbaId	false	-Comment: MusicBrainz is an open music encyclopedia that collects music metadata and makes it available to the public. -Label: MBA Id
+Meaning	false	 -Label: meaning
+MeanOfTransportation	false	 -Label: mean of transportation
+MeanRadius	false	 -Label: mean radius (μ)
+MeanTemperature	false	 -Label: mean temperature (K)
+Measurements	false	 -Label: measurements
+Media	false	 -Label: media
+Medician	false	 -Label: medician
+Medlineplus	false	 -Label: MedlinePlus
+Meeting	false	-Comment: A regular or irregular meeting of people as an event to keep record of -Label: meeting
+megabyte	false	No description provided
+Member	false	 -Label: member
+MemberOfParliament	false	 -Label: member of parliament
+Membership	false	 -Label: membership
+MembershipAsOf	false	 -Label: date membership established
+Memorial	false	-Comment: A monument erected to commemorate a person, an event and/or group. In the case of a person, this might be a grave or tomb. -Label: memorial
+MergerDate	false	 -Label: merger date
+MeshId	false	 -Label: MeSH ID
+MeshName	false	 -Label: MeSH name
+MeshNumber	false	 -Label: MeSH number
+MessierName	false	-Comment: Name for Messier objects -Label: Messier name
+metre	false	No description provided
+MetroStation	false	 -Label: subway station
+Mgiid	false	-Comment: Mouse Genomic Informatics ID -Label: mgiid
+MicroRegion	false	-Comment: A microregion is a - mainy statistical - region in Brazil, at an administrative level between a meso-region and a community -Label: micro-region
+MilitaryCommand	false	-Comment: For persons who are notable as commanding officers, the units they commanded. Dates should be given if multiple notable commands were held. -Label: military command
+MilitaryConflict	false	 -Label: military conflict
+MilitaryConflict,_AdministrativeRegion	false	No description provided
+MilitaryFunction	false	 -Label: military function
+MilitaryPerson	false	 -Label: military person
+MilitaryStructure	false	-Comment: A military structure such as a Castle, Fortress, Wall, etc. -Label: military structure
+MilitaryUnit	false	 -Label: military unit
+Mill	false	-Comment: a unit operation designed to break a solid material into smaller pieces -Label: Mill
+millimetre	false	No description provided
+MillsCodeBE	false	-Comment: mills code from the Belgian database on mills -Label: mill code BE
+MillsCodeDutch	false	 -Label: mill code NL
+MillsCodeNL	false	-Comment: mills code from the central Dutch database on mills -Label: mill code NL
+MillsCodeNLVerdwenen	false	 -Label: mill dissapeared code NL
+MillsCodeNLWindmotoren	false	 -Label: millsCodeNLWindmotoren
+MillSpan	false	 -Label: mill span (μ)
+Mineral	false	-Comment: A naturally occurring solid chemical substance. -Label: mineral
+MinimumArea	false	 -Label: minimum area
+MinimumAreaQuote	false	 -Label: minimum area quote
+MinimumElevation	false	-Comment: minimum elevation above the sea level -Label: minimum elevation (μ)
+MinimumInclination	false	 -Label: minimum inclination
+MinimumTemperature	false	 -Label: minimum temperature (K)
+minute	false	No description provided
+MirDockings	false	 -Label: mir dockings
+MissionDuration	false	 -Label: mission duration (s)
+Missions	false	 -Label: missions
+MixedMartialArtsEvent	false	 -Label: mixed martial arts event
+MixedMartialArtsLeague	false	-Comment: a group of sports teams that compete against each other in Mixed Martial Arts -Label: mixed martial arts league
+Model	false	 -Label: model
+ModelEndDate	false	 -Label: model end date
+ModelEndYear	false	 -Label: model end year
+ModelStartDate	false	 -Label: model start date
+ModelStartYear	false	 -Label: model start year
+MoldavianName	false	 -Label: moldavian name
+MolecularWeight	false	 -Label: molecular weight
+Mollusca	false	 -Label: mollusca
+Monarch	false	 -Label: monarch
+Monastery	false	-Comment: Monastery denotes the building, or complex of buildings, comprising the domestic quarters and workplace(s) of monastics, whether monks or nuns, and whether living in community or alone (hermits). The monastery generally includes a place reserved for prayer which may be a chapel, church or temple, and may also serve as an oratory. (http://en.wikipedia.org/wiki/Monastry). -Label: monastery
+Monastry	false	No description provided
+Monument	false	-Comment: A type of structure (a statue or an art object) created to commemorate a person or important event, not necessarily of a catastrophic nature. -Label: monument
+Mood	false	 -Label: mood
+Mosque	false	-Comment: A mosque, sometimes spelt mosk, is a place of worship for followers of Islam. -Label: mosk
+Moss	false	 -Label: moss
+MotocycleRacer	false	 -Label: motocycle racer
+Motorcycle	false	 -Label: motorcycle
+MotorcycleRacingLeague	false	-Comment: a group of sports teams or bikerider that compete against each other in Motorcycle Racing -Label: motorcycle racing league
+MotorcycleRider	false	 -Label: motorcycle rider
+MotorsportRacer	false	 -Label: motorsport racer
+MotorsportSeason	false	 -Label: motorsport season
+Mount	false	 -Label: mount
+Mountain	false	 -Label: mountain
+MountainPass	false	-Comment: a path that allows the crossing of a mountain chain. It is usually a saddle point in between two areas of higher elevation -Label: mountain pass
+MountainRange	false	-Comment: a chain of mountains bordered by highlands or separated from other mountains by passes or valleys. -Label: mountain range
+Mountain,Volcano	false	No description provided
+MouseGene	false	 -Label: MouseGene
+MouseGeneLocation	false	 -Label: MouseGeneLocation
+MovieDirector	false	-Comment: a person who oversees making of film. -Label: Movie director
+MovieGenre	false	 -Label: movie genre
+MovingImage	false	-Comment: A visual document that is intended to be animated; equivalent to http://purl.org/dc/dcmitype/MovingImage -Label: moving image
+MozabiteName	false	 -Label: mozabite name
+Mukhtar	false	 -Label: mukthar of a lebanon settlement
+MultiVolumePublication	false	 -Label: multi volume publication
+Municipality	false	-Comment: An administrative body governing a territorial unity on the lower level, administering one or a few more settlements -Label: municipality
+MunicipalityCode	false	 -Label: municipality code
+MunicipalityRenamedTo	false	 -Label: a municipality's new name
+MunicipalityType	false	 -Label: type of municipality
+Murderer	false	 -Label: murderer
+Muscle	false	 -Label: muscle
+Museum	false	 -Label: museum
+Musical	false	 -Label: musical
+MusicalArtist	false	 -Label: musical artist
+MusicalKey	false	 -Label: musical key
+MusicalWork	false	 -Label: musical work
+MusicComposer	false	-Comment: a person who creates music. -Label: music composer
+MusicDirector	false	-Comment: A person who is the director of an orchestra or concert band. -Label: music director
+MusicFestival	false	 -Label: music festival
+MusicFormat	false	-Comment: The format of the album: EP, Single etc. -Label: musicFormat
+MusicGenre	false	 -Label: music genre
+MusicGroup	false	No description provided
+MuteCharacterInPlay	false	-Comment: Name of a mute character in play. -Label: mute character in play
+Mvp	false	 -Label: mvp
+MythologicalFigure	false	 -Label: mythological figure
+Name	false	 -Label: name
+NameDay	false	 -Label: name day
+Names	false	 -Label: names
+NarutoCharacter	false	 -Label: naruto character
+NascarDriver	false	 -Label: nascar driver
+Nation	false	 -Label: nation
+NationalAnthem	false	-Comment: Patriotic musical composition which is the offcial national song. -Label: National anthem
+NationalArchivesIdentifier	false	-Comment: The National Archives Identifier (http://www.archives.gov/research/search/help/search-tips.html#descriptionid) -Label: has National Archives Identifier
+NationalChampionship	false	 -Label: national championship
+NationalCollegiateAthleticAssociationAthlete	false	 -Label: national collegiate athletic association athlete
+NationalFootballLeagueEvent	false	 -Label: national football league event
+NationalFootballLeagueSeason	false	 -Label: national football league season
+NationalRanking	false	 -Label: national ranking
+NationalSoccerClub	false	 -Label: national soccer club
+NationalTeamMatchPoint	false	 -Label: national team match point
+NationalTeamYear	false	 -Label: national team year
+NationalTopographicSystemMapNumber	false	 -Label: National Topographic System map number
+NationalTournamentBronze	false	 -Label: national tournament bronze
+NationalTournamentGold	false	 -Label: national tournament gold
+NationalTournamentSilver	false	 -Label: national tournament silver
+NationalYears	false	 -Label: national years
+NaturalBust	false	 -Label: has natural bust
+NaturalEvent	false	 -Label: natural event
+NaturalPlace	false	-Comment: The natural place encompasses all places occurring naturally in universe. -Label: natural place
+NaturalRegion	false	 -Label: natural region
+NcaaSeason	false	 -Label: ncaa season
+NCAATeamSeason	false	 -Label: national collegiate athletic association team season
+Ncbhof	false	 -Label: ncbhof
+NeighbourConstellations	false	 -Label: neighbour constellations
+Neighbourhood	false	 -Label: neighbourhood of a hungarian settlement
+NeighbourRegion	false	 -Label: neighbour region
+Nerve	false	 -Label: nerve
+NetballPlayer	false	 -Label: netball player
+NetIncome	false	 -Label: net income ($)
+Networth	false	 -Label: networth ($)
+Newspaper	false	-Comment: A newspaper is a regularly scheduled publication containing news of current events, informative articles, diverse features and advertising. It usually is printed on relatively inexpensive, low-grade paper such as newsprint. -Label: newspaper
+newtonMetre	false	No description provided
+NflCode	false	 -Label: nfl code
+NflSeason	false	 -Label: nfl season
+NgcName	false	-Comment: Name for NGC objects -Label: NGC name
+NlaId	false	-Comment: NLA Trove’s People and Organisation view allows the discovery of biographical and other contextual information about people and organisations. Search also available via VIAF. -Label: NLA Id
+NndbId	false	 -Label: NNDB id
+NobelPrize	false	 -Label: Nobel Prize
+Noble	false	 -Label: noble
+NobleFamily	false	-Comment: Family deemed to be of noble descent -Label: Noble family
+NoContest	false	 -Label: no contest
+NonProfessionalCareer	false	 -Label: non professional career
+Non-ProfitOrganisation	false	 -Label: non-profit organisation
+NorwaySettlement	false	No description provided
+NotableFeatures	false	 -Label: notable features
+Note	false	 -Label: note
+NoteOnPlaceOfBurial	false	 -Label: note on place of burial
+NoteOnRestingPlace	false	 -Label: note on resting place
+NoteworthyPartOfBuilding	false	-Comment: A smaller detail about a building with a particular interest -Label: Noteworthy part of a building (facade, chimney, etc.)
+NotifyDate	false	 -Label: notify date
+Novel	false	-Comment: A book of long narrative in literary prose -Label: novel
+NrhpReferenceNumber	false	 -Label: NRHP Reference Number
+NssdcId	false	 -Label: NSSDC ID
+NuclearPowerStation	false	 -Label: Nuclear Power plant
+NumberBuilt	false	 -Label: number built
+NumberOfAcademicStaff	false	 -Label: number of academic staff
+NumberOfAlbums	false	-Comment: the total number of albums released by the musical artist -Label: number of albums
+NumberOfArrondissement	false	 -Label: number of arrondissement
+NumberOfBombs	false	 -Label: number of bombs
+NumberOfBronzeMedalsWon	false	 -Label: number of bronze medals won
+NumberOfCanton	false	 -Label: number of canton
+NumberOfCantons	false	 -Label: Number Of Cantons
+NumberOfCapitalDeputies	false	 -Label: Number Of Capital Deputies
+NumberOfCity	false	 -Label: number of contries inside en continent
+NumberOfClubs	false	 -Label: number of clubs
+NumberOfCollectionItems	false	-Comment: Indication as to the size of the collection of this library -Label: number of items in collection
+NumberOfCompetitors	false	 -Label: number of competitors
+NumberOfCounties	false	 -Label: number of counties
+NumberOfCountries	false	 -Label: number of countries
+NumberOfCountry	false	 -Label: number of country
+NumberOfCrew	false	 -Label: number of crew
+NumberOfDependency	false	 -Label: number of dependency
+NumberOfDistrict	false	 -Label: number of district
+NumberOfDistricts	false	 -Label: number of districts
+NumberOfDoctoralStudents	false	 -Label: number of doctoral students
+NumberOfEmployees	false	 -Label: number of employees
+NumberOfEntrances	false	 -Label: number of entrances
+NumberOfEpisodes	false	 -Label: number of episodes
+NumberOfFederalDeputies	false	 -Label: Number Of Federal Deputies
+NumberOfFilms	false	 -Label: number of films
+NumberOfGoals	false	 -Label: number of goals scored
+NumberOfGoldMedalsWon	false	 -Label: number of gold medals won
+NumberOfGraduateStudents	false	 -Label: number of graduate students
+NumberOfGraves	false	 -Label: number of graves
+NumberOfHouses	false	-Comment: Count of the houses in the Protected Area -Label: number of houses present)
+NumberOfIntercommunality	false	 -Label: number of intercommunality
+NumberOfIsland	false	 -Label: number of islands
+NumberOfIslands	false	 -Label: number of islands
+NumberOfLanes	false	 -Label: number of lanes
+NumberOfLaps	false	 -Label: number of laps
+NumberOfLaunches	false	 -Label: number of launches
+NumberOfLawyers	false	-Comment: Number of lawyers or attorneys in the company. -Label: number of lawyers
+NumberOfLines	false	-Comment: Number of lines in the transit system. -Label: number of lines
+NumberOfLiveAlbums	false	-Comment: the number of live albums released by the musical artist -Label: number of live albums
+NumberOfLocations	false	 -Label: number of locations
+NumberOfMatches	false	 -Label: number of matches or caps
+NumberOfMembers	false	 -Label: number of members
+NumberOfMembersAsOf	false	 -Label: number of members as of
+NumberOfMinistries	false	 -Label: number of ministries
+NumberOfMunicipalities	false	 -Label: Number Of Municipalities
+NumberOfNeighbourhood	false	 -Label: number of neighbourhood
+NumberOfNewlyIntroducedSports	false	 -Label: number of newly introduced sports
+NumberOfOffices	false	-Comment: Number of the company's offices. -Label: number of offices
+NumberOfOfficials	false	 -Label: number of officials
+NumberOfOrbits	false	 -Label: number of orbits
+NumberOfPads	false	 -Label: number of pads
+NumberOfPages	false	-Comment: The books number of pages. -Label: number of pages
+NumberOfParkingSpaces	false	 -Label: number of parking spaces
+NumberOfParticipatingAthletes	false	 -Label: number of participating athletes
+NumberOfParticipatingFemaleAthletes	false	 -Label: number of participating female athletes
+NumberOfParticipatingMaleAthletes	false	 -Label: number of participating male athletes
+NumberOfParticipatingNations	false	 -Label: number of participating nations
+NumberOfPeopleAttending	false	 -Label: number of people attending
+NumberOfPeopleLicensed	false	-Comment: nombre de personnes ayant une license pour pratiquer cette activité -Label: number of licensed
+NumberOfPiersInWater	false	-Comment: Number of piers standing in a river or other water in normal conditions. -Label: number of piers in water
+NumberOfPlatformLevels	false	-Comment: Number of levels of platforms at the station. -Label: number of platform levels
+NumberOfPlayers	false	 -Label: number of players
+NumberOfPostgraduateStudents	false	 -Label: number of postgraduate students
+NumberOfProfessionals	false	-Comment: number of people who earns his living from a specified activity. -Label: number of professionals
+NumberOfReactors	false	 -Label: number of reactors
+NumberOfRestaurants	false	 -Label: number of restaurants
+NumberOfRockets	false	 -Label: number of rockets
+NumberOfRooms	false	 -Label: number of rooms
+NumberOfRun	false	 -Label: number of run
+NumberOfSeasons	false	 -Label: number of seasons
+NumberOfSeats	false	 -Label: number of seats
+NumberOfSeatsInParliament	false	-Comment: number of seats in House of Commons-like parliaments -Label: number of seats in parliament
+NumberOfSettlement	false	 -Label: number of settlement
+NumberOfSilverMedalsWon	false	 -Label: number of silver medals won
+NumberOfSpans	false	-Comment: Number of spans or arches. -Label: number of spans
+NumberOfSpeakers	false	 -Label: number of speakers
+NumberOfStaff	false	 -Label: number of staff
+NumberOfStars	false	 -Label: number of stars
+NumberOfStateDeputies	false	 -Label: Number Of State Deputies
+NumberOfStations	false	-Comment: Number of stations or stops. -Label: number of stations
+NumberOfStudents	false	 -Label: number of students
+NumberOfStudioAlbums	false	-Comment: the number of studio albums released by the musical artist -Label: number of studio albums
+NumberOfSuites	false	 -Label: number of suites
+NumberOfTeams	false	 -Label: number of teams
+NumberOfTerritories	false	 -Label: number of territories
+NumberOfTracks	false	-Comment: Number of tracks of a railway or railway station. -Label: number of tracks
+NumberOfTurns	false	 -Label: number of turns
+NumberOfUndergraduateStudents	false	 -Label: number of undergraduate students
+NumberOfVehicles	false	-Comment: Number of vehicles used in the transit system. -Label: number of vehicles
+NumberOfVillages	false	 -Label: number of villages
+NumberOfVineyards	false	 -Label: number of vineyards
+NumberOfVisitorsAsOf	false	-Comment: The year in which number of visitors occurred. -Label: number of visitors as of
+NumberOfVolumes	false	 -Label: number of volumes
+NumberOfVolunteers	false	 -Label: number of volunteers
+NumberOfWineries	false	 -Label: number of wineries
+NutsCode	false	-Comment: Nomenclature of Territorial Units for Statistics (NUTS) is a geocode  standard for referencing the subdivisions of countries  for statistical purposes. The standard is developed and regulated by the European Union, and thus only covers the member states of the EU in detail. -Label: NUTS code
+Observatory	false	 -Label: observatory
+OccitanName	false	 -Label: city occitan name
+Ocean	false	-Comment: A body of saline water that composes much of a planet's hydrosphere. -Label: Ocean
+Oclc	false	-Comment: Online Computer Library Center number -Label: OCLC
+OfferedClasses	false	 -Label: offered classes
+OfficeHolder	false	 -Label: office holder
+OfficialName	false	 -Label: official name
+OfficialSchoolColour	false	-Comment: The official colour of the EducationalInstitution represented by the colour name (e.g.: red or green). -Label: official school colour
+OfsCode	false	 -Label: ofs code of a settlement
+OkatoCode	false	 -Label: okato code
+Oldcode	false	 -Label: oldcode
+OldName	false	 -Label: old name
+OldTerritory	false	 -Label: old territory
+OlympicEvent	false	 -Label: olympic event
+OlympicGamesBronze	false	 -Label: olympic games bronze
+OlympicGamesGold	false	 -Label: olympic games gold
+OlympicGamesSilver	false	 -Label: olympic games silver
+OlympicGamesWins	false	 -Label: olympic games wins
+OlympicResult	false	 -Label: olympic result
+Olympics	false	 -Label: olympics
+Omim	false	 -Label: OMIM id
+OnChromosome	false	-Comment: the number corresponding to the chromosome on which the gene is located -Label: on chromosome
+Ons	false	 -Label: ons
+OpenAccessContent	false	-Comment: Availability of open access content. -Label: open access content
+OpeningDate	false	 -Label: opening date
+OpeningYear	false	 -Label: opening year
+openswarm	false	No description provided
+Opera	false	 -Label: opera
+OperatingIncome	false	 -Label: operating income ($)
+OrbitalEccentricity	false	 -Label: orbital eccentricity
+OrbitalFlights	false	 -Label: orbital flights
+OrbitalInclination	false	 -Label: orbital inclination
+OrbitalPeriod	false	 -Label: orbital period (s)
+OrcidId	false	-Comment: Authority data on researchers, academics, etc. The ID range has been defined as a subset of the forthcoming ISNI range. -Label: ORCID Id
+OrderDate	false	 -Label: order date
+Ordination	false	 -Label: Ordination
+Organ	false	-Comment: All types and sizes of organs -Label: Organ
+Organisation	false	 -Label: organisation
+OrganisationMember	false	-Comment: A member of an organisation. -Label: Organisation member
+Organisation,_Parish	false	No description provided
+Organization	false	No description provided
+Orientation	false	 -Label: orientation
+OriginalDanseCompetition	false	 -Label: original danse competititon
+OriginalDanseScore	false	 -Label: original danse score
+OriginallyUsedFor	false	-Comment: Original use of the architectural structure, if it is currently being used as anything other than its original purpose. -Label: originally used for
+OriginalMaximumBoatBeam	false	 -Label: original maximum boat beam (μ)
+OriginalMaximumBoatLength	false	 -Label: original maximum boat length (μ)
+OriginalTitle	false	-Comment: The original title of the work, most of the time in the original language as well -Label: original title
+Other	false	 -Label: other
+OtherActivity	false	 -Label: other activity
+OtherChannel	false	 -Label: other channel
+OtherInformation	false	 -Label: other information of a settlement
+OtherLanguage	false	 -Label: other language of a settlement
+OtherName	false	 -Label: other name
+OtherServingLines	false	-Comment: Connecting services that serve the station such as bus, etc. -Label: other serving lines
+OtherWins	false	 -Label: other wins
+Output	false	 -Label: output
+Outskirts	false	 -Label: outskirts
+OverallRecord	false	 -Label: overall record
+OverseasDepartment	false	 -Label: overseas department
+Oversight	false	 -Label: oversight
+owl#Thing	false	No description provided
+PaintballLeague	false	-Comment: a group of sports teams that compete against each other in Paintball -Label: paintball league
+Painter	false	 -Label: painter
+Painting	false	-Comment: Describes a painting to assign picture entries in wikipedia to artists. -Label: Painting
+Parish	false	-Comment: The smallest unit of a clerical administrative body -Label: parish
+Parish,_Deanery	false	No description provided
+Park	false	-Comment: A park is an area of open space provided for recreational use. http://en.wikipedia.org/wiki/Park -Label: park
+ParkingInformation	false	-Comment: Information on station's parking facilities. -Label: parking information
+Parliament	false	 -Label: parliament
+ParliamentaryGroup	false	 -Label: parliamentary group
+ParliamentType	false	 -Label: parliament type
+Participant	false	 -Label: participant
+ParticularSign	false	 -Label: particular sign
+PassengersPerDay	false	-Comment: Number of passengers per day. -Label: passengers per day
+PassengersPerYear	false	-Comment: Number of passengers per year. -Label: passengers per year
+PassengersUsedSystem	false	-Comment: System the passengers are using (from which the passenger statistics are). -Label: passengers used system
+Pdb	false	 -Label: PDB
+PenaltiesTeamA	false	 -Label: Penalties Team A
+PenaltiesTeamB	false	 -Label: Penalties Team B
+PenaltyScore	false	 -Label: penalty score
+PenaltyShootOut	false	 -Label: penalty shoot-out
+PenisLength	false	 -Label: penis length
+PeopleName	false	 -Label: peopleName
+PerCapitaIncome	false	 -Label: per capita income ($)
+PerCapitaIncomeAsOf	false	 -Label: per capita income as of
+PerCapitaIncomeRank	false	 -Label: per capital income rank
+PercentageAlcohol	false	-Comment: percentage of alcohol present in a beverage -Label: percentage of alcohol
+PercentageFat	false	-Comment: how much fat (in relative terms) does this unity of food contain -Label: percentage of fat
+Periapsis	false	 -Label: periapsis (μ)
+PeriodicalLiterature	false	-Comment: Periodical literature (also called a periodical publication or simply a periodical) is a published work that appears in a new edition on a regular schedule. The most familiar examples are the newspaper, often published daily, or weekly; or the magazine, typically published weekly, monthly or as a quarterly. Other examples would be a newsletter, a literary journal or learned journal, or a yearbook. -Label: periodical literature
+PeriodOfArtisticStyle	false	 -Label: period of artistic style
+Person	false	 -Label: person
+PersonalEvent	false	-Comment: an event that occurs in someone's personal life -Label: personal event
+PersonFunction	false	 -Label: person function
+PersonName	false	 -Label: personName
+Person,_PersonalEvent	false	No description provided
+Philosopher	false	 -Label: philosopher
+PhonePrefix	false	 -Label: phone prefix
+PhonePrefixLabel	false	 -Label: phone prefix label of a settlement
+PhonePrefixName	false	 -Label: phone prefix name
+Photographer	false	 -Label: photographer
+Piercing	false	 -Label: piercing
+PisciculturalPopulation	false	 -Label: piscicultural population
+PistonStroke	false	 -Label: piston stroke (μ)
+Place	false	-Comment: Immobile things or locations. -Label: place
+Planet	false	 -Label: planet
+Plant	false	 -Label: plant
+Play	false	-Comment: A play is a form of literature written by a playwright, usually consisting of scripted dialogue between characters, intended for theatrical performance rather than just reading. -Label: play
+PlayboyPlaymate	false	 -Label: Playboy Playmate
+PlayerStatus	false	 -Label: player status
+Plays	false	 -Label: plays
+PlayWright	false	-Comment: A person who writes dramatic literature or drama. -Label: Playwright
+Pluviometry	false	 -Label: pluviometry
+Podium	false	 -Label: podium
+Podiums	false	 -Label: podiums
+Poem	false	 -Label: poem
+Poet	false	 -Label: poet
+PokerPlayer	false	 -Label: poker player
+PolePosition	false	 -Label: pole position
+Poles	false	 -Label: poles
+PoliceName	false	 -Label: police name
+PolishKing	false	 -Label: king of Poland
+PoliticalFunction	false	 -Label: political function
+PoliticalParty	false	-Comment: for example: Democratic_Party_(United_States) -Label: political party
+PoliticalSeats	false	 -Label: political seats
+Politician	false	 -Label: politician
+PoliticianSpouse	false	 -Label: politician spouse
+PoloLeague	false	-Comment: A group of sports teams that compete against each other in Polo. -Label: polo league
+Polyhedron	false	 -Label: Polyhedron
+Pope	false	 -Label: pope
+PopularVote	false	 -Label: Number of votes given to candidate
+PopulatedPlace	false	 -Label: populated place
+Population	false	 -Label: population
+PopulationAsOf	false	 -Label: population as of
+PopulationDate	false	 -Label: population date
+PopulationDensity	false	 -Label: population density (/sqkm)
+PopulationMetro	false	 -Label: population metro
+PopulationMetroDensity	false	 -Label: population metro density (/sqkm)
+PopulationPctChildren	false	 -Label: population percentage under 12 years
+PopulationPctMen	false	 -Label: population percentage male
+PopulationPctWomen	false	 -Label: population percentage female
+PopulationQuote	false	 -Label: population quote
+PopulationRural	false	 -Label: population rural
+PopulationRuralDensity	false	 -Label: population density rural (/sqkm)
+PopulationTotalRanking	false	 -Label: total population ranking
+PopulationUrban	false	 -Label: population urban
+PopulationUrbanDensity	false	 -Label: population urban density (/sqkm)
+PopulationYear	false	 -Label: population year
+Port	false	-Comment: a location on a coast or shore containing one or more harbors where ships can dock and transfer people or cargo to or from land. -Label: Port
+Port1DockedTime	false	 -Label: port1 docked time (s)
+Port1DockingDate	false	 -Label: port1 docking date
+Port1UndockingDate	false	 -Label: port1 undocking date
+Port2DockedTime	false	 -Label: port2 docked time (s)
+Port2DockingDate	false	 -Label: port2 docking date
+Port2UndockingDate	false	 -Label: port2 undocking date
+PostalCode	false	-Comment: A postal code (known in various countries as a post code, postcode, or ZIP code) is a series of letters and/or digits appended to a postal address for the purpose of sorting mail. -Label: postal code
+Power	false	 -Label: power
+PowerOutput	false	 -Label: power output (W)
+PowerStation	false	 -Label: power station
+PrefectMandate	false	 -Label: mandate of a prefect of a romanian settlement
+Prefecture	false	 -Label: prefecture
+PrehistoricalPeriod	false	 -Label: prehistorical period
+PremiereDate	false	-Comment: Date the play was first performed. -Label: premiere date
+PremiereYear	false	-Comment: Year the play was first performed. -Label: premiere year
+Presenter	false	-Comment: TV or radio show presenter -Label: presenter
+PresentName	false	 -Label: a municipality's present name
+President	false	 -Label: president
+PresidentGeneralCouncilMandate	false	 -Label: mandate of the president of the general council
+PresidentRegionalCouncilMandate	false	 -Label: mandate of the president council of the regional council
+PreviousName	false	 -Label: previous name
+PreviousPopulationTotal	false	 -Label: previous population total
+PriceMoney	false	 -Label: price money ($)
+Priest	false	 -Label: priest
+Primate	false	 -Label: Primite
+PrimeMinister	false	 -Label: prime minister
+Prison	false	 -Label: prison
+ProbowlPick	false	 -Label: pro bowl pick
+Procedure	false	-Comment: The name designating a formal collection of steps to be taken to complete the case -Label: procedure
+Producer	false	-Comment: a person who manages movies or music recordings. -Label: Producer
+Product	false	No description provided
+Production	false	 -Label: production
+ProductionYears	false	 -Label: production years
+Profession	false	 -Label: profession
+Professor	false	 -Label: professor
+ProgramCost	false	 -Label: program cost ($)
+ProgrammingLanguage	false	 -Label: programming language
+Project	false	-Comment: A project is a temporary endeavor undertaken to achieve defined objectives. -Label: project
+ProjectBudgetFunding	false	-Comment: The part of the project budget that is funded by the Organistaions given in the "FundedBy" property. -Label: project budget funding ($)
+ProjectBudgetTotal	false	-Comment: The total budget of the research project. -Label: project budget total ($)
+ProjectEndDate	false	-Comment: The end date of the project. -Label: project end date
+ProjectKeyword	false	-Comment: A key word of the project. -Label: project keyword
+ProjectObjective	false	-Comment: A defined objective of the project. -Label: project objective
+ProjectReferenceID	false	-Comment: The reference identification of the project. -Label: project reference ID
+ProjectStartDate	false	-Comment: The start date of the project. -Label: project start date
+ProjectType	false	-Comment: The type of the research project. Mostly used for the funding schemes of the European Union, for instance: Specific Targeted Research Projects (STREP), Network of Excellence (NoE) or Integrated Project. -Label: project type
+ProPeriod	false	 -Label: pro period
+ProSince	false	 -Label: pro since
+ProtectedArea	false	-Comment: This class should be used for protected nature. For enclosed neighbourhoods there is now class GatedCommunity -Label: protected area
+ProtectionStatus	false	-Comment: The sort of status that is granted to a protected Building or Monument. This is not about being protected or not, this is about the nature of the protection regime. E.g., in the Netherlands the protection status 'rijksmonument' points to more elaborate protection than other statuses. -Label: monument protection status
+Protein	false	 -Label: protein
+ProtestantPercentage	false	 -Label: protestant percentage
+ProtohistoricalPeriod	false	 -Label: protohistorical period
+ProvCode	false	 -Label: prove code
+Province	false	-Comment: An administrative body governing a territorial unity on the intermediate level, between local and national level -Label: province
+ProvinceIsoCode	false	 -Label: iso code of a province
+ProYear	false	 -Label: pro year
+Pseudonym	false	 -Label: pseudonym
+Psychologist	false	 -Label: psychologist
+Publication	false	 -Label: publication
+PublicService	false	 -Label: public service
+PublicServiceInput	false	 -Label: public service input
+PublicServiceOutput	false	 -Label: public service output
+PublicTransitSystem	false	 -Label: public transit system
+Publisher	false	-Comment: Publishing company -Label: publisher
+PurcingPowerParity	false	 -Label: purchasing power parity
+PurcingPowerParityRank	false	 -Label: purchasing power parity rank
+PurcingPowerParityYear	false	 -Label: purchasing power parity year
+Pyramid	false	-Comment: a structure whose shape is roughly that of a pyramid in the geometric sense. -Label: Pyramid
+QatarClassic	false	 -Label: qatar classic
+QuebecerTitle	false	 -Label: quebecer title
+Quote	false	 -Label: quote
+Ra	false	 -Label: ra
+Race	false	 -Label: race
+Racecourse	false	-Comment: A racecourse is an alternate term for a horse racing track, found in countries such as the United Kingdom, Australia, Hong Kong, and the United Arab Emirates. -Label: racecourse
+RaceHorse	false	 -Label: race horse
+RaceLength	false	 -Label: race length (μ)
+Races	false	 -Label: races
+RaceTrack	false	 -Label: race track
+RaceWins	false	 -Label: race wins
+RacingDriver	false	 -Label: racing driver
+RacketCatching	false	 -Label: racket catching
+RadioControlledRacingLeague	false	-Comment: A group of sports teams or person that compete against each other in radio-controlled racing. -Label: radio-controlled racing league
+RadioHost	false	 -Label: radio host
+RadioProgram	false	 -Label: radio program
+RadioStation	false	-Comment: A radio station has one line up. For instance the radio station BBC Radio 1. Not to be confused with the broadcasting network BBC, which has many radio stations. -Label: radio station
+Radius_ly	false	 -Label: Radius_ly
+RailGauge	false	 -Label: rail gauge (μ)
+RailwayLine	false	-Comment: A railway line is a transport service by trains that pull passengers or freight provided by an organization. Not to be mistaken for railway track, which is the structure consisting of the rails. Wikipedia do not clearly differentiate between both, so there is one infobox describing tracks and lines. -Label: σιδηρόδρομος
+RailwayPlatforms	false	-Comment: Information on the type of platform(s) at the station. -Label: railway platforms
+RailwayStation	false	 -Label: train station
+RailwayTunnel	false	 -Label: σιδηροδρομική σήραγγα
+RallyDriver	false	 -Label: rally driver
+RankAgreement	false	 -Label: rank of an agreement
+RankArea	false	 -Label: rank of an area
+RankInFinalMedalCount	false	 -Label: rank in final medal count
+Ranking	false	 -Label: ranking
+RankingsDoubles	false	 -Label: doubles rankings
+RankingsSingles	false	 -Label: single rankings
+RankingWins	false	 -Label: ranking wins
+RankPopulation	false	 -Label: rank of a population
+Ratio	false	 -Label: ratio
+RebuildingDate	false	 -Label: rebuilding date
+RebuildingYear	false	 -Label: rebuilding year
+RecommissioningDate	false	 -Label: recommissioning date
+RecordDate	false	 -Label: record date
+RecordLabel	false	 -Label: record label
+RecordOffice	false	 -Label: Record Office
+Redline	false	 -Label: redline (kmh)
+RedLongDistancePisteNumber	false	 -Label: red long distance piste number
+RedSkiPisteNumber	false	 -Label: red ski piste number
+Refcul	false	 -Label: reference for cultural data
+Referee	false	-Comment: An official who watches a game or match closely to ensure that the rules are adhered to. -Label: referee
+Reference	false	 -Label: reference
+Refgen	false	 -Label: reference for general data
+Refgeo	false	 -Label: reference for geographic data
+Refpol	false	 -Label: reference for politic data
+Refseq	false	 -Label: RefSeq
+Refseqmrna	false	 -Label: refseq mRNA
+Refseqprotein	false	 -Label: refseq protein
+Regency	false	 -Label: regency
+Regime	false	 -Label: regime
+Region	false	 -Label: region
+RegionalPrefecture	false	 -Label: regional prefecture
+RegionLink	false	 -Label: region link
+RegionType	false	 -Label: region type
+Registration	false	 -Label: registration
+RegistryNumber	false	-Comment: Identification of the registry a document is in -Label: registry number
+Reign	false	 -Label: reign
+ReignName	false	 -Label: reign name
+ReleaseDate	false	 -Label: release date
+Relief	false	 -Label: relief
+Religious	false	 -Label: religious
+ReligiousBuilding	false	-Comment: An establishment or her location where a group of people (a congregation) comes to perform acts of religious study, honor, or devotion. -Label: religious building
+Reopened	false	 -Label: reopened
+ReopeningDate	false	-Comment: Date of reopening the architectural structure. -Label: reopening date
+ReopeningYear	false	-Comment: Year of reopening the architectural structure. -Label: reopening year
+ReportingMark	false	-Comment: A reporting mark is a two-, three-, or four-letter alphabetic code used to identify owners or lessees of rolling stock and other equipment used on the North American railroad network. -Label: reporting mark
+Representative	false	 -Label: number of representatives
+Reptile	false	 -Label: reptile
+ResearchProject	false	-Comment: A research project is a scientific investigation, usually using scientific methods, to achieve defined objectives. -Label: research project
+Reservations	false	-Comment: Are reservations required for the establishment or event? -Label: reservations
+Restaurant	false	 -Label: restaurant
+RestingDate	false	 -Label: resting date
+Result	false	 -Label: result
+Resume	false	-Comment: A Resume describes a persons work experience and skill set. -Label: Resume
+RetentionTime	false	 -Label: relation time
+RetirementDate	false	 -Label: retirement date
+Revenue	false	 -Label: revenue ($)
+Review	false	 -Label: review
+RgbCoordinateBlue	false	 -Label: bluecoordinate in the RGB space
+RgbCoordinateGreen	false	 -Label: green coordinate in the RGB space
+RgbCoordinateRed	false	 -Label: red coordinate in the RGB space
+RidId	false	-Comment: An identifying system for scientific authors. The system was introduced in January 2008 by Thomson Reuters. The combined use of the Digital Object Identifier with the ResearcherID allows for a unique association of authors and scientific articles. -Label: RID Id
+RightAscension	false	 -Label: right ascension
+River	false	-Comment: a large natural stream -Label: river
+Road	false	 -Label: road
+RoadJunction	false	 -Label: road junction
+RoadTunnel	false	 -Label: road tunnel
+Rocket	false	 -Label: rocket
+RocketStages	false	-Comment: number of stages, not including boosters -Label: number of rocket stages
+RolandGarrosDouble	false	 -Label: roland garros double
+RolandGarrosMixed	false	 -Label: roland garros mixed
+RolandGarrosSingle	false	 -Label: roland garros single
+RollerCoaster	false	 -Label: roller coaster
+RomanEmperor	false	 -Label: roman emperor
+RomaniaSettlement	false	No description provided
+RoofHeight	false	 -Label: roof height
+RotationPeriod	false	 -Label: rotation period (s)
+Route	false	 -Label: route
+RouteDirection	false	-Comment: The general direction of the route (eg. North-South). -Label: route direction
+RouteEndDirection	false	-Comment: End of the route. The opposite of OntologyProperty:routeStartDirection. -Label: road end direction
+RouteNumber	false	-Comment: The number of the route. -Label: route number
+RouteOfTransportation	false	 -Label: route of transportation
+RouteStartDirection	false	-Comment: End of the route. For U.S. roads, this should be either "South" or "West" per the standards set by the U.S. Roads project. -Label: road start direction
+RouteTypeAbbreviation	false	-Comment: The route type abbreviation (eg.: I for Interstate, M for Motorway or NJ for New Jersey Route). -Label: route type abbreviation
+Rower	false	 -Label: rower
+Royalty	false	 -Label: royalty
+RugbyClub	false	 -Label: rugby club
+RugbyLeague	false	-Comment: A group of sports teams that compete against each other in rugby. -Label: rugby league
+RugbyPlayer	false	 -Label: rugby player
+Ruling	false	-Comment: Ruling referred to in this legal case -Label: ruling
+Runtime	false	 -Label: runtime (s)
+RunwayDesignation	false	 -Label: designation of runway
+RunwayLength	false	 -Label: length of runway (μ)
+RunwaySurface	false	 -Label: surface of runway
+RunwayWidth	false	 -Label: width of runway (μ)
+Saint	false	 -Label: saint
+Salary	false	 -Label: salary ($)
+Sales	false	 -Label: sales
+SambaSchool	false	 -Label: samba school
+SameName	false	 -Label: same name
+SardinianName	false	 -Label: city sardinian name
+Satellite	false	-Comment: An astronomic object orbiting around a planet or star. Definition partly derived from http://www.ontotext.com/proton/protonext# (and thus WordNet 1.7). -Label: Satellite
+SatellitesDeployed	false	 -Label: satellites deployed
+Scale	false	 -Label: scale
+Scene	false	 -Label: scene
+School	false	 -Label: scuola
+SchoolCode	false	 -Label: school code
+SchoolNumber	false	 -Label: school number
+ScientificName	false	 -Label: scientific name
+Scientist	false	 -Label: scientist
+ScotishName	false	 -Label: scotish name
+ScotsName	false	 -Label: scots name
+ScottishName	false	 -Label: scottish name
+ScreenWriter	false	 -Label: screenwriter
+Sculptor	false	 -Label: sculptor
+Sculpture	false	-Comment: Sculpture is three-dimensional artwork created by shaping or combining hard materials, typically stone such as marble, metal, glass, or wood, or plastic materials such as clay, textiles, polymers and softer metals. -Label: Sculpture
+Sea	false	 -Label: sea
+SeasonManager	false	 -Label: season manager
+SeasonNumber	false	-Comment: The season number to which the TelevisionEpisode belongs. -Label: season number
+SeatingCapacity	false	 -Label: seating capacity
+SeatNumber	false	 -Label: number of seats in the land parlement
+second	false	No description provided
+Security	false	-Comment: Safety precautions that are used in the building. -Label: security
+SelectionPoint	false	 -Label: selection point
+SelectionYear	false	 -Label: selection year
+SelibrId	false	-Comment: Authority data from the National Library of Sweden -Label: SELIBR Id
+Senator	false	 -Label: senator
+Senior	false	 -Label: senior
+Seniunija	false	 -Label: seniunija
+Sentence	false	 -Label: sentence
+SequenceNumber	false	 -Label: sequence number
+SerialKiller	false	 -Label: serial killer
+ServiceEndDate	false	 -Label: service end date
+ServiceEndYear	false	 -Label: service end year
+ServiceModule	false	 -Label: service module
+ServiceNumber	false	-Comment: The service number held by the individual during military service. -Label: service number
+ServiceStartDate	false	 -Label: service start date
+ServiceStartYear	false	 -Label: service start year
+ServingTemperature	false	-Comment: Serving temperature for the food (e.g.: hot, cold, warm or room temperature). -Label: serving temperature
+SettingOfPlay	false	-Comment: The places and time where the play takes place. -Label: setting of play
+Settlement	false	 -Label: municipality
+Sex	false	 -Label: sex
+ShareDate	false	 -Label: share date
+ShareOfAudience	false	 -Label: share of audience
+ShareSource	false	 -Label: share source
+SharingOut	false	 -Label: sharing out
+SharingOutArea	false	 -Label: sharing out area
+SharingOutPopulation	false	 -Label: sharing out population
+SharingOutPopulationName	false	 -Label: sharing out population name
+SharingOutPopulationYear	false	 -Label: sharing out year
+Ship	false	 -Label: ship
+ShipBeam	false	-Comment: The beam of a ship is its width at the widest point. -Label: ship beam (μ)
+ShipDisplacement	false	-Comment: A ship's displacement is its mass at any given time. -Label: displacement (g)
+ShipDraft	false	-Comment: The draft (or draught) of a ship's hull is the vertical distance between the waterline and the bottom of the hull (keel), with the thickness of the hull included; in the case of not being included the draft outline would be obtained. -Label: ship draft (μ)
+ShipLaunch	false	 -Label: ship launched
+ShoeNumber	false	 -Label: shoe number
+ShoeSize	false	 -Label: shoe size
+Shoot	false	 -Label: shoot
+Shoots	false	 -Label: shoots
+ShoppingMall	false	 -Label: shopping mall
+ShoreLength	false	 -Label: shore length (μ)
+ShortProgCompetition	false	 -Label: short prog competition
+ShortProgScore	false	 -Label: short prog score
+Shrine	false	 -Label: shrine
+SicilianName	false	 -Label: city sicilian name
+Signature	false	 -Label: signature
+SignName	false	 -Label: sign name of a hungarian settlement
+SilverMedalDouble	false	 -Label: silver medal double
+SilverMedalMixed	false	 -Label: silver medal mixed
+SilverMedalSingle	false	 -Label: silver medal single
+Singer	false	-Comment: a person who sings. -Label: Singer
+Single	false	-Comment: In music, a single or record single is a type of release, typically a recording of fewer tracks than an LP or a CD. -Label: single
+SiteOfSpecialScientificInterest	false	-Comment: A Site of Special Scientific Interest (SSSI) is a conservation designation denoting a protected area in the United Kingdom. SSSIs are the basic building block of site-based nature conservation legislation and most other legal nature/geological conservation designations in Great Britain are based upon them, including National Nature Reserves, Ramsar Sites, Special Protection Areas, and Special Areas of Conservation. -Label: Site of Special Scientific Interest
+SixthFormStudents	false	 -Label: sixth form students
+Size_v	false	 -Label: size_v
+Skater	false	 -Label: skater
+SkiArea	false	 -Label: ski area
+Skier	false	 -Label: skier
+SkiLift	false	 -Label: ski lift
+SkiPisteKilometre	false	 -Label: ski piste kilometre (μ)
+SkiPisteNumber	false	 -Label: ski piste number
+SkiResort	false	 -Label: ski resort
+SkiTow	false	 -Label: ski tow
+Skyscraper	false	 -Label: skyscraper
+Slogan	false	 -Label: slogan
+Smiles	false	-Comment: The Simplified Molecular-Input Line-Entry System or SMILES is a specification in form of a line notation for describing the structure of chemical molecules using short ASCII strings. -Label: SMILES
+SnookerChamp	false	-Comment: An athlete that plays snooker and won the world championship at least once -Label: snooker world champion
+SnookerPlayer	false	-Comment: An athlete that plays snooker, which is a billard derivate -Label: snooker player
+SnookerWorldRanking	false	-Comment: The official world ranking in snooker for a certain year/season -Label: snooker world ranking
+SnowParkNumber	false	 -Label: snow park number
+SoapCharacter	false	 -Label: soap character
+SoccerClub	false	 -Label: soccer club
+SoccerClubSeason	false	 -Label: soccer club season
+SoccerLeague	false	-Comment: A group of sports teams that compete against each other in soccer. -Label: soccer league
+SoccerLeagueSeason	false	 -Label: soccer league season
+SoccerManager	false	 -Label: soccer manager
+SoccerPlayer	false	 -Label: soccer player
+SoccerTournament	false	 -Label: soccer tournoment
+SocietalEvent	false	-Comment: an event that is clearly different from strictly personal events -Label: societal event
+SoftballLeague	false	-Comment: A group of sports teams that compete against each other in softball. -Label: softball league
+Software	false	 -Label: software
+SolarEclipse	false	 -Label: solar eclipse
+Solubility	false	 -Label: solubility
+Song	false	 -Label: song
+SongWriter	false	-Comment: a person who writes songs. -Label: Songwriter
+Sound	false	-Comment: An audio document intended to be listened to; equivalent to http://purl.org/dc/dcmitype/Sound -Label: sound
+Space	false	 -Label: space
+Spacecraft	false	 -Label: spacecraft
+SpaceMission	false	 -Label: space mission
+SpaceShuttle	false	 -Label: space shuttle
+SpaceStation	false	 -Label: space station
+SpacewalkBegin	false	 -Label: spacewalk begin
+SpacewalkEnd	false	 -Label: spacewalk end
+Specialist	false	 -Label: specialist
+Speciality	false	 -Label: speciality
+SpecialTrial	false	 -Label: special trial
+Species	false	 -Label: species
+SpeedLimit	false	 -Label: speed limit (kmh)
+SpeedwayLeague	false	-Comment: A group of sports teams that compete against each other in motorcycle speedway racing. -Label: speedway league
+SpeedwayRider	false	 -Label: speedway rider
+SpeedwayTeam	false	 -Label: speedway team
+Spike	false	 -Label: spike
+Sport	false	-Comment: A sport is commonly defined as an organized, competitive, and skillful physical activity. -Label: sport
+SportCompetitionResult	false	 -Label: results of a sport competition
+SportFacility	false	 -Label: sport facility
+SportsEvent	false	-Comment: a event of competitive physical activity -Label: sports event
+SportsFunction	false	 -Label: sports function
+SportsLeague	false	-Comment: A group of sports teams or individual athletes that compete against each other in a specific sport. -Label: sports league
+SportsManager	false	-Comment: According to the french label sub Soccer, trainership could be meant. However, here a Sportsmanager is interpreted as a member of the board of a sporting club. -Label: sports manager
+SportsSeason	false	 -Label: sports season
+SportsTeam	false	 -Label: sports team
+SportsTeamMember	false	-Comment: A member of an athletic team. -Label: Sports team member
+SportsTeamSeason	false	-Comment: A season for a particular sports team (as opposed to the season for the entire league that the team is in) -Label: sports team season
+SpouseName	false	 -Label: spouse name
+SquadNumber	false	-Comment: The number that an athlete wears in a team sport. -Label: squad number
+Square	false	 -Label: square
+squareKilometre	false	No description provided
+squareMetre	false	No description provided
+SquashPlayer	false	 -Label: squash player
+Stadium	false	 -Label: stadium
+Staff	false	 -Label: staff
+Star	false	 -Label: star
+StarRating	false	 -Label: star rating
+Start	false	 -Label: start
+StartCareer	false	 -Label: start career
+StartDate	false	-Comment: The start date of the event. -Label: start date
+StartWct	false	 -Label: start xct
+StartWqs	false	 -Label: start wqs
+StartYearOfInsertion	false	 -Label: start year of insertion
+StartYearOfSales	false	 -Label: start year of sales
+State	false	 -Label: state
+StatedResolution	false	-Comment: A Resolution describes a formal statement adopted by a meeting or convention. -Label: Stated Resolution
+StateOfOriginPoint	false	 -Label: state of origin point
+StateOfOriginYear	false	 -Label: state of origin year
+Station	false	-Comment: Public transport station (eg. railway station, metro station, bus station). -Label: station
+StationEvaDuration	false	 -Label: station EVA duration (s)
+StationStructure	false	-Comment: Type of station structure (underground, at-grade, or elevated). -Label: station structure
+StationVisitDuration	false	 -Label: station visit duration (s)
+Statistic	false	 -Label: statistic
+StatisticValue	false	 -Label: statistic value
+StatisticYear	false	 -Label: statistic year
+StatusManager	false	 -Label: status manager
+StatusYear	false	 -Label: status year
+StillImage	false	-Comment: A visual document that is not intended to be animated; equivalent to http://purl.org/dc/dcmitype/StillImage -Label: still image
+StockExchange	false	 -Label: Registered at Stock Exchange
+Stream	false	-Comment: a flowing body of water with a current, confined within a bed and stream banks -Label: stream
+Street	false	-Comment: A Street is different from a Road in as far as the infrastructure aspect is much less important here. A Street is a social and architectural ensemble much more than the connection between two geographic points. -Label: Street
+Strength	false	 -Label: strength
+SubdivisionLink	false	 -Label: subdivision link
+Subdivisions	false	 -Label: subdivisions
+SubjectOfPlay	false	-Comment: The overall subject matter dealt with by the play. -Label: subject of play
+SubjectTerm	false	-Comment: The subject as a term, possibly a term from a formal classification -Label: subject term
+SubMunicipality	false	-Comment: An administrative body governing a territorial unity on the lowest level, administering part of a municipality -Label: borough
+SubMunicipalityType	false	 -Label: type of municipality
+SuborbitalFlights	false	 -Label: suborbital flights
+SubPrefecture	false	 -Label: subprefecture
+Subsystem	false	 -Label: subsystem
+SubsystemLink	false	 -Label: subsystem link
+SummerTemperature	false	 -Label: summer temperature (K)
+SumoWrestler	false	 -Label: sumo wrestler
+SuperbowlWin	false	 -Label: superbowl win
+SupplementalDraftRound	false	 -Label: supplemental draft round
+SupplementalDraftYear	false	 -Label: supplemental draft year
+SuppreddedDate	false	 -Label: suppredded date
+SupremeCourtOfTheUnitedStatesCase	false	 -Label: Supreme Court of the United States case
+SurfaceArea	false	 -Label: surface area (m2)
+SurfaceGravity	false	 -Label: surface gravity (g)
+Surfer	false	 -Label: surfer
+Surname	false	 -Label: surname
+Swarm	false	 -Label: Swarm
+Swimmer	false	-Comment: a trained athlete who participates in swimming meets -Label: swimmer
+SwimmingStyle	false	 -Label: Swimming style
+SwitzerlandSettlement	false	No description provided
+Symbol	false	-Comment: HUGO Gene Symbol -Label: symbol
+Synagogue	false	-Comment: A synagogue, sometimes spelt synagog, is a Jewish or Samaritan house of prayer. -Label: synagog
+SystemOfLaw	false	-Comment: a system of legislation, either national or international -Label: System of law
+TableTennisPlayer	false	-Comment: Athlete who plays table tennis -Label: table tennis player
+TamazightName	false	 -Label: tamazight name
+TamazightSettlementName	false	 -Label: tamazight settlement name
+Taste	false	 -Label: taste or flavour
+Tattoo	false	 -Label: tattoo
+Tax	false	 -Label: tax
+Taxon	false	-Comment: a category within a classification system for Species -Label: taxonomic group
+TeamMember	false	-Comment: A member of an athletic team. -Label: Team member
+TeamName	false	 -Label: team name
+TeamPoint	false	 -Label: team point
+TeamTitle	false	 -Label: team title
+Technique	false	 -Label: Technik
+TelevisionDirector	false	-Comment: a person who directs the activities involved in making a television program. -Label: Television director
+TelevisionEpisode	false	-Comment: A television episode is a part of serial television program. -Label: television episode
+TelevisionHost	false	 -Label: television host
+TelevisionPersonality	false	 -Label: television personality
+TelevisionSeason	false	 -Label: television season
+TelevisionShow	false	 -Label: television show
+TelevisionShow,_FictionalCharacter	false	No description provided
+TelevisionStation	false	-Comment: A television station has usually one line up. For instance the television station WABC-TV (or ABC 7, Channel 7). Not to be confused with the broadcasting network ABC, which has many television stations. -Label: television station
+Temple	false	 -Label: temple
+TempleYear	false	 -Label: temple year
+TempPlace	false	 -Label: Temporary Placement in the Music Charts
+TennisLeague	false	-Comment: A group of sports teams or person that compete against each other in tennis. -Label: tennis league
+TennisPlayer	false	 -Label: tennis player
+TennisTournament	false	 -Label: tennis tournament
+TermOfOffice	false	 -Label: term of office
+Territory	false	 -Label: territory
+Tessitura	false	 -Label: tessitura
+Testaverage	false	 -Label: testaverage
+Theatre	false	-Comment: A theater or theatre (also a playhouse) is a structure where theatrical works or plays are performed or other performances such as musical concerts may be produced. -Label: theatre
+TheatreDirector	false	-Comment: A director in the theatre field who oversees and orchestrates the mounting of a theatre production. -Label: Theatre director
+Theology	false	 -Label: Theology
+Thing	false	No description provided
+Third	false	 -Label: third
+ThrowingSide	false	 -Label: throwing side
+Tie	false	 -Label: tie
+TimePeriod	false	 -Label: time period
+TimeshiftChannel	false	 -Label: timeshift channel
+TitleDate	false	 -Label: title date
+TitleDouble	false	 -Label: title double
+TitleLanguage	false	 -Label: title language
+TitleSingle	false	 -Label: title single
+Toll	false	 -Label: toll ($)
+TopFloorHeight	false	 -Label: tor floor height
+Topic	false	 -Label: topic
+TopicalConcept	false	 -Label: topical concept
+TopLevelDomain	false	 -Label: country top level (tld)
+TorqueOutput	false	 -Label: torque output (Nm)
+TotalCargo	false	 -Label: total cargo (g)
+TotalDiscs	false	-Comment: the total number of discs contained in the album -Label: total discs
+TotalMass	false	 -Label: total mass (g)
+TotalPopulation	false	 -Label: total population
+TotalTracks	false	-Comment: the total number of tracks contained in the album -Label: total tracks
+TotalTravellers	false	 -Label: total travellers
+TouaregName	false	 -Label: touareg name
+TouaregSettlementName	false	 -Label: touareg settlement name
+Tournament	false	 -Label: tournament
+TournamentOfChampions	false	 -Label: tournament of champions
+TournamentRecord	false	 -Label: tournament record
+Tower	false	-Comment: A Tower is a kind of structure (not necessarily a building) that is higher than the rest -Label: tower
+TowerHeight	false	 -Label: tower height
+Town	false	-Comment: a settlement ranging from a few hundred to several thousand (occasionally hundreds of thousands). The precise meaning varies between countries and is not always a matter of legal definition. Usually, a town is thought of as larger than a village but smaller than a city, though there are exceptions to this rule. -Label: town
+TrackLength	false	-Comment: Length of the track. Wikipedians usually do not differentiate between track length and line lenght. -Label: track length (μ)
+TrackList	false	-Comment: A list of music tracks, like on a CD -Label: track list
+TrackNumber	false	 -Label: track number
+TradeUnion	false	-Comment: A trade union or labor union is an organization of workers who have banded together to achieve common goals such as better working conditions. -Label: trade union
+Train	false	 -Label: train
+TrainerYears	false	 -Label: trainer years
+Transmission	false	 -Label: transmission
+Treadmill	false	-Comment: A mill driven by the tractive power of horses, donkeys or even people -Label: Treadmill
+Tu	false	 -Label: tu
+Tuition	false	 -Label: tuition ($)
+Tunnel	false	-Comment: A tunnel may be for foot or vehicular road traffic, for rail traffic, or for a canal. Some tunnels are aqueducts to supply water for consumption or for hydroelectric stations or are sewers (http://en.wikipedia.org/wiki/Tunnel). -Label: tunnel
+TvComId	false	 -Label: tv.com id
+Type	false	-Comment: a category within a classification system -Label: type
+TypeCoordinate	false	 -Label: type coordinate
+TypeOfGrain	false	 -Label: type of grain (wheat etc.)
+TypeOfStorage	false	 -Label: type of storage
+TypeOfYeast	false	 -Label: type of yeast
+UciCode	false	-Comment: Official UCI code for cycling teams -Label: UCI code
+UlanId	false	-Comment: ULAN is an online database using a controlled vocabulary currently containing around 293,000 names and other information about artists. Names in ULAN may include given names, pseudonyms, variant spellings, names in multiple languages, and names that have changed over time (e.g., married names). -Label: ULAN Id
+UmbrellaTitle	false	 -Label: umbrella title
+UndraftedYear	false	 -Label: undrafted year
+Unicode	false	 -Label: unicode
+Uniprot	false	 -Label: UniProt
+UnitCost	false	 -Label: unit cost ($)
+UnitedStatesNationalBridgeId	false	 -Label: United States National Bridge ID
+UnitOfWork	false	-Comment: This class is meant to convey the notion of an amount work to be done. It is different from Activity in that it has a definite end and is being measured. -Label: unit of work
+University	false	 -Label: university
+Unknown	false	 -Label: Unknown
+UnknownOutcomes	false	-Comment: number of launches with unknown outcomes (or in progress) -Label: unknown outcomes
+UnlcCode	false	 -Label: unlc code
+UnloCode	false	-Comment: UN/LOCODE, the United Nations Code for Trade and Transport Locations, is a geographic coding scheme developed and maintained by United Nations Economic Commission for Europe (UNECE), a unit of the United Nations. UN/LOCODE assigns codes to locations used in trade and transport  with functions such as seaports, rail and road terminals, airports, post offices and border crossing points. -Label: UN/LOCODE
+UpperAge	false	 -Label: upper age
+UrbanArea	false	 -Label: urban area
+UsOpenDouble	false	 -Label: us open double
+UsOpenMixed	false	 -Label: us open mixed
+UsOpenSingle	false	 -Label: us open single
+UsSales	false	 -Label: US sales
+UtcOffset	false	 -Label: UTC offset
+Valley	false	-Comment: a depression with predominant extent in one direction -Label: valley
+valvetrain	false	No description provided
+VehicleCode	false	-Comment: Region related vehicle code on the vehicle plates. -Label: vehicle code
+VehiclesPerDay	false	 -Label: vehicles per day
+Vein	false	 -Label: vein
+Venue	false	 -Label: venue
+V_hb	false	 -Label: V_hb
+ViafId	false	-Comment: International authority data from the Online Computer Library Center (OCLC) -Label: VIAF Id
+Vicar	false	 -Label: vicar
+VicePresident	false	 -Label: vice president
+VicePrimeMinister	false	 -Label: vice prime minister
+Victim	false	 -Label: victim
+Victory	false	 -Label: victory
+VictoryAsMgr	false	 -Label: victory as manager
+VictoryPercentageAsMgr	false	 -Label: victory percentage as manager
+VideoGame	false	-Comment: A video game is an electronic game that involves interaction with a user interface to generate visual feedback on a video device. -Label: video game
+VideogamesLeague	false	-Comment: A group of sports teams or person that compete against each other in videogames. -Label: videogames league
+Village	false	-Comment: a clustered human settlement or community, usually smaller a town -Label: village
+VirtualChannel	false	 -Label: virtual channel
+VisitorsPercentageChange	false	-Comment: Percentage increase or decrease. -Label: visitor percentage change
+VisitorsPerDay	false	 -Label: visitors per day
+VisitorsPerYear	false	 -Label: visitors per year
+VisitorStatisticsAsOf	false	-Comment: Year visitor information was gathered. -Label: visitor statistics as of
+VisitorsTotal	false	 -Label: visitors total
+VoiceActor	false	 -Label: voice actor
+VolcanicActivity	false	 -Label: volcanic activity
+VolcanicType	false	 -Label: volcanic type
+Volcano	false	-Comment: A volcano is currently subclass of naturalplace, but it might also be considered a mountain. -Label: volcano
+VolcanoId	false	 -Label: volcano id
+VolleyballCoach	false	 -Label: volleyball coach
+VolleyballLeague	false	-Comment: A group of sports teams that compete against each other in volleyball. -Label: volleyball league
+VolleyballPlayer	false	 -Label: volleyball player
+VoltageOfElectrification	false	-Comment: Voltage of the electrification system. -Label: voltage of electrification (V)
+VolumeQuote	false	 -Label: volume quote
+VonKlitzingConstant	false	 -Label: von Klitzing electromagnetic constant (RK)
+VotesAgainst	false	 -Label: Votes against the resolution
+VotesFor	false	 -Label: Number of votes in favour of the resolution
+WaistSize	false	 -Label: waist size (μ)
+War	false	 -Label: wars
+Ward	false	 -Label: ward of a liechtenstein settlement
+Water	false	 -Label: water
+WaterArea	false	 -Label: area of water (m2)
+Watercourse	false	 -Label: watercourse
+Watermill	false	-Comment: A watermill is a structure that uses a water wheel or turbine to drive a mechanical process such as flour, lumber or textile production, or metal shaping (rolling, grinding or wire drawing) -Label: Watermill
+WaterPercentage	false	 -Label: water percentage of a place
+WaterPoloPlayer	false	 -Label: water polo player
+WaterRide	false	 -Label: water ride
+Watershed	false	 -Label: watershed (m2)
+WaterTower	false	-Comment: a construction designed to store larger quantities of water at a place of some elevation in order to keep pressure on the water provision system -Label: Water tower
+WaterwayTunnel	false	 -Label: waterway tunnel
+Wavelength	false	 -Label: wavelength (μ)
+Weapon	false	 -Label: weapon
+Website	false	 -Label: website
+WeddingParentsDate	false	 -Label: Parents Wedding Date
+WelshName	false	 -Label: welsh name
+wgs84_pos#SpatialThing	false	No description provided
+WhaDraft	false	 -Label: wha draft
+WhaDraftYear	false	 -Label: wha draft year
+Wheelbase	false	 -Label: wheelbase (μ)
+WidthQuote	false	 -Label: width quote
+WimbledonDouble	false	 -Label: wimbledon double
+WimbledonMixed	false	 -Label: wimbledon mixed
+WimbledonSingle	false	 -Label: wimbledon single
+Windmill	false	-Comment: A windmill is a machine that converts the energy of wind into rotational energy by means of vanes called sails -Label: Windmill
+WindMotor	false	-Comment: A wind-driven turbine that adapts itself to wind direction and to wind-force. Is considered to be a class in its own, despite the wind as common factor with Windmill. -Label: Wind motor
+Wine	false	 -Label: wine
+WineRegion	false	 -Label: wine region
+Winery	false	 -Label: winery
+WineYear	false	 -Label: wine year
+WingArea	false	 -Label: wing area (m2)
+Wingspan	false	 -Label: wingspan (μ)
+Wins	false	 -Label: wins
+WinterTemperature	false	 -Label: winter temperature (K)
+WomensTennisAssociationTournament	false	 -Label: Women's Tennis Association tournament
+WordBefore	false	 -Label: word before the country
+Work	false	 -Label: work
+WorkArea	false	 -Label: work area (m2)
+WorldChampionTitleYear	false	-Comment: can be one or several years -Label: year of world champion title
+WorldHeritageSite	false	-Comment: A UNESCO World Heritage Site is a site (such as a forest, mountain, lake, desert, monument, building, complex, or city) that is on the list that is maintained by the international World Heritage Programme administered by the UNESCO World Heritage Committee, composed of 21 state parties which are elected by their General Assembly for a four-year term. A World Heritage Site is a place of either cultural or physical significance. -Label: World Heritage Site
+WorldOpen	false	 -Label: world open
+WorldTeamCup	false	 -Label: world team cup
+WorldTournamentBronze	false	 -Label: world tournament bronze
+WorldTournamentGold	false	 -Label: world tournament gold
+WorldTournamentSilver	false	 -Label: world tournament silver
+WorstDefeat	false	 -Label: worst defeat
+WptFinalTable	false	 -Label: wpt final table
+WptItm	false	 -Label: wpt itm
+WptTitle	false	 -Label: wpt title
+Wrestler	false	 -Label: wrestler
+WrestlingEvent	false	 -Label: wrestling event
+Writer	false	 -Label: writer
+WrittenWork	false	-Comment: Written work is any text written to read it (e.g.: books, newspaper, articles) -Label: written work
+WsopItm	false	 -Label: wsop itm
+WsopWinYear	false	 -Label: wsop win year
+WsopWristband	false	 -Label: wsop wristband
+Year	false	 -Label: year
+YearElevationIntoNobility	false	 -Label: year of elevation into the nobility
+YearInSpaceflight	false	 -Label: year in spaceflight
+YearOfConstruction	false	-Comment: The year in which construction of the Place was finished. -Label: year of construction
+YearOfElectrification	false	-Comment: Year station was electrified, if not previously at date of opening. -Label: year of electrification
+Years	false	 -Label: years
+YouthYears	false	 -Label: youth years
+Zdb	false	-Comment: Identifier for serial titles. More precise than issn -Label: zdb
+ZipCode	false	 -Label: zip code
+Zoo	false	 -Label: zoo
