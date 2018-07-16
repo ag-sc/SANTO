@@ -54,6 +54,7 @@ available at https://pub.uni-bielefeld.de/publication/2919923
     password=anno_password
     schema=anno
     ```
+### Adding users and ontology data
 5. In the repository root, create an admin user (replace admin by a username and secret by a password): 
     ```bash
     php php/cli_createuser.php admin secret 1
