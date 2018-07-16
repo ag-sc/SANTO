@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 5.5.59, for debian-linux-gnu (x86_64)
+-- MySQL dump 10.13  Distrib 5.7.22, for Linux (x86_64)
 --
--- Host: localhost    Database: anno_pub
+-- Host: localhost    Database: anno
 -- ------------------------------------------------------
--- Server version	5.5.59-0+deb8u1
+-- Server version	5.7.22-0ubuntu18.04.1
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -14,6 +14,16 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Current Database: `anno`
+--
+
+/*!40000 DROP DATABASE IF EXISTS `anno`*/;
+
+CREATE DATABASE /*!32312 IF NOT EXISTS*/ `anno` /*!40100 DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci */;
+
+USE `anno`;
 
 --
 -- Table structure for table `Annotation`
@@ -33,6 +43,7 @@ CREATE TABLE `Annotation` (
   `Text` varchar(255) NOT NULL,
   `User` int(10) unsigned NOT NULL,
   `Reference` int(10) unsigned DEFAULT NULL,
+  `annometa` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`Id`),
   UNIQUE KEY `Id_UNIQUE` (`Id`),
   UNIQUE KEY `PublicationId_2` (`PublicationId`,`Class`,`Sentence`,`Onset`,`Offset`,`User`),
@@ -46,7 +57,7 @@ CREATE TABLE `Annotation` (
   CONSTRAINT `fk_publication` FOREIGN KEY (`PublicationId`) REFERENCES `Publication` (`Id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `fk_ref` FOREIGN KEY (`Reference`) REFERENCES `Annotation` (`Id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `fk_user` FOREIGN KEY (`User`) REFERENCES `User` (`Id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=48508 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=73761 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -64,7 +75,7 @@ CREATE TABLE `Class` (
   PRIMARY KEY (`Id`),
   UNIQUE KEY `Name` (`Name`),
   UNIQUE KEY `Id` (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=558 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=567 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -84,6 +95,43 @@ CREATE TABLE `Data` (
   `Name` varchar(63) DEFAULT NULL,
   `User` int(10) unsigned NOT NULL,
   `PublicationId` int(10) unsigned NOT NULL,
+  `ManuallySet` tinyint(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`),
+  KEY `fk_1Data_1_idx` (`ClassId`),
+  KEY `fk_1Data_2_idx` (`Parent`),
+  KEY `fk_1Data_3_idx` (`AnnotationId`),
+  KEY `fk_1Data_4_idx` (`RelationId`),
+  KEY `fk_1Data_5_idx` (`DataGroup`),
+  KEY `fk_1Data_6_idx` (`User`),
+  KEY `PublicationId_idx_1` (`PublicationId`),
+  CONSTRAINT `fk_2Data_1` FOREIGN KEY (`ClassId`) REFERENCES `Class` (`Id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `fk_2Data_2` FOREIGN KEY (`Parent`) REFERENCES `Data` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `fk_2Data_3` FOREIGN KEY (`AnnotationId`) REFERENCES `Annotation` (`Id`) ON DELETE SET NULL ON UPDATE SET NULL,
+  CONSTRAINT `fk_2Data_4` FOREIGN KEY (`RelationId`) REFERENCES `Relation` (`Id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `fk_2Data_5` FOREIGN KEY (`DataGroup`) REFERENCES `Data` (`id`) ON DELETE SET NULL ON UPDATE SET NULL,
+  CONSTRAINT `fk_2Data_6` FOREIGN KEY (`User`) REFERENCES `User` (`Id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `fk_2Data_7` FOREIGN KEY (`PublicationId`) REFERENCES `Publication` (`Id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=17838 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `Data_bak`
+--
+
+DROP TABLE IF EXISTS `Data_bak`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `Data_bak` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `ClassId` int(10) unsigned NOT NULL,
+  `Parent` int(10) unsigned DEFAULT NULL,
+  `AnnotationId` int(10) unsigned DEFAULT NULL,
+  `RelationId` int(10) unsigned DEFAULT NULL,
+  `DataGroup` int(10) unsigned DEFAULT NULL,
+  `Name` varchar(63) DEFAULT NULL,
+  `User` int(10) unsigned NOT NULL,
+  `PublicationId` int(10) unsigned NOT NULL,
+  `ManuallySet` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
   UNIQUE KEY `id_UNIQUE` (`id`),
   KEY `fk_Data_1_idx` (`ClassId`),
@@ -94,13 +142,13 @@ CREATE TABLE `Data` (
   KEY `fk_Data_6` (`User`),
   KEY `PublicationId` (`PublicationId`),
   CONSTRAINT `fk_Data_1` FOREIGN KEY (`ClassId`) REFERENCES `Class` (`Id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `fk_Data_2` FOREIGN KEY (`Parent`) REFERENCES `Data` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `fk_Data_2` FOREIGN KEY (`Parent`) REFERENCES `Data_bak` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `fk_Data_3` FOREIGN KEY (`AnnotationId`) REFERENCES `Annotation` (`Id`) ON DELETE SET NULL ON UPDATE SET NULL,
   CONSTRAINT `fk_Data_4` FOREIGN KEY (`RelationId`) REFERENCES `Relation` (`Id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `fk_Data_5` FOREIGN KEY (`DataGroup`) REFERENCES `Data` (`id`) ON DELETE SET NULL ON UPDATE SET NULL,
+  CONSTRAINT `fk_Data_5` FOREIGN KEY (`DataGroup`) REFERENCES `Data_bak` (`id`) ON DELETE SET NULL ON UPDATE SET NULL,
   CONSTRAINT `fk_Data_6` FOREIGN KEY (`User`) REFERENCES `User` (`Id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `fk_Data_7` FOREIGN KEY (`PublicationId`) REFERENCES `Publication` (`Id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=109 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=10812 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -135,7 +183,7 @@ CREATE TABLE `Publication` (
   `FileName` varchar(63) NOT NULL,
   `Name` varchar(63) DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=219 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=236 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -161,7 +209,7 @@ CREATE TABLE `Relation` (
   KEY `fk_Annotation_2_idx` (`Range`),
   CONSTRAINT `fk_Relation_1` FOREIGN KEY (`Domain`) REFERENCES `Class` (`Id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `fk_Relation_2` FOREIGN KEY (`Range`) REFERENCES `Class` (`Id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=100 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=106 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -182,7 +230,7 @@ CREATE TABLE `SubClass` (
   KEY `fk_SubClass_2_idx` (`SubClass`),
   CONSTRAINT `fk_SubClass_1` FOREIGN KEY (`SuperClass`) REFERENCES `Class` (`Id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `fk_SubClass_2` FOREIGN KEY (`SubClass`) REFERENCES `Class` (`Id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=519 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=518 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -203,7 +251,7 @@ CREATE TABLE `Token` (
   PRIMARY KEY (`Id`),
   KEY `PublicationId` (`PublicationId`),
   CONSTRAINT `pubid` FOREIGN KEY (`PublicationId`) REFERENCES `Publication` (`Id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=1933160 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2112309 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -220,7 +268,7 @@ CREATE TABLE `User` (
   `IsCurator` tinyint(1) NOT NULL,
   PRIMARY KEY (`Id`),
   UNIQUE KEY `Mail` (`Mail`)
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -243,7 +291,7 @@ CREATE TABLE `User_Publication` (
   KEY `PublicationId` (`PublicationId`),
   CONSTRAINT `User_Publication_fk1` FOREIGN KEY (`UserId`) REFERENCES `User` (`Id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `User_Publication_fk2` FOREIGN KEY (`PublicationId`) REFERENCES `Publication` (`Id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=4842 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5778 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -255,4 +303,4 @@ CREATE TABLE `User_Publication` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-03-26 17:48:14
+-- Dump completed on 2018-07-12  1:05:50
