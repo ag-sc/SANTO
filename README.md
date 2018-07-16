@@ -71,12 +71,13 @@ available at https://pub.uni-bielefeld.de/publication/2919923
     * Since there is quite a mismatch between ontologies and what annotators are actually required to utilize, you currently have to provide those files manually. We are working on an addon that let's you pick and choose which parts of an ontology file you want to import.
 
     The configuration also let's you configure URI prefixes for the triples in the RDF and annotation export files (examples are for dbpedia URIs).
+### Adding your (pre-annotated) corpus
 8. Import a zipped dataset (tokenized publication + annotations). The bulk import script will automatically assign users to their respective publications. Filenames follow the scheme `PublicationName_username.extension`, where extension is `csv` for tokenizations and `annodb`for pre-existing annotations (see example files).
     ```bash
     php php/cli_import.php /path/to/importfile.zip
     ```
 
-    The import script automatically maps tokenized publications and their annotations to existing users by following the naming convention: `<Publication Name>_<Username>.<Extension>`. Make sure to add users beforehand (see step 5).
+    The import script automatically maps tokenized publications and their annotations to existing users by following the naming convention: `<Publication Name>_<Username>.<Extension>`. Make sure to add users beforehand (see step 5). Note that existing annotations must match class names as defined in the ontology.
 
 
 ## Acknowledgements
