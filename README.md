@@ -49,6 +49,7 @@ A demo instance that is routinely reset is available at http://psink.techfak.uni
     Test your login at https://serveruri/
 3. Import schema.sql into the database you created induring step 2.
     ```bash
+    mysql -u<user> -p <database name> < schema.sql
     ```
 4. Adjust config/annodb.config and provide connection details (hostname, username, password, schema (= database name))  for your installation.
     ```
@@ -64,12 +65,18 @@ A demo instance that is routinely reset is available at http://psink.techfak.uni
     php php/cli_createuser.php admin secret 1
     ```
     The "1" indicates that the created user should be granted curator privileges.
-6. For the slot filling functionality to be more useful, you need to specify which groups of ontology classes should be visible on the right hand side. For this, create a file called `groups.txt` in which you specify (tab-delimited, see examples/groups.csv): (internal) group name, the heading of the section in the UI, the name of the Class and a numeric order (1-N) in which the sections will be rendered.
+6. For the slot filling functionality to be more useful, you need to specify which groups of ontology classes should be visible on the right hand side. For this, create a file called `groups.txt` in which you specify (tab-delimited, see file [examples/groups.csv](examples/groups.csv)): (internal) group name, the heading of the section in the UI, the name of the Class and a numeric order (1-N) in which the sections will be rendered.
     ```Person Persons Person 1
     Country Countries Country 2
     ```
     The above would generate two sections of persons and country objects with the respective plural form as their heading.
-7. Upload your ontology descriptor files (see examples) under https://serveruri/Upload.html
+7. Upload your ontology descriptor files (see [examples/](examples/) folder) under https://serveruri/Upload.html
+    The descriptor files, containing tab-separated fields are:
+    * **[examples/dbpedia_2014_classes.csv](classes.csv)** Classname, "true"/"false", Description, where the boolean indicates whether or not the class describes individual names
+    * **[examples/dbpedia_2014_subclasses.csv](subclasses.csv)** Superclass, Subclass
+    * **[examples/dbpedia_2014_relations.csv](relations.csv)** domainClass, relation, rangeClass, from ("1", "m"), to ("1", "m"), isDataTypeProperty ("true", "false"), mergedName, description
+    * **groups.csv** from step 6.
+
     Several notes here:
     * Please be aware that this drops all existing data, we will likely provide a more convenient upgrade mechanism in the future.
     * Since there is quite a mismatch between ontologies and what annotators are actually required to utilize, you currently have to provide those files manually. We are working on an addon that let's you pick and choose which parts of an ontology file you want to import.
